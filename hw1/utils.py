@@ -185,7 +185,6 @@ def save_results(part, dataset_id, train_and_sample_func, args):
     train_losses, test_losses, samples_noise, samples_no_noise = train_and_sample_func(train_data, test_data, args)
     print(f'Final -ELBO: {test_losses[-1, 0]:.4f}, Recon Loss: {test_losses[-1, 1]:.4f}, '
           f'KL Loss: {test_losses[-1, 2]:.4f}')
-
     plot_vae_training_plot(train_losses, test_losses, f'Part({part}) Dataset {dataset_id} Train Plot',
                            f'visualization/part_{part}_dataset_{dataset_id}_train_plot.png')
     save_scatter_2d(samples_noise, title='Samples with Decoder Noise',

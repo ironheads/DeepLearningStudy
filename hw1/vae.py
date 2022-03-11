@@ -1,7 +1,6 @@
 import argparse
 from collections import OrderedDict
-
-from zmq import device
+from tkinter import Variable
 from tqdm import tqdm
 import numpy as np
 import torch
@@ -11,9 +10,8 @@ import utils
 
 def train(model, train_loader, optimizer, epoch, quiet, grad_clip=None):
     """Train the model for one epoch.
-
     :param model: the model (VAE).
-    :param train_loader: data loader of training samples.
+    :param train_loader: dåata loader of training samples.
     :param optimizer: the optimizer, for example, Adam.
     :param epoch: current epoch.
     :param quiet: whether to show training process.
@@ -107,17 +105,17 @@ class FullyConnectedVAE(nn.Module):
 
     def __init__(self, input_dim, latent_dim, enc_hidden_dims, dec_hidden_dims):
         super().__init__()
+        self.input_dim=input_dim
         self.latent_dim = latent_dim
         self.encoder=nn.Sequential(
             nn.Linear(input_dim,enc_hidden_dims),
-            nn.Linear(enc_hidden_dims,enc_hidden_dims),
+            nn.ReLU(),
             nn.Linear(enc_hidden_dims,2*latent_dim),
-            nn.ReLU()
         )
         
         self.decoder = nn.Sequential(
             nn.Linear(latent_dim,dec_hidden_dims),
-            nn.Linear(dec_hidden_dims,dec_hidden_dims),
+            nn.ReLU(),
             nn.Linear(dec_hidden_dims,input_dim),
             nn.Sigmoid()
         )
@@ -131,25 +129,26 @@ class FullyConnectedVAE(nn.Module):
         sampled_z = self.reparametrizer(mu,log_std)
         x_hat = self.decoder(sampled_z)
         # print(x,x_hat)
-        reconstruction_function = nn.BCELoss()
-        reconstruction_function.size_average = False
+        reconstruction_function = nn.MSELoss()
         recon_loss=reconstruction_function(x_hat,x)
-        KLD_element = mu.pow(2).add_(log_std.exp()).mul_(-1).add_(1).add_(log_std)
-        kl_loss=torch.sum(KLD_element).mul_(-0.5)
+        kl_loss=- 0.5 * torch.sum(1 + log_std - mu.pow(2) - log_std.exp())
         return OrderedDict(loss=recon_loss + kl_loss, recon_loss=recon_loss, kl_loss=kl_loss)
 
     def reparametrizer(self,mu,log_std):
-        std=log_std
+        sigma=torch.exp(log_std*0.5)
+        eps=torch.randn_like(sigma)
+        return mu+sigma*eps
     
     def sample(self, n, noise=True):
         with torch.no_grad():
-            z = torch.randn(n, self.latent_dim).to(device)
-            mu, log_std = self.decoder(z).chunk(2, dim=1)
+            z = torch.randn(n, self.input_dim).to(device)
+            mu, log_std = self.encoder(z).chunk(2, dim=1)
             if noise:
                 z = torch.randn_like(mu) * log_std.exp() + mu
             else:
                 z = mu
-        return z.cpu().numpy()
+            z=self.decoder(z)
+        return z.to(device).numpy()
 
 
 def train_vae_and_sample(train_data, test_data, args: argparse.Namespace):
