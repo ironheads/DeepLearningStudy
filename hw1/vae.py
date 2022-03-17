@@ -7,6 +7,7 @@ import torch
 import torch.nn as nn
 import torch.utils.data as data
 import utils
+import math
 
 def train(model, train_loader, optimizer, epoch, quiet, grad_clip=None):
     """Train the model for one epoch.
@@ -98,6 +99,35 @@ def train_epochs(model, train_loader, test_loader, args, quiet=False):
     return train_losses, test_losses
 
 
+class MLP(nn.Module):
+    """MLP subclasses inherited from torch.nn.Module.
+    """
+
+    def __init__(self, input_dim, output_dim, hidden_dims):
+        super().__init__()
+
+        if isinstance(input_dim, int):
+            input_dim = (input_dim,)
+        if isinstance(output_dim, int):
+            output_dim = (output_dim,)
+
+        self.input_dim = input_dim
+        self.output_dim = output_dim
+        self.hidden_dims = hidden_dims
+
+        model = []
+        prev_h = np.prod(input_dim)
+        for h in hidden_dims + [np.prod(output_dim)]:
+            model.append(nn.Linear(prev_h, h))
+            model.append(nn.ReLU())
+            prev_h = h
+        model.pop()
+        self.net = nn.Sequential(*model)
+
+    def forward(self, x):
+        b = x.shape[0]
+        x = x.view(b, -1)
+        return self.net(x).view(b, *self.output_dim)
 
 class FullyConnectedVAE(nn.Module):
     """VAE with only fully connected layers.
@@ -105,20 +135,9 @@ class FullyConnectedVAE(nn.Module):
 
     def __init__(self, input_dim, latent_dim, enc_hidden_dims, dec_hidden_dims):
         super().__init__()
-        self.input_dim=input_dim
         self.latent_dim = latent_dim
-        self.encoder=nn.Sequential(
-            nn.Linear(input_dim,enc_hidden_dims),
-            nn.ReLU(),
-            nn.Linear(enc_hidden_dims,2*latent_dim),
-        )
-        
-        self.decoder = nn.Sequential(
-            nn.Linear(latent_dim,dec_hidden_dims),
-            nn.ReLU(),
-            nn.Linear(dec_hidden_dims,input_dim),
-            nn.Sigmoid()
-        )
+        self.encoder = MLP(input_dim, 2 * latent_dim, enc_hidden_dims)
+        self.decoder = MLP(latent_dim, 2 * input_dim, dec_hidden_dims)
 
     def loss(self, x):
         # TODO
@@ -126,29 +145,42 @@ class FullyConnectedVAE(nn.Module):
         batch_size=x.shape[0]
         x=x.view(batch_size,-1)
         mu, log_std = self.encoder(x).chunk(2, dim=1)
-        sampled_z = self.reparametrizer(mu,log_std)
-        x_hat = self.decoder(sampled_z)
-        # print(x,x_hat)
-        reconstruction_function = nn.MSELoss()
-        recon_loss=reconstruction_function(x_hat,x)
-        kl_loss=- 0.5 * torch.sum(1 + log_std - mu.pow(2) - log_std.exp())
+        sample_z=self.reparametrizer(mu,log_std)
+        mu_x,log_std_x=self.decoder(sample_z).chunk(2, dim=1)
+        sample_x = self.reparametrizer(mu,log_std)
+        recon_loss = (0.5*np.log(2*math.pi)+log_std_x+((x-mu_x).pow(2))/(2*(log_std_x.exp().pow(2)))).sum()
+        kl_loss=(- 0.5 * torch.sum(1 + 2*log_std - mu.pow(2) - log_std.exp().pow(2))).sum()
         return OrderedDict(loss=recon_loss + kl_loss, recon_loss=recon_loss, kl_loss=kl_loss)
 
-    def reparametrizer(self,mu,log_std):
-        sigma=torch.exp(log_std*0.5)
-        eps=torch.randn_like(sigma)
-        return mu+sigma*eps
-    
     def sample(self, n, noise=True):
         with torch.no_grad():
-            z = torch.randn(n, self.input_dim).to(device)
-            mu, log_std = self.encoder(z).chunk(2, dim=1)
+            z = torch.randn(n, self.latent_dim).to(device)
+            mu, log_std = self.decoder(z).chunk(2, dim=1)
             if noise:
                 z = torch.randn_like(mu) * log_std.exp() + mu
             else:
                 z = mu
-            z=self.decoder(z)
         return z.to(device).numpy()
+
+    # def loss(self, x):
+    #     # TODO
+    #     # perform forward propagation and calculate loss
+    #     batch_size=x.shape[0]
+    #     x=x.view(batch_size,-1)
+    #     mu, log_std = self.encoder(x).chunk(2, dim=1)
+    #     sampled_z = self.reparametrizer(mu,log_std)
+    #     x_hat = self.decoder(sampled_z)
+    #     # print(x,x_hat)
+    #     reconstruction_function = nn.MSELoss()
+    #     recon_loss=reconstruction_function(x_hat,x)
+    #     kl_loss=- 0.5 * torch.sum(1 + log_std - mu.pow(2) - log_std.exp())
+    #     return OrderedDict(loss=recon_loss + kl_loss, recon_loss=recon_loss, kl_loss=kl_loss)
+
+    def reparametrizer(self,mu,log_std):
+        z = torch.randn_like(mu) * log_std.exp() + mu
+        return z
+    
+
 
 
 def train_vae_and_sample(train_data, test_data, args: argparse.Namespace):
@@ -167,7 +199,7 @@ def train_vae_and_sample(train_data, test_data, args: argparse.Namespace):
         - a numpy array of size (1000, 2) of 1000 samples WITHOUT decoder noise, i.e. sample z ~ p(z), x = mu(z).
     """
 
-    model = FullyConnectedVAE(2, 2, 128, 128).to(device)
+    model = FullyConnectedVAE(2, 2, [128, 128], [128, 128]).to(device)
     train_loader = data.DataLoader(train_data, batch_size=args.batch_size, shuffle=True)
     test_loader = data.DataLoader(test_data, batch_size=args.batch_size)
     train_losses, test_losses = train_epochs(model, train_loader, test_loader, args, quiet=True)
