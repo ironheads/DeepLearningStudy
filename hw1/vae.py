@@ -9,6 +9,8 @@ import torch.utils.data as data
 import utils
 import math
 
+global device
+
 def train(model, train_loader, optimizer, epoch, quiet, grad_clip=None):
     """Train the model for one epoch.
     :param model: the model (VAE).
@@ -160,28 +162,12 @@ class FullyConnectedVAE(nn.Module):
                 z = torch.randn_like(mu) * log_std.exp() + mu
             else:
                 z = mu
-        return z.to(device).numpy()
-
-    # def loss(self, x):
-    #     # TODO
-    #     # perform forward propagation and calculate loss
-    #     batch_size=x.shape[0]
-    #     x=x.view(batch_size,-1)
-    #     mu, log_std = self.encoder(x).chunk(2, dim=1)
-    #     sampled_z = self.reparametrizer(mu,log_std)
-    #     x_hat = self.decoder(sampled_z)
-    #     # print(x,x_hat)
-    #     reconstruction_function = nn.MSELoss()
-    #     recon_loss=reconstruction_function(x_hat,x)
-    #     kl_loss=- 0.5 * torch.sum(1 + log_std - mu.pow(2) - log_std.exp())
-    #     return OrderedDict(loss=recon_loss + kl_loss, recon_loss=recon_loss, kl_loss=kl_loss)
+        return z.cpu().numpy()
 
     def reparametrizer(self,mu,log_std):
         z = torch.randn_like(mu) * log_std.exp() + mu
         return z
     
-
-
 
 def train_vae_and_sample(train_data, test_data, args: argparse.Namespace):
     """Train our VAE then use it to generate samples.
@@ -240,5 +226,5 @@ if __name__ == '__main__':
                         help='a scalar specifies grad clip (Default: None)')
     parser.add_argument('--device',default='cpu',type=str,help='use which device')
     args = parser.parse_args()
-    device= args.device
+    device = args.device
     main(args)
