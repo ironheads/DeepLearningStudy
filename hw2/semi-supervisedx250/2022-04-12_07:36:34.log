@@ -1,0 +1,1159 @@
+04/12/2022 07:36:34 - INFO - train -   ***** Running training *****
+04/12/2022 07:36:34 - INFO - train -     Task = dataset@250
+04/12/2022 07:36:34 - INFO - train -     Num Epochs = 1024
+04/12/2022 07:36:34 - INFO - train -     Batch size per GPU = 16
+04/12/2022 07:36:34 - INFO - train -     Total optimization steps = 131072
+04/12/2022 07:36:34 - INFO - train -   Total params: 11.18M
+04/12/2022 07:36:34 - INFO - train -   -----------start training--------------
+04/12/2022 07:37:23 - INFO - train -   epoch:0, iter: 128. loss: 1.9111. loss_u: 0.0351. loss_x: 1.8759. Mask:4.2500 . LR: 0.0379. Time: 0.03
+04/12/2022 07:38:11 - INFO - train -   epoch:0, iter: 256. loss: 1.7505. loss_u: 0.0572. loss_x: 1.6934. Mask:3.9297 . LR: 0.0351. Time: 0.03
+04/12/2022 07:38:59 - INFO - train -   epoch:0, iter: 384. loss: 1.6410. loss_u: 0.0640. loss_x: 1.5770. Mask:4.4922 . LR: 0.0401. Time: 0.03
+04/12/2022 07:39:48 - INFO - train -   epoch:0, iter: 512. loss: 1.5561. loss_u: 0.0817. loss_x: 1.4744. Mask:4.9531 . LR: 0.0442. Time: 0.03
+04/12/2022 07:40:36 - INFO - train -   epoch:0, iter: 640. loss: 1.4809. loss_u: 0.0823. loss_x: 1.3986. Mask:5.7031 . LR: 0.0509. Time: 0.03
+04/12/2022 07:41:24 - INFO - train -   epoch:0, iter: 768. loss: 1.4247. loss_u: 0.0892. loss_x: 1.3355. Mask:6.4219 . LR: 0.0573. Time: 0.03
+04/12/2022 07:42:12 - INFO - train -   epoch:0, iter: 896. loss: 1.3729. loss_u: 0.0987. loss_x: 1.2741. Mask:7.5469 . LR: 0.0674. Time: 0.03
+04/12/2022 07:43:00 - INFO - train -   epoch:0, iter: 1024. loss: 1.3272. loss_u: 0.1087. loss_x: 1.2185. Mask:8.5781 . LR: 0.0766. Time: 0.03
+04/12/2022 07:43:04 - INFO - train -   Epoch 0. Top1: 9.9081. Top5: 48.8787. best_acc: 9.9081 in epoch0
+04/12/2022 07:43:53 - INFO - train -   epoch:1, iter: 128. loss: 0.9992. loss_u: 0.1515. loss_x: 0.8477. Mask:16.7266 . LR: 0.1493. Time: 0.03
+04/12/2022 07:44:42 - INFO - train -   epoch:1, iter: 256. loss: 0.9430. loss_u: 0.1566. loss_x: 0.7864. Mask:18.1055 . LR: 0.1617. Time: 0.03
+04/12/2022 07:45:30 - INFO - train -   epoch:1, iter: 384. loss: 0.9059. loss_u: 0.1536. loss_x: 0.7523. Mask:19.0000 . LR: 0.1696. Time: 0.03
+04/12/2022 07:46:18 - INFO - train -   epoch:1, iter: 512. loss: 0.8749. loss_u: 0.1546. loss_x: 0.7204. Mask:20.2793 . LR: 0.1811. Time: 0.03
+04/12/2022 07:47:06 - INFO - train -   epoch:1, iter: 640. loss: 0.8559. loss_u: 0.1564. loss_x: 0.6994. Mask:21.3453 . LR: 0.1906. Time: 0.03
+04/12/2022 07:47:54 - INFO - train -   epoch:1, iter: 768. loss: 0.8365. loss_u: 0.1595. loss_x: 0.6771. Mask:22.6172 . LR: 0.2019. Time: 0.03
+04/12/2022 07:48:42 - INFO - train -   epoch:1, iter: 896. loss: 0.8163. loss_u: 0.1639. loss_x: 0.6524. Mask:23.8527 . LR: 0.2130. Time: 0.03
+04/12/2022 07:49:30 - INFO - train -   epoch:1, iter: 1024. loss: 0.7998. loss_u: 0.1708. loss_x: 0.6289. Mask:25.2676 . LR: 0.2256. Time: 0.03
+04/12/2022 07:49:34 - INFO - train -   Epoch 1. Top1: 35.8517. Top5: 69.6691. best_acc: 35.8517 in epoch1
+04/12/2022 07:50:23 - INFO - train -   epoch:2, iter: 128. loss: 0.6519. loss_u: 0.2039. loss_x: 0.4479. Mask:37.5000 . LR: 0.3348. Time: 0.03
+04/12/2022 07:51:11 - INFO - train -   epoch:2, iter: 256. loss: 0.6631. loss_u: 0.2113. loss_x: 0.4519. Mask:36.4883 . LR: 0.3258. Time: 0.03
+04/12/2022 07:51:59 - INFO - train -   epoch:2, iter: 384. loss: 0.6542. loss_u: 0.2103. loss_x: 0.4439. Mask:36.6745 . LR: 0.3275. Time: 0.03
+04/12/2022 07:52:47 - INFO - train -   epoch:2, iter: 512. loss: 0.6416. loss_u: 0.2124. loss_x: 0.4292. Mask:36.9258 . LR: 0.3297. Time: 0.03
+04/12/2022 07:53:35 - INFO - train -   epoch:2, iter: 640. loss: 0.6359. loss_u: 0.2165. loss_x: 0.4194. Mask:37.7594 . LR: 0.3371. Time: 0.03
+04/12/2022 07:54:23 - INFO - train -   epoch:2, iter: 768. loss: 0.6270. loss_u: 0.2197. loss_x: 0.4072. Mask:38.4323 . LR: 0.3431. Time: 0.03
+04/12/2022 07:55:11 - INFO - train -   epoch:2, iter: 896. loss: 0.6223. loss_u: 0.2253. loss_x: 0.3970. Mask:39.2020 . LR: 0.3500. Time: 0.03
+04/12/2022 07:55:59 - INFO - train -   epoch:2, iter: 1024. loss: 0.6177. loss_u: 0.2280. loss_x: 0.3897. Mask:39.8174 . LR: 0.3555. Time: 0.03
+04/12/2022 07:56:04 - INFO - train -   Epoch 2. Top1: 46.4277. Top5: 89.0074. best_acc: 46.4277 in epoch2
+04/12/2022 07:56:53 - INFO - train -   epoch:3, iter: 128. loss: 0.6034. loss_u: 0.2510. loss_x: 0.3524. Mask:45.0312 . LR: 0.4021. Time: 0.03
+04/12/2022 07:57:41 - INFO - train -   epoch:3, iter: 256. loss: 0.5777. loss_u: 0.2585. loss_x: 0.3192. Mask:46.4258 . LR: 0.4145. Time: 0.03
+04/12/2022 07:58:29 - INFO - train -   epoch:3, iter: 384. loss: 0.5765. loss_u: 0.2611. loss_x: 0.3154. Mask:47.1094 . LR: 0.4206. Time: 0.03
+04/12/2022 07:59:17 - INFO - train -   epoch:3, iter: 512. loss: 0.5679. loss_u: 0.2653. loss_x: 0.3026. Mask:47.5664 . LR: 0.4247. Time: 0.03
+04/12/2022 08:00:04 - INFO - train -   epoch:3, iter: 640. loss: 0.5697. loss_u: 0.2624. loss_x: 0.3073. Mask:47.2016 . LR: 0.4214. Time: 0.03
+04/12/2022 08:00:52 - INFO - train -   epoch:3, iter: 768. loss: 0.5610. loss_u: 0.2610. loss_x: 0.2999. Mask:47.3177 . LR: 0.4225. Time: 0.03
+04/12/2022 08:01:40 - INFO - train -   epoch:3, iter: 896. loss: 0.5525. loss_u: 0.2637. loss_x: 0.2887. Mask:47.9944 . LR: 0.4285. Time: 0.03
+04/12/2022 08:02:28 - INFO - train -   epoch:3, iter: 1024. loss: 0.5511. loss_u: 0.2655. loss_x: 0.2856. Mask:48.3926 . LR: 0.4321. Time: 0.03
+04/12/2022 08:02:32 - INFO - train -   Epoch 3. Top1: 44.3934. Top5: 88.8971. best_acc: 46.4277 in epoch2
+04/12/2022 08:03:21 - INFO - train -   epoch:4, iter: 128. loss: 0.5385. loss_u: 0.2718. loss_x: 0.2667. Mask:50.7656 . LR: 0.4533. Time: 0.03
+04/12/2022 08:04:09 - INFO - train -   epoch:4, iter: 256. loss: 0.5307. loss_u: 0.2704. loss_x: 0.2603. Mask:50.9414 . LR: 0.4548. Time: 0.03
+04/12/2022 08:04:57 - INFO - train -   epoch:4, iter: 384. loss: 0.5241. loss_u: 0.2694. loss_x: 0.2546. Mask:51.0052 . LR: 0.4554. Time: 0.03
+04/12/2022 08:05:45 - INFO - train -   epoch:4, iter: 512. loss: 0.5137. loss_u: 0.2694. loss_x: 0.2443. Mask:51.7793 . LR: 0.4623. Time: 0.03
+04/12/2022 08:06:33 - INFO - train -   epoch:4, iter: 640. loss: 0.5152. loss_u: 0.2724. loss_x: 0.2429. Mask:52.1328 . LR: 0.4655. Time: 0.03
+04/12/2022 08:07:22 - INFO - train -   epoch:4, iter: 768. loss: 0.5127. loss_u: 0.2738. loss_x: 0.2389. Mask:52.5052 . LR: 0.4688. Time: 0.03
+04/12/2022 08:08:10 - INFO - train -   epoch:4, iter: 896. loss: 0.5113. loss_u: 0.2766. loss_x: 0.2347. Mask:53.1496 . LR: 0.4745. Time: 0.03
+04/12/2022 08:08:58 - INFO - train -   epoch:4, iter: 1024. loss: 0.5100. loss_u: 0.2751. loss_x: 0.2349. Mask:53.1445 . LR: 0.4745. Time: 0.03
+04/12/2022 08:09:02 - INFO - train -   Epoch 4. Top1: 58.0944. Top5: 96.3419. best_acc: 58.0944 in epoch4
+04/12/2022 08:09:51 - INFO - train -   epoch:5, iter: 128. loss: 0.4772. loss_u: 0.2647. loss_x: 0.2125. Mask:54.0625 . LR: 0.4827. Time: 0.03
+04/12/2022 08:10:39 - INFO - train -   epoch:5, iter: 256. loss: 0.4822. loss_u: 0.2750. loss_x: 0.2072. Mask:55.0234 . LR: 0.4913. Time: 0.03
+04/12/2022 08:11:27 - INFO - train -   epoch:5, iter: 384. loss: 0.4766. loss_u: 0.2814. loss_x: 0.1952. Mask:55.8880 . LR: 0.4990. Time: 0.03
+04/12/2022 08:12:15 - INFO - train -   epoch:5, iter: 512. loss: 0.4851. loss_u: 0.2779. loss_x: 0.2072. Mask:55.7930 . LR: 0.4982. Time: 0.03
+04/12/2022 08:13:03 - INFO - train -   epoch:5, iter: 640. loss: 0.4825. loss_u: 0.2772. loss_x: 0.2052. Mask:55.7313 . LR: 0.4976. Time: 0.03
+04/12/2022 08:13:51 - INFO - train -   epoch:5, iter: 768. loss: 0.4833. loss_u: 0.2775. loss_x: 0.2058. Mask:55.7839 . LR: 0.4981. Time: 0.03
+04/12/2022 08:14:39 - INFO - train -   epoch:5, iter: 896. loss: 0.4817. loss_u: 0.2788. loss_x: 0.2029. Mask:55.7656 . LR: 0.4979. Time: 0.03
+04/12/2022 08:15:26 - INFO - train -   epoch:5, iter: 1024. loss: 0.4824. loss_u: 0.2809. loss_x: 0.2015. Mask:56.3232 . LR: 0.5029. Time: 0.03
+04/12/2022 08:15:30 - INFO - train -   Epoch 5. Top1: 68.2904. Top5: 96.4522. best_acc: 68.2904 in epoch5
+04/12/2022 08:16:20 - INFO - train -   epoch:6, iter: 128. loss: 0.4829. loss_u: 0.2723. loss_x: 0.2106. Mask:56.3047 . LR: 0.5027. Time: 0.03
+04/12/2022 08:17:08 - INFO - train -   epoch:6, iter: 256. loss: 0.4950. loss_u: 0.2770. loss_x: 0.2179. Mask:55.6992 . LR: 0.4973. Time: 0.03
+04/12/2022 08:17:57 - INFO - train -   epoch:6, iter: 384. loss: 0.4890. loss_u: 0.2781. loss_x: 0.2110. Mask:55.7995 . LR: 0.4982. Time: 0.03
+04/12/2022 08:18:45 - INFO - train -   epoch:6, iter: 512. loss: 0.4882. loss_u: 0.2800. loss_x: 0.2081. Mask:56.3418 . LR: 0.5031. Time: 0.03
+04/12/2022 08:19:33 - INFO - train -   epoch:6, iter: 640. loss: 0.4849. loss_u: 0.2776. loss_x: 0.2073. Mask:56.2313 . LR: 0.5021. Time: 0.03
+04/12/2022 08:20:22 - INFO - train -   epoch:6, iter: 768. loss: 0.4796. loss_u: 0.2789. loss_x: 0.2007. Mask:56.7578 . LR: 0.5068. Time: 0.03
+04/12/2022 08:21:10 - INFO - train -   epoch:6, iter: 896. loss: 0.4756. loss_u: 0.2767. loss_x: 0.1988. Mask:56.8348 . LR: 0.5075. Time: 0.03
+04/12/2022 08:21:59 - INFO - train -   epoch:6, iter: 1024. loss: 0.4722. loss_u: 0.2772. loss_x: 0.1950. Mask:57.2764 . LR: 0.5114. Time: 0.03
+04/12/2022 08:22:03 - INFO - train -   Epoch 6. Top1: 69.9877. Top5: 98.0699. best_acc: 69.9877 in epoch6
+04/12/2022 08:22:52 - INFO - train -   epoch:7, iter: 128. loss: 0.4507. loss_u: 0.2804. loss_x: 0.1703. Mask:59.4609 . LR: 0.5309. Time: 0.03
+04/12/2022 08:23:41 - INFO - train -   epoch:7, iter: 256. loss: 0.4618. loss_u: 0.2841. loss_x: 0.1776. Mask:58.2617 . LR: 0.5202. Time: 0.03
+04/12/2022 08:24:29 - INFO - train -   epoch:7, iter: 384. loss: 0.4587. loss_u: 0.2850. loss_x: 0.1737. Mask:58.7865 . LR: 0.5249. Time: 0.03
+04/12/2022 08:25:18 - INFO - train -   epoch:7, iter: 512. loss: 0.4573. loss_u: 0.2847. loss_x: 0.1727. Mask:59.0723 . LR: 0.5274. Time: 0.03
+04/12/2022 08:26:07 - INFO - train -   epoch:7, iter: 640. loss: 0.4559. loss_u: 0.2843. loss_x: 0.1716. Mask:59.2219 . LR: 0.5288. Time: 0.03
+04/12/2022 08:26:55 - INFO - train -   epoch:7, iter: 768. loss: 0.4537. loss_u: 0.2843. loss_x: 0.1694. Mask:59.7096 . LR: 0.5331. Time: 0.03
+04/12/2022 08:27:43 - INFO - train -   epoch:7, iter: 896. loss: 0.4495. loss_u: 0.2839. loss_x: 0.1657. Mask:59.9699 . LR: 0.5354. Time: 0.03
+04/12/2022 08:28:32 - INFO - train -   epoch:7, iter: 1024. loss: 0.4501. loss_u: 0.2826. loss_x: 0.1675. Mask:60.0850 . LR: 0.5365. Time: 0.03
+04/12/2022 08:28:36 - INFO - train -   Epoch 7. Top1: 69.6814. Top5: 96.7463. best_acc: 69.9877 in epoch6
+04/12/2022 08:29:25 - INFO - train -   epoch:8, iter: 128. loss: 0.4550. loss_u: 0.2582. loss_x: 0.1968. Mask:58.1875 . LR: 0.5195. Time: 0.03
+04/12/2022 08:30:13 - INFO - train -   epoch:8, iter: 256. loss: 0.4412. loss_u: 0.2805. loss_x: 0.1607. Mask:60.6953 . LR: 0.5419. Time: 0.03
+04/12/2022 08:31:02 - INFO - train -   epoch:8, iter: 384. loss: 0.4378. loss_u: 0.2826. loss_x: 0.1551. Mask:60.8906 . LR: 0.5437. Time: 0.03
+04/12/2022 08:31:50 - INFO - train -   epoch:8, iter: 512. loss: 0.4390. loss_u: 0.2847. loss_x: 0.1543. Mask:61.0879 . LR: 0.5454. Time: 0.03
+04/12/2022 08:32:38 - INFO - train -   epoch:8, iter: 640. loss: 0.4366. loss_u: 0.2832. loss_x: 0.1534. Mask:61.3906 . LR: 0.5481. Time: 0.03
+04/12/2022 08:33:26 - INFO - train -   epoch:8, iter: 768. loss: 0.4356. loss_u: 0.2869. loss_x: 0.1487. Mask:61.9922 . LR: 0.5535. Time: 0.03
+04/12/2022 08:34:15 - INFO - train -   epoch:8, iter: 896. loss: 0.4349. loss_u: 0.2888. loss_x: 0.1462. Mask:62.3650 . LR: 0.5568. Time: 0.03
+04/12/2022 08:35:03 - INFO - train -   epoch:8, iter: 1024. loss: 0.4334. loss_u: 0.2880. loss_x: 0.1453. Mask:62.5195 . LR: 0.5582. Time: 0.03
+04/12/2022 08:35:07 - INFO - train -   Epoch 8. Top1: 70.0980. Top5: 96.9424. best_acc: 70.0980 in epoch8
+04/12/2022 08:35:56 - INFO - train -   epoch:9, iter: 128. loss: 0.4483. loss_u: 0.2818. loss_x: 0.1664. Mask:61.5859 . LR: 0.5499. Time: 0.03
+04/12/2022 08:36:44 - INFO - train -   epoch:9, iter: 256. loss: 0.4535. loss_u: 0.2867. loss_x: 0.1667. Mask:62.1875 . LR: 0.5552. Time: 0.03
+04/12/2022 08:37:32 - INFO - train -   epoch:9, iter: 384. loss: 0.4377. loss_u: 0.2832. loss_x: 0.1546. Mask:62.5677 . LR: 0.5586. Time: 0.03
+04/12/2022 08:38:21 - INFO - train -   epoch:9, iter: 512. loss: 0.4318. loss_u: 0.2859. loss_x: 0.1458. Mask:62.9648 . LR: 0.5622. Time: 0.03
+04/12/2022 08:39:09 - INFO - train -   epoch:9, iter: 640. loss: 0.4323. loss_u: 0.2898. loss_x: 0.1425. Mask:63.5297 . LR: 0.5672. Time: 0.03
+04/12/2022 08:39:58 - INFO - train -   epoch:9, iter: 768. loss: 0.4270. loss_u: 0.2890. loss_x: 0.1381. Mask:63.4570 . LR: 0.5666. Time: 0.03
+04/12/2022 08:40:46 - INFO - train -   epoch:9, iter: 896. loss: 0.4269. loss_u: 0.2902. loss_x: 0.1366. Mask:63.4989 . LR: 0.5670. Time: 0.03
+04/12/2022 08:41:34 - INFO - train -   epoch:9, iter: 1024. loss: 0.4276. loss_u: 0.2905. loss_x: 0.1371. Mask:63.6396 . LR: 0.5682. Time: 0.03
+04/12/2022 08:41:39 - INFO - train -   Epoch 9. Top1: 74.8100. Top5: 97.0650. best_acc: 74.8100 in epoch9
+04/12/2022 08:42:28 - INFO - train -   epoch:10, iter: 128. loss: 0.4063. loss_u: 0.2855. loss_x: 0.1208. Mask:65.7344 . LR: 0.5869. Time: 0.03
+04/12/2022 08:43:16 - INFO - train -   epoch:10, iter: 256. loss: 0.4234. loss_u: 0.2809. loss_x: 0.1424. Mask:63.9141 . LR: 0.5707. Time: 0.03
+04/12/2022 08:44:04 - INFO - train -   epoch:10, iter: 384. loss: 0.4224. loss_u: 0.2762. loss_x: 0.1462. Mask:62.6068 . LR: 0.5590. Time: 0.03
+04/12/2022 08:44:52 - INFO - train -   epoch:10, iter: 512. loss: 0.4236. loss_u: 0.2760. loss_x: 0.1476. Mask:62.5449 . LR: 0.5584. Time: 0.03
+04/12/2022 08:45:40 - INFO - train -   epoch:10, iter: 640. loss: 0.4255. loss_u: 0.2766. loss_x: 0.1488. Mask:62.6797 . LR: 0.5596. Time: 0.03
+04/12/2022 08:46:28 - INFO - train -   epoch:10, iter: 768. loss: 0.4228. loss_u: 0.2752. loss_x: 0.1476. Mask:62.9049 . LR: 0.5617. Time: 0.03
+04/12/2022 08:47:16 - INFO - train -   epoch:10, iter: 896. loss: 0.4238. loss_u: 0.2791. loss_x: 0.1448. Mask:63.1473 . LR: 0.5638. Time: 0.03
+04/12/2022 08:48:05 - INFO - train -   epoch:10, iter: 1024. loss: 0.4224. loss_u: 0.2798. loss_x: 0.1426. Mask:63.3398 . LR: 0.5655. Time: 0.03
+04/12/2022 08:48:09 - INFO - train -   Epoch 10. Top1: 76.8689. Top5: 97.8554. best_acc: 76.8689 in epoch10
+04/12/2022 08:48:58 - INFO - train -   epoch:11, iter: 128. loss: 0.4133. loss_u: 0.2947. loss_x: 0.1187. Mask:68.0312 . LR: 0.6074. Time: 0.03
+04/12/2022 08:49:46 - INFO - train -   epoch:11, iter: 256. loss: 0.3989. loss_u: 0.2848. loss_x: 0.1141. Mask:66.5352 . LR: 0.5941. Time: 0.03
+04/12/2022 08:50:34 - INFO - train -   epoch:11, iter: 384. loss: 0.4077. loss_u: 0.2819. loss_x: 0.1258. Mask:65.6979 . LR: 0.5866. Time: 0.03
+04/12/2022 08:51:22 - INFO - train -   epoch:11, iter: 512. loss: 0.4078. loss_u: 0.2844. loss_x: 0.1234. Mask:65.7988 . LR: 0.5875. Time: 0.03
+04/12/2022 08:52:10 - INFO - train -   epoch:11, iter: 640. loss: 0.4044. loss_u: 0.2828. loss_x: 0.1216. Mask:65.7156 . LR: 0.5867. Time: 0.03
+04/12/2022 08:52:59 - INFO - train -   epoch:11, iter: 768. loss: 0.4088. loss_u: 0.2815. loss_x: 0.1273. Mask:65.3424 . LR: 0.5834. Time: 0.03
+04/12/2022 08:53:47 - INFO - train -   epoch:11, iter: 896. loss: 0.4054. loss_u: 0.2825. loss_x: 0.1229. Mask:65.4955 . LR: 0.5848. Time: 0.03
+04/12/2022 08:54:35 - INFO - train -   epoch:11, iter: 1024. loss: 0.4047. loss_u: 0.2832. loss_x: 0.1215. Mask:65.6104 . LR: 0.5858. Time: 0.03
+04/12/2022 08:54:39 - INFO - train -   Epoch 11. Top1: 77.2488. Top5: 98.3640. best_acc: 77.2488 in epoch11
+04/12/2022 08:55:28 - INFO - train -   epoch:12, iter: 128. loss: 0.4187. loss_u: 0.2799. loss_x: 0.1387. Mask:63.6016 . LR: 0.5679. Time: 0.03
+04/12/2022 08:56:16 - INFO - train -   epoch:12, iter: 256. loss: 0.4026. loss_u: 0.2821. loss_x: 0.1205. Mask:65.1562 . LR: 0.5818. Time: 0.03
+04/12/2022 08:57:04 - INFO - train -   epoch:12, iter: 384. loss: 0.4029. loss_u: 0.2839. loss_x: 0.1190. Mask:65.3698 . LR: 0.5837. Time: 0.03
+04/12/2022 08:57:52 - INFO - train -   epoch:12, iter: 512. loss: 0.4053. loss_u: 0.2868. loss_x: 0.1185. Mask:65.5410 . LR: 0.5852. Time: 0.03
+04/12/2022 08:58:41 - INFO - train -   epoch:12, iter: 640. loss: 0.4100. loss_u: 0.2850. loss_x: 0.1251. Mask:65.2469 . LR: 0.5826. Time: 0.03
+04/12/2022 08:59:29 - INFO - train -   epoch:12, iter: 768. loss: 0.4077. loss_u: 0.2853. loss_x: 0.1224. Mask:65.5052 . LR: 0.5849. Time: 0.03
+04/12/2022 09:00:16 - INFO - train -   epoch:12, iter: 896. loss: 0.4069. loss_u: 0.2826. loss_x: 0.1243. Mask:65.4464 . LR: 0.5843. Time: 0.03
+04/12/2022 09:01:04 - INFO - train -   epoch:12, iter: 1024. loss: 0.4097. loss_u: 0.2844. loss_x: 0.1254. Mask:65.6338 . LR: 0.5860. Time: 0.03
+04/12/2022 09:01:08 - INFO - train -   Epoch 12. Top1: 76.9240. Top5: 97.8922. best_acc: 77.2488 in epoch11
+04/12/2022 09:01:57 - INFO - train -   epoch:13, iter: 128. loss: 0.3959. loss_u: 0.2963. loss_x: 0.0997. Mask:65.5156 . LR: 0.5850. Time: 0.03
+04/12/2022 09:02:45 - INFO - train -   epoch:13, iter: 256. loss: 0.3914. loss_u: 0.2941. loss_x: 0.0973. Mask:66.8828 . LR: 0.5972. Time: 0.03
+04/12/2022 09:03:33 - INFO - train -   epoch:13, iter: 384. loss: 0.3880. loss_u: 0.2859. loss_x: 0.1021. Mask:66.5833 . LR: 0.5945. Time: 0.03
+04/12/2022 09:04:20 - INFO - train -   epoch:13, iter: 512. loss: 0.3882. loss_u: 0.2827. loss_x: 0.1055. Mask:66.1562 . LR: 0.5907. Time: 0.03
+04/12/2022 09:05:08 - INFO - train -   epoch:13, iter: 640. loss: 0.3970. loss_u: 0.2804. loss_x: 0.1166. Mask:65.6672 . LR: 0.5863. Time: 0.03
+04/12/2022 09:05:56 - INFO - train -   epoch:13, iter: 768. loss: 0.3967. loss_u: 0.2819. loss_x: 0.1147. Mask:66.0560 . LR: 0.5898. Time: 0.03
+04/12/2022 09:06:43 - INFO - train -   epoch:13, iter: 896. loss: 0.3966. loss_u: 0.2826. loss_x: 0.1140. Mask:66.3069 . LR: 0.5920. Time: 0.03
+04/12/2022 09:07:31 - INFO - train -   epoch:13, iter: 1024. loss: 0.3959. loss_u: 0.2826. loss_x: 0.1132. Mask:66.4043 . LR: 0.5929. Time: 0.03
+04/12/2022 09:07:35 - INFO - train -   Epoch 13. Top1: 78.8603. Top5: 98.3272. best_acc: 78.8603 in epoch13
+04/12/2022 09:08:24 - INFO - train -   epoch:14, iter: 128. loss: 0.3883. loss_u: 0.2692. loss_x: 0.1190. Mask:65.3281 . LR: 0.5833. Time: 0.03
+04/12/2022 09:09:12 - INFO - train -   epoch:14, iter: 256. loss: 0.3992. loss_u: 0.2753. loss_x: 0.1239. Mask:64.9961 . LR: 0.5803. Time: 0.03
+04/12/2022 09:10:00 - INFO - train -   epoch:14, iter: 384. loss: 0.3913. loss_u: 0.2782. loss_x: 0.1131. Mask:65.9349 . LR: 0.5887. Time: 0.03
+04/12/2022 09:10:48 - INFO - train -   epoch:14, iter: 512. loss: 0.3928. loss_u: 0.2742. loss_x: 0.1186. Mask:65.8613 . LR: 0.5880. Time: 0.03
+04/12/2022 09:11:36 - INFO - train -   epoch:14, iter: 640. loss: 0.3936. loss_u: 0.2781. loss_x: 0.1155. Mask:66.2031 . LR: 0.5911. Time: 0.03
+04/12/2022 09:12:23 - INFO - train -   epoch:14, iter: 768. loss: 0.3947. loss_u: 0.2754. loss_x: 0.1192. Mask:66.1849 . LR: 0.5909. Time: 0.03
+04/12/2022 09:13:11 - INFO - train -   epoch:14, iter: 896. loss: 0.3964. loss_u: 0.2757. loss_x: 0.1208. Mask:66.2567 . LR: 0.5916. Time: 0.03
+04/12/2022 09:13:59 - INFO - train -   epoch:14, iter: 1024. loss: 0.3938. loss_u: 0.2765. loss_x: 0.1173. Mask:66.4121 . LR: 0.5930. Time: 0.03
+04/12/2022 09:14:03 - INFO - train -   Epoch 14. Top1: 78.6091. Top5: 98.4007. best_acc: 78.8603 in epoch13
+04/12/2022 09:14:52 - INFO - train -   epoch:15, iter: 128. loss: 0.3889. loss_u: 0.2808. loss_x: 0.1081. Mask:68.2891 . LR: 0.6097. Time: 0.03
+04/12/2022 09:15:41 - INFO - train -   epoch:15, iter: 256. loss: 0.3989. loss_u: 0.2818. loss_x: 0.1171. Mask:66.7852 . LR: 0.5963. Time: 0.03
+04/12/2022 09:16:29 - INFO - train -   epoch:15, iter: 384. loss: 0.3927. loss_u: 0.2853. loss_x: 0.1074. Mask:67.6328 . LR: 0.6039. Time: 0.03
+04/12/2022 09:17:17 - INFO - train -   epoch:15, iter: 512. loss: 0.3921. loss_u: 0.2839. loss_x: 0.1082. Mask:67.2754 . LR: 0.6007. Time: 0.03
+04/12/2022 09:18:06 - INFO - train -   epoch:15, iter: 640. loss: 0.3916. loss_u: 0.2816. loss_x: 0.1100. Mask:66.9922 . LR: 0.5981. Time: 0.03
+04/12/2022 09:18:54 - INFO - train -   epoch:15, iter: 768. loss: 0.3896. loss_u: 0.2816. loss_x: 0.1080. Mask:67.3711 . LR: 0.6015. Time: 0.03
+04/12/2022 09:19:43 - INFO - train -   epoch:15, iter: 896. loss: 0.3935. loss_u: 0.2828. loss_x: 0.1107. Mask:67.3717 . LR: 0.6015. Time: 0.03
+04/12/2022 09:20:31 - INFO - train -   epoch:15, iter: 1024. loss: 0.3959. loss_u: 0.2835. loss_x: 0.1124. Mask:67.4336 . LR: 0.6021. Time: 0.03
+04/12/2022 09:20:35 - INFO - train -   Epoch 15. Top1: 79.3627. Top5: 98.4743. best_acc: 79.3627 in epoch15
+04/12/2022 09:21:24 - INFO - train -   epoch:16, iter: 128. loss: 0.3993. loss_u: 0.2698. loss_x: 0.1294. Mask:65.4766 . LR: 0.5846. Time: 0.03
+04/12/2022 09:22:12 - INFO - train -   epoch:16, iter: 256. loss: 0.3968. loss_u: 0.2671. loss_x: 0.1297. Mask:65.5820 . LR: 0.5856. Time: 0.03
+04/12/2022 09:23:00 - INFO - train -   epoch:16, iter: 384. loss: 0.3934. loss_u: 0.2737. loss_x: 0.1196. Mask:66.8984 . LR: 0.5973. Time: 0.03
+04/12/2022 09:23:47 - INFO - train -   epoch:16, iter: 512. loss: 0.3988. loss_u: 0.2813. loss_x: 0.1175. Mask:67.3145 . LR: 0.6010. Time: 0.03
+04/12/2022 09:24:36 - INFO - train -   epoch:16, iter: 640. loss: 0.3971. loss_u: 0.2793. loss_x: 0.1178. Mask:67.2922 . LR: 0.6008. Time: 0.03
+04/12/2022 09:25:24 - INFO - train -   epoch:16, iter: 768. loss: 0.3950. loss_u: 0.2801. loss_x: 0.1148. Mask:67.5781 . LR: 0.6034. Time: 0.03
+04/12/2022 09:26:12 - INFO - train -   epoch:16, iter: 896. loss: 0.3930. loss_u: 0.2807. loss_x: 0.1123. Mask:67.9364 . LR: 0.6066. Time: 0.03
+04/12/2022 09:27:00 - INFO - train -   epoch:16, iter: 1024. loss: 0.3906. loss_u: 0.2810. loss_x: 0.1096. Mask:67.9824 . LR: 0.6070. Time: 0.03
+04/12/2022 09:27:04 - INFO - train -   Epoch 16. Top1: 77.5674. Top5: 98.4743. best_acc: 79.3627 in epoch15
+04/12/2022 09:27:54 - INFO - train -   epoch:17, iter: 128. loss: 0.3851. loss_u: 0.2842. loss_x: 0.1009. Mask:67.7344 . LR: 0.6048. Time: 0.03
+04/12/2022 09:28:41 - INFO - train -   epoch:17, iter: 256. loss: 0.3837. loss_u: 0.2838. loss_x: 0.0999. Mask:68.4375 . LR: 0.6110. Time: 0.03
+04/12/2022 09:29:29 - INFO - train -   epoch:17, iter: 384. loss: 0.3881. loss_u: 0.2861. loss_x: 0.1020. Mask:68.0052 . LR: 0.6072. Time: 0.03
+04/12/2022 09:30:17 - INFO - train -   epoch:17, iter: 512. loss: 0.3823. loss_u: 0.2811. loss_x: 0.1013. Mask:67.5977 . LR: 0.6036. Time: 0.03
+04/12/2022 09:31:05 - INFO - train -   epoch:17, iter: 640. loss: 0.3815. loss_u: 0.2804. loss_x: 0.1011. Mask:67.8516 . LR: 0.6058. Time: 0.03
+04/12/2022 09:31:53 - INFO - train -   epoch:17, iter: 768. loss: 0.3800. loss_u: 0.2805. loss_x: 0.0995. Mask:68.3320 . LR: 0.6101. Time: 0.03
+04/12/2022 09:32:41 - INFO - train -   epoch:17, iter: 896. loss: 0.3812. loss_u: 0.2809. loss_x: 0.1003. Mask:68.7121 . LR: 0.6135. Time: 0.03
+04/12/2022 09:33:29 - INFO - train -   epoch:17, iter: 1024. loss: 0.3807. loss_u: 0.2808. loss_x: 0.0999. Mask:68.7100 . LR: 0.6135. Time: 0.03
+04/12/2022 09:33:33 - INFO - train -   Epoch 17. Top1: 75.9743. Top5: 98.5294. best_acc: 79.3627 in epoch15
+04/12/2022 09:34:22 - INFO - train -   epoch:18, iter: 128. loss: 0.3936. loss_u: 0.2878. loss_x: 0.1059. Mask:70.1328 . LR: 0.6262. Time: 0.03
+04/12/2022 09:35:10 - INFO - train -   epoch:18, iter: 256. loss: 0.3888. loss_u: 0.2853. loss_x: 0.1035. Mask:70.4414 . LR: 0.6289. Time: 0.03
+04/12/2022 09:35:58 - INFO - train -   epoch:18, iter: 384. loss: 0.3801. loss_u: 0.2853. loss_x: 0.0947. Mask:70.5625 . LR: 0.6300. Time: 0.03
+04/12/2022 09:36:47 - INFO - train -   epoch:18, iter: 512. loss: 0.3777. loss_u: 0.2828. loss_x: 0.0949. Mask:70.2070 . LR: 0.6268. Time: 0.03
+04/12/2022 09:37:36 - INFO - train -   epoch:18, iter: 640. loss: 0.3726. loss_u: 0.2817. loss_x: 0.0909. Mask:70.3016 . LR: 0.6277. Time: 0.03
+04/12/2022 09:38:24 - INFO - train -   epoch:18, iter: 768. loss: 0.3719. loss_u: 0.2827. loss_x: 0.0892. Mask:70.3229 . LR: 0.6279. Time: 0.03
+04/12/2022 09:39:12 - INFO - train -   epoch:18, iter: 896. loss: 0.3756. loss_u: 0.2823. loss_x: 0.0933. Mask:70.2098 . LR: 0.6269. Time: 0.03
+04/12/2022 09:40:00 - INFO - train -   epoch:18, iter: 1024. loss: 0.3813. loss_u: 0.2822. loss_x: 0.0991. Mask:69.9180 . LR: 0.6243. Time: 0.03
+04/12/2022 09:40:04 - INFO - train -   Epoch 18. Top1: 79.6752. Top5: 98.5846. best_acc: 79.6752 in epoch18
+04/12/2022 09:40:53 - INFO - train -   epoch:19, iter: 128. loss: 0.3724. loss_u: 0.2893. loss_x: 0.0832. Mask:71.5703 . LR: 0.6390. Time: 0.03
+04/12/2022 09:41:42 - INFO - train -   epoch:19, iter: 256. loss: 0.3624. loss_u: 0.2796. loss_x: 0.0828. Mask:70.9375 . LR: 0.6334. Time: 0.03
+04/12/2022 09:42:30 - INFO - train -   epoch:19, iter: 384. loss: 0.3728. loss_u: 0.2857. loss_x: 0.0872. Mask:71.0391 . LR: 0.6343. Time: 0.03
+04/12/2022 09:43:17 - INFO - train -   epoch:19, iter: 512. loss: 0.3771. loss_u: 0.2850. loss_x: 0.0921. Mask:71.1172 . LR: 0.6350. Time: 0.03
+04/12/2022 09:44:05 - INFO - train -   epoch:19, iter: 640. loss: 0.3773. loss_u: 0.2814. loss_x: 0.0959. Mask:70.3469 . LR: 0.6281. Time: 0.03
+04/12/2022 09:44:53 - INFO - train -   epoch:19, iter: 768. loss: 0.3739. loss_u: 0.2815. loss_x: 0.0924. Mask:70.5573 . LR: 0.6300. Time: 0.03
+04/12/2022 09:45:41 - INFO - train -   epoch:19, iter: 896. loss: 0.3704. loss_u: 0.2818. loss_x: 0.0886. Mask:70.8917 . LR: 0.6330. Time: 0.03
+04/12/2022 09:46:29 - INFO - train -   epoch:19, iter: 1024. loss: 0.3683. loss_u: 0.2812. loss_x: 0.0871. Mask:71.0410 . LR: 0.6343. Time: 0.03
+04/12/2022 09:46:33 - INFO - train -   Epoch 19. Top1: 80.4412. Top5: 98.6765. best_acc: 80.4412 in epoch19
+04/12/2022 09:47:22 - INFO - train -   epoch:20, iter: 128. loss: 0.3593. loss_u: 0.2712. loss_x: 0.0881. Mask:69.2891 . LR: 0.6187. Time: 0.03
+04/12/2022 09:48:10 - INFO - train -   epoch:20, iter: 256. loss: 0.3636. loss_u: 0.2747. loss_x: 0.0888. Mask:70.9023 . LR: 0.6331. Time: 0.03
+04/12/2022 09:48:58 - INFO - train -   epoch:20, iter: 384. loss: 0.3664. loss_u: 0.2783. loss_x: 0.0881. Mask:71.1094 . LR: 0.6349. Time: 0.03
+04/12/2022 09:49:46 - INFO - train -   epoch:20, iter: 512. loss: 0.3677. loss_u: 0.2815. loss_x: 0.0863. Mask:71.3086 . LR: 0.6367. Time: 0.03
+04/12/2022 09:50:34 - INFO - train -   epoch:20, iter: 640. loss: 0.3709. loss_u: 0.2793. loss_x: 0.0916. Mask:70.4219 . LR: 0.6288. Time: 0.03
+04/12/2022 09:51:22 - INFO - train -   epoch:20, iter: 768. loss: 0.3725. loss_u: 0.2807. loss_x: 0.0918. Mask:70.4701 . LR: 0.6292. Time: 0.03
+04/12/2022 09:52:10 - INFO - train -   epoch:20, iter: 896. loss: 0.3764. loss_u: 0.2805. loss_x: 0.0960. Mask:70.0123 . LR: 0.6251. Time: 0.03
+04/12/2022 09:52:58 - INFO - train -   epoch:20, iter: 1024. loss: 0.3759. loss_u: 0.2813. loss_x: 0.0946. Mask:70.1318 . LR: 0.6262. Time: 0.03
+04/12/2022 09:53:02 - INFO - train -   Epoch 20. Top1: 77.7512. Top5: 98.4926. best_acc: 80.4412 in epoch19
+04/12/2022 09:53:52 - INFO - train -   epoch:21, iter: 128. loss: 0.3711. loss_u: 0.2736. loss_x: 0.0976. Mask:69.8438 . LR: 0.6236. Time: 0.03
+04/12/2022 09:54:40 - INFO - train -   epoch:21, iter: 256. loss: 0.3757. loss_u: 0.2779. loss_x: 0.0978. Mask:69.2031 . LR: 0.6179. Time: 0.03
+04/12/2022 09:55:28 - INFO - train -   epoch:21, iter: 384. loss: 0.3779. loss_u: 0.2788. loss_x: 0.0991. Mask:69.5807 . LR: 0.6213. Time: 0.03
+04/12/2022 09:56:16 - INFO - train -   epoch:21, iter: 512. loss: 0.3704. loss_u: 0.2804. loss_x: 0.0900. Mask:70.6660 . LR: 0.6309. Time: 0.03
+04/12/2022 09:57:03 - INFO - train -   epoch:21, iter: 640. loss: 0.3711. loss_u: 0.2839. loss_x: 0.0872. Mask:71.0203 . LR: 0.6341. Time: 0.03
+04/12/2022 09:57:52 - INFO - train -   epoch:21, iter: 768. loss: 0.3687. loss_u: 0.2830. loss_x: 0.0858. Mask:71.1198 . LR: 0.6350. Time: 0.03
+04/12/2022 09:58:40 - INFO - train -   epoch:21, iter: 896. loss: 0.3676. loss_u: 0.2824. loss_x: 0.0852. Mask:71.3069 . LR: 0.6367. Time: 0.03
+04/12/2022 09:59:28 - INFO - train -   epoch:21, iter: 1024. loss: 0.3661. loss_u: 0.2823. loss_x: 0.0838. Mask:71.4326 . LR: 0.6378. Time: 0.03
+04/12/2022 09:59:32 - INFO - train -   Epoch 21. Top1: 79.0257. Top5: 98.7316. best_acc: 80.4412 in epoch19
+04/12/2022 10:00:21 - INFO - train -   epoch:22, iter: 128. loss: 0.3645. loss_u: 0.2930. loss_x: 0.0715. Mask:73.7422 . LR: 0.6584. Time: 0.03
+04/12/2022 10:01:10 - INFO - train -   epoch:22, iter: 256. loss: 0.3640. loss_u: 0.2790. loss_x: 0.0850. Mask:71.7422 . LR: 0.6406. Time: 0.03
+04/12/2022 10:01:57 - INFO - train -   epoch:22, iter: 384. loss: 0.3643. loss_u: 0.2795. loss_x: 0.0848. Mask:71.9609 . LR: 0.6425. Time: 0.03
+04/12/2022 10:02:46 - INFO - train -   epoch:22, iter: 512. loss: 0.3665. loss_u: 0.2831. loss_x: 0.0834. Mask:72.4355 . LR: 0.6467. Time: 0.03
+04/12/2022 10:03:34 - INFO - train -   epoch:22, iter: 640. loss: 0.3645. loss_u: 0.2817. loss_x: 0.0829. Mask:72.3594 . LR: 0.6461. Time: 0.03
+04/12/2022 10:04:22 - INFO - train -   epoch:22, iter: 768. loss: 0.3678. loss_u: 0.2830. loss_x: 0.0848. Mask:72.3906 . LR: 0.6463. Time: 0.03
+04/12/2022 10:05:10 - INFO - train -   epoch:22, iter: 896. loss: 0.3687. loss_u: 0.2839. loss_x: 0.0848. Mask:72.4397 . LR: 0.6468. Time: 0.03
+04/12/2022 10:05:58 - INFO - train -   epoch:22, iter: 1024. loss: 0.3681. loss_u: 0.2838. loss_x: 0.0843. Mask:72.4775 . LR: 0.6471. Time: 0.03
+04/12/2022 10:06:02 - INFO - train -   Epoch 22. Top1: 79.9326. Top5: 98.8603. best_acc: 80.4412 in epoch19
+04/12/2022 10:06:51 - INFO - train -   epoch:23, iter: 128. loss: 0.3885. loss_u: 0.2769. loss_x: 0.1116. Mask:70.1172 . LR: 0.6260. Time: 0.03
+04/12/2022 10:07:39 - INFO - train -   epoch:23, iter: 256. loss: 0.3737. loss_u: 0.2802. loss_x: 0.0934. Mask:72.3359 . LR: 0.6459. Time: 0.03
+04/12/2022 10:08:27 - INFO - train -   epoch:23, iter: 384. loss: 0.3760. loss_u: 0.2799. loss_x: 0.0961. Mask:71.8281 . LR: 0.6413. Time: 0.03
+04/12/2022 10:09:15 - INFO - train -   epoch:23, iter: 512. loss: 0.3762. loss_u: 0.2777. loss_x: 0.0985. Mask:71.4805 . LR: 0.6382. Time: 0.03
+04/12/2022 10:10:03 - INFO - train -   epoch:23, iter: 640. loss: 0.3725. loss_u: 0.2792. loss_x: 0.0933. Mask:71.5953 . LR: 0.6392. Time: 0.03
+04/12/2022 10:10:51 - INFO - train -   epoch:23, iter: 768. loss: 0.3679. loss_u: 0.2794. loss_x: 0.0885. Mask:72.0039 . LR: 0.6429. Time: 0.03
+04/12/2022 10:11:39 - INFO - train -   epoch:23, iter: 896. loss: 0.3655. loss_u: 0.2791. loss_x: 0.0864. Mask:72.1406 . LR: 0.6441. Time: 0.03
+04/12/2022 10:12:26 - INFO - train -   epoch:23, iter: 1024. loss: 0.3649. loss_u: 0.2790. loss_x: 0.0858. Mask:72.2383 . LR: 0.6450. Time: 0.03
+04/12/2022 10:12:31 - INFO - train -   Epoch 23. Top1: 81.9975. Top5: 98.6213. best_acc: 81.9975 in epoch23
+04/12/2022 10:13:19 - INFO - train -   epoch:24, iter: 128. loss: 0.3594. loss_u: 0.2928. loss_x: 0.0666. Mask:74.1016 . LR: 0.6616. Time: 0.03
+04/12/2022 10:14:07 - INFO - train -   epoch:24, iter: 256. loss: 0.3593. loss_u: 0.2901. loss_x: 0.0692. Mask:74.2852 . LR: 0.6633. Time: 0.03
+04/12/2022 10:14:55 - INFO - train -   epoch:24, iter: 384. loss: 0.3609. loss_u: 0.2891. loss_x: 0.0717. Mask:74.2839 . LR: 0.6632. Time: 0.03
+04/12/2022 10:15:43 - INFO - train -   epoch:24, iter: 512. loss: 0.3586. loss_u: 0.2844. loss_x: 0.0742. Mask:74.0410 . LR: 0.6611. Time: 0.03
+04/12/2022 10:16:32 - INFO - train -   epoch:24, iter: 640. loss: 0.3639. loss_u: 0.2828. loss_x: 0.0810. Mask:73.5328 . LR: 0.6565. Time: 0.03
+04/12/2022 10:17:20 - INFO - train -   epoch:24, iter: 768. loss: 0.3639. loss_u: 0.2815. loss_x: 0.0824. Mask:73.2461 . LR: 0.6540. Time: 0.03
+04/12/2022 10:18:08 - INFO - train -   epoch:24, iter: 896. loss: 0.3603. loss_u: 0.2804. loss_x: 0.0799. Mask:73.4051 . LR: 0.6554. Time: 0.03
+04/12/2022 10:18:57 - INFO - train -   epoch:24, iter: 1024. loss: 0.3586. loss_u: 0.2794. loss_x: 0.0792. Mask:73.3350 . LR: 0.6548. Time: 0.03
+04/12/2022 10:19:01 - INFO - train -   Epoch 24. Top1: 78.6091. Top5: 98.5294. best_acc: 81.9975 in epoch23
+04/12/2022 10:19:50 - INFO - train -   epoch:25, iter: 128. loss: 0.3496. loss_u: 0.2986. loss_x: 0.0509. Mask:76.5547 . LR: 0.6835. Time: 0.03
+04/12/2022 10:20:38 - INFO - train -   epoch:25, iter: 256. loss: 0.3481. loss_u: 0.2835. loss_x: 0.0647. Mask:75.3438 . LR: 0.6727. Time: 0.03
+04/12/2022 10:21:26 - INFO - train -   epoch:25, iter: 384. loss: 0.3506. loss_u: 0.2803. loss_x: 0.0703. Mask:74.4036 . LR: 0.6643. Time: 0.03
+04/12/2022 10:22:14 - INFO - train -   epoch:25, iter: 512. loss: 0.3541. loss_u: 0.2814. loss_x: 0.0727. Mask:74.1895 . LR: 0.6624. Time: 0.03
+04/12/2022 10:23:01 - INFO - train -   epoch:25, iter: 640. loss: 0.3562. loss_u: 0.2818. loss_x: 0.0745. Mask:74.2031 . LR: 0.6625. Time: 0.03
+04/12/2022 10:23:49 - INFO - train -   epoch:25, iter: 768. loss: 0.3557. loss_u: 0.2789. loss_x: 0.0768. Mask:73.6042 . LR: 0.6572. Time: 0.03
+04/12/2022 10:24:38 - INFO - train -   epoch:25, iter: 896. loss: 0.3552. loss_u: 0.2797. loss_x: 0.0755. Mask:73.6998 . LR: 0.6580. Time: 0.03
+04/12/2022 10:25:26 - INFO - train -   epoch:25, iter: 1024. loss: 0.3550. loss_u: 0.2800. loss_x: 0.0749. Mask:73.5420 . LR: 0.6566. Time: 0.03
+04/12/2022 10:25:30 - INFO - train -   Epoch 25. Top1: 84.7794. Top5: 99.1728. best_acc: 84.7794 in epoch25
+04/12/2022 10:26:19 - INFO - train -   epoch:26, iter: 128. loss: 0.3683. loss_u: 0.2733. loss_x: 0.0950. Mask:72.0547 . LR: 0.6433. Time: 0.03
+04/12/2022 10:27:08 - INFO - train -   epoch:26, iter: 256. loss: 0.3701. loss_u: 0.2769. loss_x: 0.0932. Mask:72.7812 . LR: 0.6498. Time: 0.03
+04/12/2022 10:27:56 - INFO - train -   epoch:26, iter: 384. loss: 0.3664. loss_u: 0.2753. loss_x: 0.0911. Mask:72.5573 . LR: 0.6478. Time: 0.03
+04/12/2022 10:28:44 - INFO - train -   epoch:26, iter: 512. loss: 0.3651. loss_u: 0.2745. loss_x: 0.0906. Mask:72.5977 . LR: 0.6482. Time: 0.03
+04/12/2022 10:29:32 - INFO - train -   epoch:26, iter: 640. loss: 0.3591. loss_u: 0.2730. loss_x: 0.0862. Mask:72.5891 . LR: 0.6481. Time: 0.03
+04/12/2022 10:30:20 - INFO - train -   epoch:26, iter: 768. loss: 0.3624. loss_u: 0.2750. loss_x: 0.0874. Mask:72.4570 . LR: 0.6469. Time: 0.03
+04/12/2022 10:31:08 - INFO - train -   epoch:26, iter: 896. loss: 0.3612. loss_u: 0.2770. loss_x: 0.0842. Mask:72.6763 . LR: 0.6489. Time: 0.03
+04/12/2022 10:31:57 - INFO - train -   epoch:26, iter: 1024. loss: 0.3607. loss_u: 0.2782. loss_x: 0.0824. Mask:72.9932 . LR: 0.6517. Time: 0.03
+04/12/2022 10:32:01 - INFO - train -   Epoch 26. Top1: 81.3603. Top5: 99.2096. best_acc: 84.7794 in epoch25
+04/12/2022 10:32:49 - INFO - train -   epoch:27, iter: 128. loss: 0.3590. loss_u: 0.2718. loss_x: 0.0872. Mask:74.4609 . LR: 0.6648. Time: 0.03
+04/12/2022 10:33:37 - INFO - train -   epoch:27, iter: 256. loss: 0.3629. loss_u: 0.2765. loss_x: 0.0864. Mask:73.5703 . LR: 0.6569. Time: 0.03
+04/12/2022 10:34:25 - INFO - train -   epoch:27, iter: 384. loss: 0.3660. loss_u: 0.2801. loss_x: 0.0859. Mask:73.5156 . LR: 0.6564. Time: 0.03
+04/12/2022 10:35:13 - INFO - train -   epoch:27, iter: 512. loss: 0.3638. loss_u: 0.2812. loss_x: 0.0826. Mask:74.1738 . LR: 0.6623. Time: 0.03
+04/12/2022 10:36:01 - INFO - train -   epoch:27, iter: 640. loss: 0.3615. loss_u: 0.2806. loss_x: 0.0809. Mask:74.3375 . LR: 0.6637. Time: 0.03
+04/12/2022 10:36:50 - INFO - train -   epoch:27, iter: 768. loss: 0.3609. loss_u: 0.2795. loss_x: 0.0813. Mask:74.3971 . LR: 0.6643. Time: 0.03
+04/12/2022 10:37:38 - INFO - train -   epoch:27, iter: 896. loss: 0.3595. loss_u: 0.2785. loss_x: 0.0810. Mask:74.1473 . LR: 0.6620. Time: 0.03
+04/12/2022 10:38:27 - INFO - train -   epoch:27, iter: 1024. loss: 0.3563. loss_u: 0.2775. loss_x: 0.0788. Mask:74.1953 . LR: 0.6625. Time: 0.03
+04/12/2022 10:38:31 - INFO - train -   Epoch 27. Top1: 79.5282. Top5: 98.9338. best_acc: 84.7794 in epoch25
+04/12/2022 10:39:20 - INFO - train -   epoch:28, iter: 128. loss: 0.3681. loss_u: 0.2797. loss_x: 0.0884. Mask:73.7031 . LR: 0.6581. Time: 0.03
+04/12/2022 10:40:07 - INFO - train -   epoch:28, iter: 256. loss: 0.3611. loss_u: 0.2780. loss_x: 0.0832. Mask:73.9844 . LR: 0.6606. Time: 0.03
+04/12/2022 10:40:54 - INFO - train -   epoch:28, iter: 384. loss: 0.3589. loss_u: 0.2778. loss_x: 0.0811. Mask:74.0156 . LR: 0.6609. Time: 0.03
+04/12/2022 10:41:42 - INFO - train -   epoch:28, iter: 512. loss: 0.3660. loss_u: 0.2812. loss_x: 0.0849. Mask:74.0176 . LR: 0.6609. Time: 0.03
+04/12/2022 10:42:30 - INFO - train -   epoch:28, iter: 640. loss: 0.3678. loss_u: 0.2778. loss_x: 0.0900. Mask:73.5812 . LR: 0.6570. Time: 0.03
+04/12/2022 10:43:17 - INFO - train -   epoch:28, iter: 768. loss: 0.3611. loss_u: 0.2756. loss_x: 0.0855. Mask:73.8216 . LR: 0.6591. Time: 0.03
+04/12/2022 10:44:06 - INFO - train -   epoch:28, iter: 896. loss: 0.3593. loss_u: 0.2774. loss_x: 0.0820. Mask:74.2266 . LR: 0.6627. Time: 0.03
+04/12/2022 10:44:54 - INFO - train -   epoch:28, iter: 1024. loss: 0.3567. loss_u: 0.2776. loss_x: 0.0791. Mask:74.3887 . LR: 0.6642. Time: 0.03
+04/12/2022 10:44:58 - INFO - train -   Epoch 28. Top1: 76.8995. Top5: 98.7500. best_acc: 84.7794 in epoch25
+04/12/2022 10:45:47 - INFO - train -   epoch:29, iter: 128. loss: 0.3428. loss_u: 0.2735. loss_x: 0.0693. Mask:76.0391 . LR: 0.6789. Time: 0.03
+04/12/2022 10:46:35 - INFO - train -   epoch:29, iter: 256. loss: 0.3473. loss_u: 0.2788. loss_x: 0.0686. Mask:75.9297 . LR: 0.6779. Time: 0.03
+04/12/2022 10:47:24 - INFO - train -   epoch:29, iter: 384. loss: 0.3505. loss_u: 0.2781. loss_x: 0.0724. Mask:75.8021 . LR: 0.6768. Time: 0.03
+04/12/2022 10:48:12 - INFO - train -   epoch:29, iter: 512. loss: 0.3487. loss_u: 0.2782. loss_x: 0.0704. Mask:75.9336 . LR: 0.6780. Time: 0.03
+04/12/2022 10:49:00 - INFO - train -   epoch:29, iter: 640. loss: 0.3560. loss_u: 0.2784. loss_x: 0.0777. Mask:75.3250 . LR: 0.6725. Time: 0.03
+04/12/2022 10:49:49 - INFO - train -   epoch:29, iter: 768. loss: 0.3562. loss_u: 0.2778. loss_x: 0.0784. Mask:75.0052 . LR: 0.6697. Time: 0.03
+04/12/2022 10:50:37 - INFO - train -   epoch:29, iter: 896. loss: 0.3578. loss_u: 0.2799. loss_x: 0.0779. Mask:75.1685 . LR: 0.6711. Time: 0.03
+04/12/2022 10:51:25 - INFO - train -   epoch:29, iter: 1024. loss: 0.3553. loss_u: 0.2798. loss_x: 0.0755. Mask:75.2666 . LR: 0.6720. Time: 0.03
+04/12/2022 10:51:30 - INFO - train -   Epoch 29. Top1: 82.5674. Top5: 99.2647. best_acc: 84.7794 in epoch25
+04/12/2022 10:52:19 - INFO - train -   epoch:30, iter: 128. loss: 0.3486. loss_u: 0.2882. loss_x: 0.0605. Mask:76.3984 . LR: 0.6821. Time: 0.03
+04/12/2022 10:53:07 - INFO - train -   epoch:30, iter: 256. loss: 0.3577. loss_u: 0.2938. loss_x: 0.0639. Mask:75.7148 . LR: 0.6760. Time: 0.03
+04/12/2022 10:53:55 - INFO - train -   epoch:30, iter: 384. loss: 0.3543. loss_u: 0.2893. loss_x: 0.0650. Mask:75.6406 . LR: 0.6754. Time: 0.03
+04/12/2022 10:54:43 - INFO - train -   epoch:30, iter: 512. loss: 0.3433. loss_u: 0.2823. loss_x: 0.0610. Mask:75.4746 . LR: 0.6739. Time: 0.03
+04/12/2022 10:55:31 - INFO - train -   epoch:30, iter: 640. loss: 0.3422. loss_u: 0.2823. loss_x: 0.0599. Mask:75.9688 . LR: 0.6783. Time: 0.03
+04/12/2022 10:56:19 - INFO - train -   epoch:30, iter: 768. loss: 0.3418. loss_u: 0.2838. loss_x: 0.0580. Mask:76.4128 . LR: 0.6823. Time: 0.03
+04/12/2022 10:57:07 - INFO - train -   epoch:30, iter: 896. loss: 0.3414. loss_u: 0.2845. loss_x: 0.0568. Mask:76.8839 . LR: 0.6865. Time: 0.03
+04/12/2022 10:57:55 - INFO - train -   epoch:30, iter: 1024. loss: 0.3433. loss_u: 0.2842. loss_x: 0.0591. Mask:76.5957 . LR: 0.6839. Time: 0.03
+04/12/2022 10:57:59 - INFO - train -   Epoch 30. Top1: 79.0319. Top5: 99.2096. best_acc: 84.7794 in epoch25
+04/12/2022 10:58:48 - INFO - train -   epoch:31, iter: 128. loss: 0.3494. loss_u: 0.2713. loss_x: 0.0781. Mask:75.2266 . LR: 0.6717. Time: 0.03
+04/12/2022 10:59:36 - INFO - train -   epoch:31, iter: 256. loss: 0.3573. loss_u: 0.2772. loss_x: 0.0801. Mask:75.9297 . LR: 0.6779. Time: 0.03
+04/12/2022 11:00:23 - INFO - train -   epoch:31, iter: 384. loss: 0.3636. loss_u: 0.2765. loss_x: 0.0871. Mask:75.5755 . LR: 0.6748. Time: 0.03
+04/12/2022 11:01:11 - INFO - train -   epoch:31, iter: 512. loss: 0.3605. loss_u: 0.2771. loss_x: 0.0834. Mask:75.3047 . LR: 0.6724. Time: 0.03
+04/12/2022 11:01:59 - INFO - train -   epoch:31, iter: 640. loss: 0.3614. loss_u: 0.2770. loss_x: 0.0844. Mask:75.0328 . LR: 0.6699. Time: 0.03
+04/12/2022 11:02:47 - INFO - train -   epoch:31, iter: 768. loss: 0.3599. loss_u: 0.2769. loss_x: 0.0830. Mask:74.9727 . LR: 0.6694. Time: 0.03
+04/12/2022 11:03:35 - INFO - train -   epoch:31, iter: 896. loss: 0.3641. loss_u: 0.2784. loss_x: 0.0856. Mask:74.6953 . LR: 0.6669. Time: 0.03
+04/12/2022 11:04:23 - INFO - train -   epoch:31, iter: 1024. loss: 0.3620. loss_u: 0.2786. loss_x: 0.0834. Mask:74.6426 . LR: 0.6665. Time: 0.03
+04/12/2022 11:04:27 - INFO - train -   Epoch 31. Top1: 82.5735. Top5: 99.1544. best_acc: 84.7794 in epoch25
+04/12/2022 11:05:16 - INFO - train -   epoch:32, iter: 128. loss: 0.3578. loss_u: 0.2640. loss_x: 0.0938. Mask:75.7734 . LR: 0.6765. Time: 0.03
+04/12/2022 11:06:05 - INFO - train -   epoch:32, iter: 256. loss: 0.3486. loss_u: 0.2733. loss_x: 0.0752. Mask:75.9258 . LR: 0.6779. Time: 0.03
+04/12/2022 11:06:53 - INFO - train -   epoch:32, iter: 384. loss: 0.3444. loss_u: 0.2766. loss_x: 0.0678. Mask:76.3958 . LR: 0.6821. Time: 0.03
+04/12/2022 11:07:41 - INFO - train -   epoch:32, iter: 512. loss: 0.3497. loss_u: 0.2710. loss_x: 0.0787. Mask:75.1660 . LR: 0.6711. Time: 0.03
+04/12/2022 11:08:30 - INFO - train -   epoch:32, iter: 640. loss: 0.3512. loss_u: 0.2737. loss_x: 0.0775. Mask:75.4344 . LR: 0.6735. Time: 0.03
+04/12/2022 11:09:18 - INFO - train -   epoch:32, iter: 768. loss: 0.3488. loss_u: 0.2731. loss_x: 0.0757. Mask:75.6055 . LR: 0.6750. Time: 0.03
+04/12/2022 11:10:06 - INFO - train -   epoch:32, iter: 896. loss: 0.3473. loss_u: 0.2736. loss_x: 0.0737. Mask:75.6730 . LR: 0.6757. Time: 0.03
+04/12/2022 11:10:54 - INFO - train -   epoch:32, iter: 1024. loss: 0.3440. loss_u: 0.2748. loss_x: 0.0692. Mask:76.1484 . LR: 0.6799. Time: 0.03
+04/12/2022 11:10:58 - INFO - train -   Epoch 32. Top1: 85.7414. Top5: 99.5588. best_acc: 85.7414 in epoch32
+04/12/2022 11:11:48 - INFO - train -   epoch:33, iter: 128. loss: 0.3311. loss_u: 0.2722. loss_x: 0.0590. Mask:78.1328 . LR: 0.6976. Time: 0.03
+04/12/2022 11:12:36 - INFO - train -   epoch:33, iter: 256. loss: 0.3389. loss_u: 0.2779. loss_x: 0.0610. Mask:78.5352 . LR: 0.7012. Time: 0.03
+04/12/2022 11:13:24 - INFO - train -   epoch:33, iter: 384. loss: 0.3441. loss_u: 0.2781. loss_x: 0.0660. Mask:78.0547 . LR: 0.6969. Time: 0.03
+04/12/2022 11:14:13 - INFO - train -   epoch:33, iter: 512. loss: 0.3495. loss_u: 0.2795. loss_x: 0.0700. Mask:77.4961 . LR: 0.6919. Time: 0.03
+04/12/2022 11:15:01 - INFO - train -   epoch:33, iter: 640. loss: 0.3498. loss_u: 0.2797. loss_x: 0.0701. Mask:77.2609 . LR: 0.6898. Time: 0.03
+04/12/2022 11:15:49 - INFO - train -   epoch:33, iter: 768. loss: 0.3485. loss_u: 0.2792. loss_x: 0.0692. Mask:77.3073 . LR: 0.6902. Time: 0.03
+04/12/2022 11:16:37 - INFO - train -   epoch:33, iter: 896. loss: 0.3502. loss_u: 0.2796. loss_x: 0.0706. Mask:77.4208 . LR: 0.6913. Time: 0.03
+04/12/2022 11:17:26 - INFO - train -   epoch:33, iter: 1024. loss: 0.3484. loss_u: 0.2783. loss_x: 0.0702. Mask:77.3457 . LR: 0.6906. Time: 0.03
+04/12/2022 11:17:30 - INFO - train -   Epoch 33. Top1: 78.7561. Top5: 99.3566. best_acc: 85.7414 in epoch32
+04/12/2022 11:18:18 - INFO - train -   epoch:34, iter: 128. loss: 0.3790. loss_u: 0.2908. loss_x: 0.0882. Mask:75.4141 . LR: 0.6733. Time: 0.03
+04/12/2022 11:19:06 - INFO - train -   epoch:34, iter: 256. loss: 0.3646. loss_u: 0.2855. loss_x: 0.0790. Mask:75.6758 . LR: 0.6757. Time: 0.03
+04/12/2022 11:19:54 - INFO - train -   epoch:34, iter: 384. loss: 0.3592. loss_u: 0.2839. loss_x: 0.0753. Mask:76.0104 . LR: 0.6787. Time: 0.03
+04/12/2022 11:20:42 - INFO - train -   epoch:34, iter: 512. loss: 0.3595. loss_u: 0.2865. loss_x: 0.0731. Mask:76.0254 . LR: 0.6788. Time: 0.03
+04/12/2022 11:21:30 - INFO - train -   epoch:34, iter: 640. loss: 0.3560. loss_u: 0.2862. loss_x: 0.0699. Mask:76.3063 . LR: 0.6813. Time: 0.03
+04/12/2022 11:22:19 - INFO - train -   epoch:34, iter: 768. loss: 0.3537. loss_u: 0.2847. loss_x: 0.0689. Mask:76.7214 . LR: 0.6850. Time: 0.03
+04/12/2022 11:23:07 - INFO - train -   epoch:34, iter: 896. loss: 0.3504. loss_u: 0.2826. loss_x: 0.0678. Mask:77.0413 . LR: 0.6879. Time: 0.03
+04/12/2022 11:23:55 - INFO - train -   epoch:34, iter: 1024. loss: 0.3478. loss_u: 0.2813. loss_x: 0.0666. Mask:77.1045 . LR: 0.6884. Time: 0.03
+04/12/2022 11:23:59 - INFO - train -   Epoch 34. Top1: 84.7917. Top5: 99.3015. best_acc: 85.7414 in epoch32
+04/12/2022 11:24:48 - INFO - train -   epoch:35, iter: 128. loss: 0.3452. loss_u: 0.2656. loss_x: 0.0796. Mask:76.4531 . LR: 0.6826. Time: 0.03
+04/12/2022 11:25:36 - INFO - train -   epoch:35, iter: 256. loss: 0.3470. loss_u: 0.2737. loss_x: 0.0733. Mask:77.6836 . LR: 0.6936. Time: 0.03
+04/12/2022 11:26:24 - INFO - train -   epoch:35, iter: 384. loss: 0.3487. loss_u: 0.2770. loss_x: 0.0717. Mask:77.8620 . LR: 0.6952. Time: 0.03
+04/12/2022 11:27:12 - INFO - train -   epoch:35, iter: 512. loss: 0.3502. loss_u: 0.2750. loss_x: 0.0752. Mask:77.0059 . LR: 0.6876. Time: 0.03
+04/12/2022 11:27:59 - INFO - train -   epoch:35, iter: 640. loss: 0.3491. loss_u: 0.2742. loss_x: 0.0749. Mask:76.7547 . LR: 0.6853. Time: 0.03
+04/12/2022 11:28:48 - INFO - train -   epoch:35, iter: 768. loss: 0.3490. loss_u: 0.2755. loss_x: 0.0735. Mask:76.9154 . LR: 0.6867. Time: 0.03
+04/12/2022 11:29:36 - INFO - train -   epoch:35, iter: 896. loss: 0.3476. loss_u: 0.2771. loss_x: 0.0705. Mask:77.2902 . LR: 0.6901. Time: 0.03
+04/12/2022 11:30:25 - INFO - train -   epoch:35, iter: 1024. loss: 0.3463. loss_u: 0.2756. loss_x: 0.0707. Mask:77.4111 . LR: 0.6912. Time: 0.03
+04/12/2022 11:30:29 - INFO - train -   Epoch 35. Top1: 83.5907. Top5: 99.2279. best_acc: 85.7414 in epoch32
+04/12/2022 11:31:17 - INFO - train -   epoch:36, iter: 128. loss: 0.3447. loss_u: 0.2827. loss_x: 0.0619. Mask:80.7500 . LR: 0.7210. Time: 0.03
+04/12/2022 11:32:05 - INFO - train -   epoch:36, iter: 256. loss: 0.3418. loss_u: 0.2820. loss_x: 0.0597. Mask:79.5547 . LR: 0.7103. Time: 0.03
+04/12/2022 11:32:53 - INFO - train -   epoch:36, iter: 384. loss: 0.3378. loss_u: 0.2813. loss_x: 0.0565. Mask:79.9115 . LR: 0.7135. Time: 0.03
+04/12/2022 11:33:40 - INFO - train -   epoch:36, iter: 512. loss: 0.3419. loss_u: 0.2838. loss_x: 0.0581. Mask:79.3223 . LR: 0.7082. Time: 0.03
+04/12/2022 11:34:28 - INFO - train -   epoch:36, iter: 640. loss: 0.3405. loss_u: 0.2826. loss_x: 0.0579. Mask:79.2969 . LR: 0.7080. Time: 0.03
+04/12/2022 11:35:15 - INFO - train -   epoch:36, iter: 768. loss: 0.3396. loss_u: 0.2795. loss_x: 0.0602. Mask:79.0182 . LR: 0.7055. Time: 0.03
+04/12/2022 11:36:04 - INFO - train -   epoch:36, iter: 896. loss: 0.3388. loss_u: 0.2794. loss_x: 0.0594. Mask:79.1629 . LR: 0.7068. Time: 0.03
+04/12/2022 11:36:51 - INFO - train -   epoch:36, iter: 1024. loss: 0.3358. loss_u: 0.2776. loss_x: 0.0582. Mask:79.5117 . LR: 0.7099. Time: 0.03
+04/12/2022 11:36:55 - INFO - train -   Epoch 36. Top1: 85.7659. Top5: 99.3566. best_acc: 85.7659 in epoch36
+04/12/2022 11:37:45 - INFO - train -   epoch:37, iter: 128. loss: 0.3383. loss_u: 0.2868. loss_x: 0.0515. Mask:80.7812 . LR: 0.7213. Time: 0.03
+04/12/2022 11:38:33 - INFO - train -   epoch:37, iter: 256. loss: 0.3464. loss_u: 0.2805. loss_x: 0.0659. Mask:79.1172 . LR: 0.7064. Time: 0.03
+04/12/2022 11:39:21 - INFO - train -   epoch:37, iter: 384. loss: 0.3469. loss_u: 0.2793. loss_x: 0.0676. Mask:78.6771 . LR: 0.7025. Time: 0.03
+04/12/2022 11:40:09 - INFO - train -   epoch:37, iter: 512. loss: 0.3416. loss_u: 0.2781. loss_x: 0.0635. Mask:79.4316 . LR: 0.7092. Time: 0.03
+04/12/2022 11:40:57 - INFO - train -   epoch:37, iter: 640. loss: 0.3429. loss_u: 0.2800. loss_x: 0.0629. Mask:79.5406 . LR: 0.7102. Time: 0.03
+04/12/2022 11:41:45 - INFO - train -   epoch:37, iter: 768. loss: 0.3418. loss_u: 0.2781. loss_x: 0.0637. Mask:79.1875 . LR: 0.7070. Time: 0.03
+04/12/2022 11:42:33 - INFO - train -   epoch:37, iter: 896. loss: 0.3407. loss_u: 0.2768. loss_x: 0.0638. Mask:79.0491 . LR: 0.7058. Time: 0.03
+04/12/2022 11:43:21 - INFO - train -   epoch:37, iter: 1024. loss: 0.3420. loss_u: 0.2770. loss_x: 0.0650. Mask:79.1328 . LR: 0.7065. Time: 0.03
+04/12/2022 11:43:25 - INFO - train -   Epoch 37. Top1: 75.3676. Top5: 98.6397. best_acc: 85.7659 in epoch36
+04/12/2022 11:44:14 - INFO - train -   epoch:38, iter: 128. loss: 0.3661. loss_u: 0.2761. loss_x: 0.0900. Mask:74.9844 . LR: 0.6695. Time: 0.03
+04/12/2022 11:45:02 - INFO - train -   epoch:38, iter: 256. loss: 0.3726. loss_u: 0.2771. loss_x: 0.0954. Mask:76.5703 . LR: 0.6837. Time: 0.03
+04/12/2022 11:45:50 - INFO - train -   epoch:38, iter: 384. loss: 0.3840. loss_u: 0.2717. loss_x: 0.1123. Mask:73.7370 . LR: 0.6584. Time: 0.03
+04/12/2022 11:46:38 - INFO - train -   epoch:38, iter: 512. loss: 0.3787. loss_u: 0.2703. loss_x: 0.1083. Mask:74.2344 . LR: 0.6628. Time: 0.03
+04/12/2022 11:47:26 - INFO - train -   epoch:38, iter: 640. loss: 0.3730. loss_u: 0.2715. loss_x: 0.1015. Mask:74.3922 . LR: 0.6642. Time: 0.03
+04/12/2022 11:48:14 - INFO - train -   epoch:38, iter: 768. loss: 0.3704. loss_u: 0.2722. loss_x: 0.0982. Mask:74.6784 . LR: 0.6668. Time: 0.03
+04/12/2022 11:49:02 - INFO - train -   epoch:38, iter: 896. loss: 0.3657. loss_u: 0.2740. loss_x: 0.0917. Mask:75.2935 . LR: 0.6723. Time: 0.03
+04/12/2022 11:49:50 - INFO - train -   epoch:38, iter: 1024. loss: 0.3617. loss_u: 0.2744. loss_x: 0.0873. Mask:75.8955 . LR: 0.6776. Time: 0.03
+04/12/2022 11:49:54 - INFO - train -   Epoch 38. Top1: 85.9743. Top5: 99.3382. best_acc: 85.9743 in epoch38
+04/12/2022 11:50:44 - INFO - train -   epoch:39, iter: 128. loss: 0.3462. loss_u: 0.2883. loss_x: 0.0578. Mask:79.5938 . LR: 0.7107. Time: 0.03
+04/12/2022 11:51:32 - INFO - train -   epoch:39, iter: 256. loss: 0.3292. loss_u: 0.2752. loss_x: 0.0540. Mask:79.9961 . LR: 0.7143. Time: 0.03
+04/12/2022 11:52:21 - INFO - train -   epoch:39, iter: 384. loss: 0.3344. loss_u: 0.2809. loss_x: 0.0534. Mask:80.6094 . LR: 0.7197. Time: 0.03
+04/12/2022 11:53:09 - INFO - train -   epoch:39, iter: 512. loss: 0.3358. loss_u: 0.2789. loss_x: 0.0569. Mask:80.1445 . LR: 0.7156. Time: 0.03
+04/12/2022 11:53:58 - INFO - train -   epoch:39, iter: 640. loss: 0.3408. loss_u: 0.2813. loss_x: 0.0595. Mask:80.1234 . LR: 0.7154. Time: 0.03
+04/12/2022 11:54:46 - INFO - train -   epoch:39, iter: 768. loss: 0.3361. loss_u: 0.2786. loss_x: 0.0575. Mask:80.2760 . LR: 0.7168. Time: 0.03
+04/12/2022 11:55:34 - INFO - train -   epoch:39, iter: 896. loss: 0.3346. loss_u: 0.2784. loss_x: 0.0562. Mask:80.3929 . LR: 0.7178. Time: 0.03
+04/12/2022 11:56:22 - INFO - train -   epoch:39, iter: 1024. loss: 0.3356. loss_u: 0.2800. loss_x: 0.0556. Mask:80.4727 . LR: 0.7185. Time: 0.03
+04/12/2022 11:56:26 - INFO - train -   Epoch 39. Top1: 85.1287. Top5: 99.5956. best_acc: 85.9743 in epoch38
+04/12/2022 11:57:15 - INFO - train -   epoch:40, iter: 128. loss: 0.3216. loss_u: 0.2808. loss_x: 0.0408. Mask:83.0781 . LR: 0.7418. Time: 0.03
+04/12/2022 11:58:03 - INFO - train -   epoch:40, iter: 256. loss: 0.3305. loss_u: 0.2844. loss_x: 0.0461. Mask:81.9688 . LR: 0.7319. Time: 0.03
+04/12/2022 11:58:51 - INFO - train -   epoch:40, iter: 384. loss: 0.3293. loss_u: 0.2831. loss_x: 0.0462. Mask:81.3620 . LR: 0.7264. Time: 0.03
+04/12/2022 11:59:39 - INFO - train -   epoch:40, iter: 512. loss: 0.3327. loss_u: 0.2824. loss_x: 0.0503. Mask:81.1289 . LR: 0.7244. Time: 0.03
+04/12/2022 12:00:28 - INFO - train -   epoch:40, iter: 640. loss: 0.3292. loss_u: 0.2800. loss_x: 0.0492. Mask:81.0984 . LR: 0.7241. Time: 0.03
+04/12/2022 12:01:16 - INFO - train -   epoch:40, iter: 768. loss: 0.3303. loss_u: 0.2791. loss_x: 0.0512. Mask:80.9036 . LR: 0.7224. Time: 0.03
+04/12/2022 12:02:05 - INFO - train -   epoch:40, iter: 896. loss: 0.3298. loss_u: 0.2783. loss_x: 0.0515. Mask:80.9096 . LR: 0.7224. Time: 0.03
+04/12/2022 12:02:53 - INFO - train -   epoch:40, iter: 1024. loss: 0.3317. loss_u: 0.2787. loss_x: 0.0530. Mask:80.7666 . LR: 0.7211. Time: 0.03
+04/12/2022 12:02:57 - INFO - train -   Epoch 40. Top1: 83.9583. Top5: 99.3934. best_acc: 85.9743 in epoch38
+04/12/2022 12:03:47 - INFO - train -   epoch:41, iter: 128. loss: 0.3367. loss_u: 0.2687. loss_x: 0.0679. Mask:77.9766 . LR: 0.6962. Time: 0.03
+04/12/2022 12:04:35 - INFO - train -   epoch:41, iter: 256. loss: 0.3329. loss_u: 0.2685. loss_x: 0.0644. Mask:78.5312 . LR: 0.7012. Time: 0.03
+04/12/2022 12:05:23 - INFO - train -   epoch:41, iter: 384. loss: 0.3287. loss_u: 0.2709. loss_x: 0.0578. Mask:79.5495 . LR: 0.7103. Time: 0.03
+04/12/2022 12:06:11 - INFO - train -   epoch:41, iter: 512. loss: 0.3262. loss_u: 0.2728. loss_x: 0.0535. Mask:80.5273 . LR: 0.7190. Time: 0.03
+04/12/2022 12:06:59 - INFO - train -   epoch:41, iter: 640. loss: 0.3267. loss_u: 0.2747. loss_x: 0.0520. Mask:80.9813 . LR: 0.7230. Time: 0.03
+04/12/2022 12:07:47 - INFO - train -   epoch:41, iter: 768. loss: 0.3299. loss_u: 0.2757. loss_x: 0.0542. Mask:80.5990 . LR: 0.7196. Time: 0.03
+04/12/2022 12:08:35 - INFO - train -   epoch:41, iter: 896. loss: 0.3293. loss_u: 0.2750. loss_x: 0.0542. Mask:80.4364 . LR: 0.7182. Time: 0.03
+04/12/2022 12:09:23 - INFO - train -   epoch:41, iter: 1024. loss: 0.3331. loss_u: 0.2757. loss_x: 0.0574. Mask:80.2568 . LR: 0.7166. Time: 0.03
+04/12/2022 12:09:27 - INFO - train -   Epoch 41. Top1: 86.6238. Top5: 99.5588. best_acc: 86.6238 in epoch41
+04/12/2022 12:10:16 - INFO - train -   epoch:42, iter: 128. loss: 0.3452. loss_u: 0.2713. loss_x: 0.0739. Mask:78.9297 . LR: 0.7047. Time: 0.03
+04/12/2022 12:11:05 - INFO - train -   epoch:42, iter: 256. loss: 0.3357. loss_u: 0.2748. loss_x: 0.0610. Mask:80.4570 . LR: 0.7184. Time: 0.03
+04/12/2022 12:11:53 - INFO - train -   epoch:42, iter: 384. loss: 0.3342. loss_u: 0.2737. loss_x: 0.0605. Mask:80.1094 . LR: 0.7153. Time: 0.03
+04/12/2022 12:12:41 - INFO - train -   epoch:42, iter: 512. loss: 0.3404. loss_u: 0.2739. loss_x: 0.0664. Mask:79.5078 . LR: 0.7099. Time: 0.03
+04/12/2022 12:13:29 - INFO - train -   epoch:42, iter: 640. loss: 0.3422. loss_u: 0.2759. loss_x: 0.0663. Mask:79.2188 . LR: 0.7073. Time: 0.03
+04/12/2022 12:14:17 - INFO - train -   epoch:42, iter: 768. loss: 0.3407. loss_u: 0.2760. loss_x: 0.0646. Mask:79.3385 . LR: 0.7084. Time: 0.03
+04/12/2022 12:15:06 - INFO - train -   epoch:42, iter: 896. loss: 0.3395. loss_u: 0.2756. loss_x: 0.0639. Mask:79.4085 . LR: 0.7090. Time: 0.03
+04/12/2022 12:15:54 - INFO - train -   epoch:42, iter: 1024. loss: 0.3404. loss_u: 0.2752. loss_x: 0.0652. Mask:79.1895 . LR: 0.7070. Time: 0.03
+04/12/2022 12:15:58 - INFO - train -   Epoch 42. Top1: 85.3615. Top5: 99.0074. best_acc: 86.6238 in epoch41
+04/12/2022 12:16:47 - INFO - train -   epoch:43, iter: 128. loss: 0.3519. loss_u: 0.2919. loss_x: 0.0600. Mask:79.8672 . LR: 0.7131. Time: 0.03
+04/12/2022 12:17:34 - INFO - train -   epoch:43, iter: 256. loss: 0.3298. loss_u: 0.2808. loss_x: 0.0489. Mask:81.4531 . LR: 0.7273. Time: 0.03
+04/12/2022 12:18:21 - INFO - train -   epoch:43, iter: 384. loss: 0.3286. loss_u: 0.2794. loss_x: 0.0492. Mask:81.6667 . LR: 0.7292. Time: 0.03
+04/12/2022 12:19:09 - INFO - train -   epoch:43, iter: 512. loss: 0.3314. loss_u: 0.2835. loss_x: 0.0479. Mask:81.7129 . LR: 0.7296. Time: 0.03
+04/12/2022 12:19:57 - INFO - train -   epoch:43, iter: 640. loss: 0.3411. loss_u: 0.2826. loss_x: 0.0585. Mask:80.5625 . LR: 0.7193. Time: 0.03
+04/12/2022 12:20:45 - INFO - train -   epoch:43, iter: 768. loss: 0.3396. loss_u: 0.2791. loss_x: 0.0605. Mask:80.0195 . LR: 0.7145. Time: 0.03
+04/12/2022 12:21:32 - INFO - train -   epoch:43, iter: 896. loss: 0.3362. loss_u: 0.2783. loss_x: 0.0580. Mask:80.1629 . LR: 0.7157. Time: 0.03
+04/12/2022 12:22:20 - INFO - train -   epoch:43, iter: 1024. loss: 0.3354. loss_u: 0.2769. loss_x: 0.0585. Mask:80.2910 . LR: 0.7169. Time: 0.03
+04/12/2022 12:22:24 - INFO - train -   Epoch 43. Top1: 86.8811. Top5: 99.5956. best_acc: 86.8811 in epoch43
+04/12/2022 12:23:14 - INFO - train -   epoch:44, iter: 128. loss: 0.3430. loss_u: 0.2883. loss_x: 0.0547. Mask:79.9062 . LR: 0.7134. Time: 0.03
+04/12/2022 12:24:02 - INFO - train -   epoch:44, iter: 256. loss: 0.3380. loss_u: 0.2802. loss_x: 0.0579. Mask:80.0078 . LR: 0.7144. Time: 0.03
+04/12/2022 12:24:50 - INFO - train -   epoch:44, iter: 384. loss: 0.3342. loss_u: 0.2789. loss_x: 0.0553. Mask:80.2604 . LR: 0.7166. Time: 0.03
+04/12/2022 12:25:38 - INFO - train -   epoch:44, iter: 512. loss: 0.3373. loss_u: 0.2801. loss_x: 0.0572. Mask:80.1738 . LR: 0.7158. Time: 0.03
+04/12/2022 12:26:25 - INFO - train -   epoch:44, iter: 640. loss: 0.3339. loss_u: 0.2764. loss_x: 0.0574. Mask:80.1922 . LR: 0.7160. Time: 0.03
+04/12/2022 12:27:13 - INFO - train -   epoch:44, iter: 768. loss: 0.3321. loss_u: 0.2756. loss_x: 0.0565. Mask:80.1901 . LR: 0.7160. Time: 0.03
+04/12/2022 12:28:01 - INFO - train -   epoch:44, iter: 896. loss: 0.3296. loss_u: 0.2756. loss_x: 0.0541. Mask:80.6317 . LR: 0.7199. Time: 0.03
+04/12/2022 12:28:48 - INFO - train -   epoch:44, iter: 1024. loss: 0.3286. loss_u: 0.2755. loss_x: 0.0531. Mask:80.7178 . LR: 0.7207. Time: 0.03
+04/12/2022 12:28:52 - INFO - train -   Epoch 44. Top1: 86.3419. Top5: 99.6507. best_acc: 86.8811 in epoch43
+04/12/2022 12:29:40 - INFO - train -   epoch:45, iter: 128. loss: 0.3308. loss_u: 0.2768. loss_x: 0.0540. Mask:81.3438 . LR: 0.7263. Time: 0.03
+04/12/2022 12:30:27 - INFO - train -   epoch:45, iter: 256. loss: 0.3342. loss_u: 0.2780. loss_x: 0.0562. Mask:80.8867 . LR: 0.7222. Time: 0.03
+04/12/2022 12:31:14 - INFO - train -   epoch:45, iter: 384. loss: 0.3412. loss_u: 0.2747. loss_x: 0.0665. Mask:80.1797 . LR: 0.7159. Time: 0.03
+04/12/2022 12:32:02 - INFO - train -   epoch:45, iter: 512. loss: 0.3392. loss_u: 0.2746. loss_x: 0.0647. Mask:80.1348 . LR: 0.7155. Time: 0.03
+04/12/2022 12:32:49 - INFO - train -   epoch:45, iter: 640. loss: 0.3359. loss_u: 0.2764. loss_x: 0.0595. Mask:80.4609 . LR: 0.7184. Time: 0.03
+04/12/2022 12:33:36 - INFO - train -   epoch:45, iter: 768. loss: 0.3335. loss_u: 0.2751. loss_x: 0.0584. Mask:80.6107 . LR: 0.7197. Time: 0.03
+04/12/2022 12:34:24 - INFO - train -   epoch:45, iter: 896. loss: 0.3296. loss_u: 0.2734. loss_x: 0.0562. Mask:80.9275 . LR: 0.7226. Time: 0.03
+04/12/2022 12:35:12 - INFO - train -   epoch:45, iter: 1024. loss: 0.3308. loss_u: 0.2740. loss_x: 0.0568. Mask:80.9990 . LR: 0.7232. Time: 0.03
+04/12/2022 12:35:16 - INFO - train -   Epoch 45. Top1: 85.3922. Top5: 99.2463. best_acc: 86.8811 in epoch43
+04/12/2022 12:36:05 - INFO - train -   epoch:46, iter: 128. loss: 0.3582. loss_u: 0.2777. loss_x: 0.0805. Mask:79.9922 . LR: 0.7142. Time: 0.03
+04/12/2022 12:36:52 - INFO - train -   epoch:46, iter: 256. loss: 0.3429. loss_u: 0.2821. loss_x: 0.0608. Mask:80.6602 . LR: 0.7202. Time: 0.03
+04/12/2022 12:37:40 - INFO - train -   epoch:46, iter: 384. loss: 0.3410. loss_u: 0.2795. loss_x: 0.0615. Mask:80.5573 . LR: 0.7193. Time: 0.03
+04/12/2022 12:38:27 - INFO - train -   epoch:46, iter: 512. loss: 0.3353. loss_u: 0.2772. loss_x: 0.0581. Mask:80.6172 . LR: 0.7198. Time: 0.03
+04/12/2022 12:39:15 - INFO - train -   epoch:46, iter: 640. loss: 0.3326. loss_u: 0.2772. loss_x: 0.0555. Mask:81.1219 . LR: 0.7243. Time: 0.03
+04/12/2022 12:40:03 - INFO - train -   epoch:46, iter: 768. loss: 0.3318. loss_u: 0.2777. loss_x: 0.0541. Mask:81.2604 . LR: 0.7255. Time: 0.03
+04/12/2022 12:40:50 - INFO - train -   epoch:46, iter: 896. loss: 0.3295. loss_u: 0.2759. loss_x: 0.0536. Mask:81.2690 . LR: 0.7256. Time: 0.03
+04/12/2022 12:41:38 - INFO - train -   epoch:46, iter: 1024. loss: 0.3295. loss_u: 0.2754. loss_x: 0.0541. Mask:81.2305 . LR: 0.7253. Time: 0.03
+04/12/2022 12:41:42 - INFO - train -   Epoch 46. Top1: 86.1336. Top5: 99.4301. best_acc: 86.8811 in epoch43
+04/12/2022 12:42:31 - INFO - train -   epoch:47, iter: 128. loss: 0.3340. loss_u: 0.2688. loss_x: 0.0652. Mask:80.7031 . LR: 0.7206. Time: 0.03
+04/12/2022 12:43:19 - INFO - train -   epoch:47, iter: 256. loss: 0.3316. loss_u: 0.2741. loss_x: 0.0574. Mask:81.6289 . LR: 0.7288. Time: 0.03
+04/12/2022 12:44:07 - INFO - train -   epoch:47, iter: 384. loss: 0.3275. loss_u: 0.2742. loss_x: 0.0533. Mask:81.8307 . LR: 0.7306. Time: 0.03
+04/12/2022 12:44:55 - INFO - train -   epoch:47, iter: 512. loss: 0.3290. loss_u: 0.2774. loss_x: 0.0516. Mask:82.4590 . LR: 0.7362. Time: 0.03
+04/12/2022 12:45:43 - INFO - train -   epoch:47, iter: 640. loss: 0.3272. loss_u: 0.2748. loss_x: 0.0525. Mask:82.1063 . LR: 0.7331. Time: 0.03
+04/12/2022 12:46:31 - INFO - train -   epoch:47, iter: 768. loss: 0.3287. loss_u: 0.2743. loss_x: 0.0544. Mask:81.5768 . LR: 0.7284. Time: 0.03
+04/12/2022 12:47:19 - INFO - train -   epoch:47, iter: 896. loss: 0.3265. loss_u: 0.2743. loss_x: 0.0521. Mask:81.5346 . LR: 0.7280. Time: 0.03
+04/12/2022 12:48:07 - INFO - train -   epoch:47, iter: 1024. loss: 0.3234. loss_u: 0.2738. loss_x: 0.0496. Mask:81.6885 . LR: 0.7294. Time: 0.03
+04/12/2022 12:48:11 - INFO - train -   Epoch 47. Top1: 88.4007. Top5: 99.4853. best_acc: 88.4007 in epoch47
+04/12/2022 12:49:00 - INFO - train -   epoch:48, iter: 128. loss: 0.3382. loss_u: 0.2935. loss_x: 0.0447. Mask:84.7656 . LR: 0.7568. Time: 0.03
+04/12/2022 12:49:48 - INFO - train -   epoch:48, iter: 256. loss: 0.3364. loss_u: 0.2881. loss_x: 0.0483. Mask:83.3984 . LR: 0.7446. Time: 0.03
+04/12/2022 12:50:36 - INFO - train -   epoch:48, iter: 384. loss: 0.3331. loss_u: 0.2818. loss_x: 0.0512. Mask:82.3073 . LR: 0.7349. Time: 0.03
+04/12/2022 12:51:24 - INFO - train -   epoch:48, iter: 512. loss: 0.3281. loss_u: 0.2822. loss_x: 0.0459. Mask:82.6387 . LR: 0.7378. Time: 0.03
+04/12/2022 12:52:12 - INFO - train -   epoch:48, iter: 640. loss: 0.3272. loss_u: 0.2793. loss_x: 0.0480. Mask:82.7156 . LR: 0.7385. Time: 0.03
+04/12/2022 12:53:01 - INFO - train -   epoch:48, iter: 768. loss: 0.3287. loss_u: 0.2784. loss_x: 0.0503. Mask:82.6810 . LR: 0.7382. Time: 0.03
+04/12/2022 12:53:49 - INFO - train -   epoch:48, iter: 896. loss: 0.3320. loss_u: 0.2784. loss_x: 0.0537. Mask:82.0647 . LR: 0.7327. Time: 0.03
+04/12/2022 12:54:37 - INFO - train -   epoch:48, iter: 1024. loss: 0.3286. loss_u: 0.2769. loss_x: 0.0517. Mask:81.9248 . LR: 0.7315. Time: 0.03
+04/12/2022 12:54:42 - INFO - train -   Epoch 48. Top1: 83.0147. Top5: 99.4118. best_acc: 88.4007 in epoch47
+04/12/2022 12:55:30 - INFO - train -   epoch:49, iter: 128. loss: 0.3365. loss_u: 0.2673. loss_x: 0.0693. Mask:81.2188 . LR: 0.7252. Time: 0.03
+04/12/2022 12:56:18 - INFO - train -   epoch:49, iter: 256. loss: 0.3423. loss_u: 0.2688. loss_x: 0.0735. Mask:80.7734 . LR: 0.7212. Time: 0.03
+04/12/2022 12:57:05 - INFO - train -   epoch:49, iter: 384. loss: 0.3455. loss_u: 0.2686. loss_x: 0.0769. Mask:79.8177 . LR: 0.7127. Time: 0.03
+04/12/2022 12:57:53 - INFO - train -   epoch:49, iter: 512. loss: 0.3409. loss_u: 0.2700. loss_x: 0.0709. Mask:80.2207 . LR: 0.7163. Time: 0.03
+04/12/2022 12:58:41 - INFO - train -   epoch:49, iter: 640. loss: 0.3369. loss_u: 0.2724. loss_x: 0.0645. Mask:80.9500 . LR: 0.7228. Time: 0.03
+04/12/2022 12:59:29 - INFO - train -   epoch:49, iter: 768. loss: 0.3342. loss_u: 0.2723. loss_x: 0.0619. Mask:81.1966 . LR: 0.7250. Time: 0.03
+04/12/2022 13:00:17 - INFO - train -   epoch:49, iter: 896. loss: 0.3347. loss_u: 0.2716. loss_x: 0.0631. Mask:81.4542 . LR: 0.7273. Time: 0.03
+04/12/2022 13:01:05 - INFO - train -   epoch:49, iter: 1024. loss: 0.3338. loss_u: 0.2702. loss_x: 0.0636. Mask:81.2812 . LR: 0.7257. Time: 0.03
+04/12/2022 13:01:08 - INFO - train -   Epoch 49. Top1: 87.0772. Top5: 99.3566. best_acc: 88.4007 in epoch47
+04/12/2022 13:01:58 - INFO - train -   epoch:50, iter: 128. loss: 0.3198. loss_u: 0.2752. loss_x: 0.0446. Mask:83.1875 . LR: 0.7427. Time: 0.03
+04/12/2022 13:02:46 - INFO - train -   epoch:50, iter: 256. loss: 0.3296. loss_u: 0.2769. loss_x: 0.0527. Mask:82.7812 . LR: 0.7391. Time: 0.03
+04/12/2022 13:03:34 - INFO - train -   epoch:50, iter: 384. loss: 0.3306. loss_u: 0.2755. loss_x: 0.0550. Mask:81.8906 . LR: 0.7312. Time: 0.03
+04/12/2022 13:04:22 - INFO - train -   epoch:50, iter: 512. loss: 0.3334. loss_u: 0.2731. loss_x: 0.0604. Mask:81.2363 . LR: 0.7253. Time: 0.03
+04/12/2022 13:05:10 - INFO - train -   epoch:50, iter: 640. loss: 0.3306. loss_u: 0.2734. loss_x: 0.0572. Mask:81.7453 . LR: 0.7299. Time: 0.03
+04/12/2022 13:05:58 - INFO - train -   epoch:50, iter: 768. loss: 0.3298. loss_u: 0.2739. loss_x: 0.0559. Mask:81.8633 . LR: 0.7309. Time: 0.03
+04/12/2022 13:06:46 - INFO - train -   epoch:50, iter: 896. loss: 0.3284. loss_u: 0.2742. loss_x: 0.0542. Mask:82.1060 . LR: 0.7331. Time: 0.03
+04/12/2022 13:07:34 - INFO - train -   epoch:50, iter: 1024. loss: 0.3271. loss_u: 0.2728. loss_x: 0.0543. Mask:81.9951 . LR: 0.7321. Time: 0.03
+04/12/2022 13:07:38 - INFO - train -   Epoch 50. Top1: 85.9926. Top5: 99.5221. best_acc: 88.4007 in epoch47
+04/12/2022 13:08:27 - INFO - train -   epoch:51, iter: 128. loss: 0.3158. loss_u: 0.2791. loss_x: 0.0367. Mask:83.0859 . LR: 0.7418. Time: 0.03
+04/12/2022 13:09:15 - INFO - train -   epoch:51, iter: 256. loss: 0.3211. loss_u: 0.2726. loss_x: 0.0485. Mask:81.9648 . LR: 0.7318. Time: 0.03
+04/12/2022 13:10:03 - INFO - train -   epoch:51, iter: 384. loss: 0.3091. loss_u: 0.2648. loss_x: 0.0443. Mask:82.3307 . LR: 0.7351. Time: 0.03
+04/12/2022 13:10:52 - INFO - train -   epoch:51, iter: 512. loss: 0.3126. loss_u: 0.2657. loss_x: 0.0469. Mask:82.3086 . LR: 0.7349. Time: 0.03
+04/12/2022 13:11:40 - INFO - train -   epoch:51, iter: 640. loss: 0.3171. loss_u: 0.2681. loss_x: 0.0490. Mask:82.0812 . LR: 0.7329. Time: 0.03
+04/12/2022 13:12:28 - INFO - train -   epoch:51, iter: 768. loss: 0.3163. loss_u: 0.2663. loss_x: 0.0500. Mask:82.1732 . LR: 0.7337. Time: 0.03
+04/12/2022 13:13:17 - INFO - train -   epoch:51, iter: 896. loss: 0.3154. loss_u: 0.2675. loss_x: 0.0479. Mask:82.5804 . LR: 0.7373. Time: 0.03
+04/12/2022 13:14:05 - INFO - train -   epoch:51, iter: 1024. loss: 0.3153. loss_u: 0.2681. loss_x: 0.0472. Mask:82.7998 . LR: 0.7393. Time: 0.03
+04/12/2022 13:14:09 - INFO - train -   Epoch 51. Top1: 87.8615. Top5: 99.5588. best_acc: 88.4007 in epoch47
+04/12/2022 13:14:59 - INFO - train -   epoch:52, iter: 128. loss: 0.3098. loss_u: 0.2671. loss_x: 0.0428. Mask:83.2812 . LR: 0.7436. Time: 0.03
+04/12/2022 13:15:46 - INFO - train -   epoch:52, iter: 256. loss: 0.3107. loss_u: 0.2668. loss_x: 0.0439. Mask:82.7422 . LR: 0.7388. Time: 0.03
+04/12/2022 13:16:34 - INFO - train -   epoch:52, iter: 384. loss: 0.3211. loss_u: 0.2663. loss_x: 0.0548. Mask:82.3828 . LR: 0.7356. Time: 0.03
+04/12/2022 13:17:22 - INFO - train -   epoch:52, iter: 512. loss: 0.3256. loss_u: 0.2692. loss_x: 0.0564. Mask:82.3066 . LR: 0.7349. Time: 0.03
+04/12/2022 13:18:10 - INFO - train -   epoch:52, iter: 640. loss: 0.3221. loss_u: 0.2684. loss_x: 0.0538. Mask:82.3531 . LR: 0.7353. Time: 0.03
+04/12/2022 13:18:58 - INFO - train -   epoch:52, iter: 768. loss: 0.3218. loss_u: 0.2682. loss_x: 0.0536. Mask:82.5456 . LR: 0.7370. Time: 0.03
+04/12/2022 13:19:46 - INFO - train -   epoch:52, iter: 896. loss: 0.3254. loss_u: 0.2698. loss_x: 0.0556. Mask:82.2958 . LR: 0.7348. Time: 0.03
+04/12/2022 13:20:35 - INFO - train -   epoch:52, iter: 1024. loss: 0.3242. loss_u: 0.2704. loss_x: 0.0538. Mask:82.3379 . LR: 0.7352. Time: 0.03
+04/12/2022 13:20:39 - INFO - train -   Epoch 52. Top1: 86.5319. Top5: 99.3382. best_acc: 88.4007 in epoch47
+04/12/2022 13:21:28 - INFO - train -   epoch:53, iter: 128. loss: 0.3191. loss_u: 0.2759. loss_x: 0.0432. Mask:84.0781 . LR: 0.7507. Time: 0.03
+04/12/2022 13:22:16 - INFO - train -   epoch:53, iter: 256. loss: 0.3185. loss_u: 0.2743. loss_x: 0.0442. Mask:84.0000 . LR: 0.7500. Time: 0.03
+04/12/2022 13:23:04 - INFO - train -   epoch:53, iter: 384. loss: 0.3143. loss_u: 0.2728. loss_x: 0.0415. Mask:84.4922 . LR: 0.7544. Time: 0.03
+04/12/2022 13:23:53 - INFO - train -   epoch:53, iter: 512. loss: 0.3149. loss_u: 0.2711. loss_x: 0.0438. Mask:83.9336 . LR: 0.7494. Time: 0.03
+04/12/2022 13:24:41 - INFO - train -   epoch:53, iter: 640. loss: 0.3138. loss_u: 0.2688. loss_x: 0.0450. Mask:84.1094 . LR: 0.7510. Time: 0.03
+04/12/2022 13:25:29 - INFO - train -   epoch:53, iter: 768. loss: 0.3137. loss_u: 0.2703. loss_x: 0.0433. Mask:84.2331 . LR: 0.7521. Time: 0.03
+04/12/2022 13:26:17 - INFO - train -   epoch:53, iter: 896. loss: 0.3133. loss_u: 0.2714. loss_x: 0.0418. Mask:84.3650 . LR: 0.7533. Time: 0.03
+04/12/2022 13:27:05 - INFO - train -   epoch:53, iter: 1024. loss: 0.3138. loss_u: 0.2714. loss_x: 0.0424. Mask:84.1973 . LR: 0.7518. Time: 0.03
+04/12/2022 13:27:09 - INFO - train -   Epoch 53. Top1: 88.1985. Top5: 99.2831. best_acc: 88.4007 in epoch47
+04/12/2022 13:27:59 - INFO - train -   epoch:54, iter: 128. loss: 0.3119. loss_u: 0.2700. loss_x: 0.0419. Mask:83.7500 . LR: 0.7478. Time: 0.03
+04/12/2022 13:28:47 - INFO - train -   epoch:54, iter: 256. loss: 0.3188. loss_u: 0.2714. loss_x: 0.0474. Mask:83.4648 . LR: 0.7452. Time: 0.03
+04/12/2022 13:29:36 - INFO - train -   epoch:54, iter: 384. loss: 0.3268. loss_u: 0.2725. loss_x: 0.0543. Mask:82.7370 . LR: 0.7387. Time: 0.03
+04/12/2022 13:30:24 - INFO - train -   epoch:54, iter: 512. loss: 0.3209. loss_u: 0.2719. loss_x: 0.0490. Mask:82.9961 . LR: 0.7410. Time: 0.03
+04/12/2022 13:31:13 - INFO - train -   epoch:54, iter: 640. loss: 0.3188. loss_u: 0.2719. loss_x: 0.0469. Mask:83.0516 . LR: 0.7415. Time: 0.02
+04/12/2022 13:32:02 - INFO - train -   epoch:54, iter: 768. loss: 0.3203. loss_u: 0.2719. loss_x: 0.0485. Mask:82.9453 . LR: 0.7406. Time: 0.02
+04/12/2022 13:32:50 - INFO - train -   epoch:54, iter: 896. loss: 0.3204. loss_u: 0.2708. loss_x: 0.0496. Mask:82.8415 . LR: 0.7397. Time: 0.02
+04/12/2022 13:33:38 - INFO - train -   epoch:54, iter: 1024. loss: 0.3193. loss_u: 0.2708. loss_x: 0.0485. Mask:82.8496 . LR: 0.7397. Time: 0.02
+04/12/2022 13:33:42 - INFO - train -   Epoch 54. Top1: 88.3885. Top5: 99.6875. best_acc: 88.4007 in epoch47
+04/12/2022 13:34:31 - INFO - train -   epoch:55, iter: 128. loss: 0.3253. loss_u: 0.2601. loss_x: 0.0652. Mask:82.1406 . LR: 0.7334. Time: 0.02
+04/12/2022 13:35:19 - INFO - train -   epoch:55, iter: 256. loss: 0.3288. loss_u: 0.2688. loss_x: 0.0600. Mask:82.5352 . LR: 0.7369. Time: 0.02
+04/12/2022 13:36:08 - INFO - train -   epoch:55, iter: 384. loss: 0.3341. loss_u: 0.2678. loss_x: 0.0662. Mask:81.3411 . LR: 0.7263. Time: 0.02
+04/12/2022 13:36:56 - INFO - train -   epoch:55, iter: 512. loss: 0.3268. loss_u: 0.2676. loss_x: 0.0592. Mask:81.8730 . LR: 0.7310. Time: 0.02
+04/12/2022 13:37:44 - INFO - train -   epoch:55, iter: 640. loss: 0.3262. loss_u: 0.2673. loss_x: 0.0589. Mask:81.7891 . LR: 0.7303. Time: 0.02
+04/12/2022 13:38:33 - INFO - train -   epoch:55, iter: 768. loss: 0.3223. loss_u: 0.2679. loss_x: 0.0544. Mask:82.1445 . LR: 0.7334. Time: 0.02
+04/12/2022 13:39:21 - INFO - train -   epoch:55, iter: 896. loss: 0.3221. loss_u: 0.2688. loss_x: 0.0533. Mask:82.3772 . LR: 0.7355. Time: 0.02
+04/12/2022 13:40:10 - INFO - train -   epoch:55, iter: 1024. loss: 0.3229. loss_u: 0.2703. loss_x: 0.0526. Mask:82.6172 . LR: 0.7377. Time: 0.02
+04/12/2022 13:40:14 - INFO - train -   Epoch 55. Top1: 87.7022. Top5: 99.3199. best_acc: 88.4007 in epoch47
+04/12/2022 13:41:03 - INFO - train -   epoch:56, iter: 128. loss: 0.3220. loss_u: 0.2718. loss_x: 0.0501. Mask:82.7891 . LR: 0.7392. Time: 0.02
+04/12/2022 13:41:51 - INFO - train -   epoch:56, iter: 256. loss: 0.3224. loss_u: 0.2695. loss_x: 0.0529. Mask:81.6445 . LR: 0.7290. Time: 0.02
+04/12/2022 13:42:39 - INFO - train -   epoch:56, iter: 384. loss: 0.3197. loss_u: 0.2691. loss_x: 0.0506. Mask:82.0286 . LR: 0.7324. Time: 0.02
+04/12/2022 13:43:27 - INFO - train -   epoch:56, iter: 512. loss: 0.3189. loss_u: 0.2710. loss_x: 0.0479. Mask:82.7734 . LR: 0.7390. Time: 0.02
+04/12/2022 13:44:15 - INFO - train -   epoch:56, iter: 640. loss: 0.3190. loss_u: 0.2716. loss_x: 0.0473. Mask:82.9953 . LR: 0.7410. Time: 0.02
+04/12/2022 13:45:03 - INFO - train -   epoch:56, iter: 768. loss: 0.3183. loss_u: 0.2714. loss_x: 0.0468. Mask:82.9427 . LR: 0.7406. Time: 0.02
+04/12/2022 13:45:51 - INFO - train -   epoch:56, iter: 896. loss: 0.3168. loss_u: 0.2705. loss_x: 0.0463. Mask:83.0480 . LR: 0.7415. Time: 0.02
+04/12/2022 13:46:39 - INFO - train -   epoch:56, iter: 1024. loss: 0.3171. loss_u: 0.2701. loss_x: 0.0470. Mask:83.0664 . LR: 0.7417. Time: 0.02
+04/12/2022 13:46:43 - INFO - train -   Epoch 56. Top1: 89.0319. Top5: 99.6691. best_acc: 89.0319 in epoch56
+04/12/2022 13:47:33 - INFO - train -   epoch:57, iter: 128. loss: 0.3144. loss_u: 0.2610. loss_x: 0.0534. Mask:81.4453 . LR: 0.7272. Time: 0.02
+04/12/2022 13:48:20 - INFO - train -   epoch:57, iter: 256. loss: 0.3098. loss_u: 0.2605. loss_x: 0.0493. Mask:82.9766 . LR: 0.7409. Time: 0.02
+04/12/2022 13:49:08 - INFO - train -   epoch:57, iter: 384. loss: 0.3146. loss_u: 0.2636. loss_x: 0.0509. Mask:82.6536 . LR: 0.7380. Time: 0.02
+04/12/2022 13:49:56 - INFO - train -   epoch:57, iter: 512. loss: 0.3119. loss_u: 0.2633. loss_x: 0.0486. Mask:83.1250 . LR: 0.7422. Time: 0.02
+04/12/2022 13:50:44 - INFO - train -   epoch:57, iter: 640. loss: 0.3109. loss_u: 0.2649. loss_x: 0.0460. Mask:83.8672 . LR: 0.7488. Time: 0.02
+04/12/2022 13:51:32 - INFO - train -   epoch:57, iter: 768. loss: 0.3140. loss_u: 0.2664. loss_x: 0.0476. Mask:83.8164 . LR: 0.7484. Time: 0.02
+04/12/2022 13:52:20 - INFO - train -   epoch:57, iter: 896. loss: 0.3151. loss_u: 0.2684. loss_x: 0.0467. Mask:83.6864 . LR: 0.7472. Time: 0.02
+04/12/2022 13:53:08 - INFO - train -   epoch:57, iter: 1024. loss: 0.3157. loss_u: 0.2686. loss_x: 0.0471. Mask:83.6553 . LR: 0.7469. Time: 0.02
+04/12/2022 13:53:12 - INFO - train -   Epoch 57. Top1: 88.0576. Top5: 99.0625. best_acc: 89.0319 in epoch56
+04/12/2022 13:54:02 - INFO - train -   epoch:58, iter: 128. loss: 0.3143. loss_u: 0.2760. loss_x: 0.0383. Mask:83.7656 . LR: 0.7479. Time: 0.02
+04/12/2022 13:54:50 - INFO - train -   epoch:58, iter: 256. loss: 0.3202. loss_u: 0.2751. loss_x: 0.0451. Mask:82.5703 . LR: 0.7372. Time: 0.02
+04/12/2022 13:55:38 - INFO - train -   epoch:58, iter: 384. loss: 0.3152. loss_u: 0.2725. loss_x: 0.0427. Mask:82.9323 . LR: 0.7405. Time: 0.02
+04/12/2022 13:56:27 - INFO - train -   epoch:58, iter: 512. loss: 0.3152. loss_u: 0.2716. loss_x: 0.0437. Mask:82.7148 . LR: 0.7385. Time: 0.02
+04/12/2022 13:57:15 - INFO - train -   epoch:58, iter: 640. loss: 0.3161. loss_u: 0.2706. loss_x: 0.0455. Mask:82.6203 . LR: 0.7377. Time: 0.02
+04/12/2022 13:58:03 - INFO - train -   epoch:58, iter: 768. loss: 0.3197. loss_u: 0.2693. loss_x: 0.0504. Mask:82.5664 . LR: 0.7372. Time: 0.02
+04/12/2022 13:58:51 - INFO - train -   epoch:58, iter: 896. loss: 0.3175. loss_u: 0.2691. loss_x: 0.0484. Mask:82.7924 . LR: 0.7392. Time: 0.02
+04/12/2022 13:59:39 - INFO - train -   epoch:58, iter: 1024. loss: 0.3187. loss_u: 0.2687. loss_x: 0.0501. Mask:82.5693 . LR: 0.7372. Time: 0.02
+04/12/2022 13:59:43 - INFO - train -   Epoch 58. Top1: 83.0515. Top5: 99.5772. best_acc: 89.0319 in epoch56
+04/12/2022 14:00:32 - INFO - train -   epoch:59, iter: 128. loss: 0.3258. loss_u: 0.2705. loss_x: 0.0553. Mask:82.5547 . LR: 0.7371. Time: 0.02
+04/12/2022 14:01:20 - INFO - train -   epoch:59, iter: 256. loss: 0.3245. loss_u: 0.2749. loss_x: 0.0497. Mask:82.9180 . LR: 0.7403. Time: 0.02
+04/12/2022 14:02:07 - INFO - train -   epoch:59, iter: 384. loss: 0.3161. loss_u: 0.2737. loss_x: 0.0425. Mask:83.7786 . LR: 0.7480. Time: 0.02
+04/12/2022 14:02:55 - INFO - train -   epoch:59, iter: 512. loss: 0.3158. loss_u: 0.2728. loss_x: 0.0430. Mask:84.0898 . LR: 0.7508. Time: 0.02
+04/12/2022 14:03:44 - INFO - train -   epoch:59, iter: 640. loss: 0.3166. loss_u: 0.2712. loss_x: 0.0455. Mask:84.0641 . LR: 0.7506. Time: 0.02
+04/12/2022 14:04:32 - INFO - train -   epoch:59, iter: 768. loss: 0.3158. loss_u: 0.2705. loss_x: 0.0453. Mask:84.3125 . LR: 0.7528. Time: 0.02
+04/12/2022 14:05:20 - INFO - train -   epoch:59, iter: 896. loss: 0.3132. loss_u: 0.2694. loss_x: 0.0439. Mask:84.3862 . LR: 0.7534. Time: 0.02
+04/12/2022 14:06:08 - INFO - train -   epoch:59, iter: 1024. loss: 0.3162. loss_u: 0.2696. loss_x: 0.0465. Mask:83.9795 . LR: 0.7498. Time: 0.02
+04/12/2022 14:06:12 - INFO - train -   Epoch 59. Top1: 87.5368. Top5: 99.3750. best_acc: 89.0319 in epoch56
+04/12/2022 14:07:01 - INFO - train -   epoch:60, iter: 128. loss: 0.3033. loss_u: 0.2706. loss_x: 0.0327. Mask:86.2188 . LR: 0.7698. Time: 0.02
+04/12/2022 14:07:49 - INFO - train -   epoch:60, iter: 256. loss: 0.3100. loss_u: 0.2689. loss_x: 0.0411. Mask:85.4531 . LR: 0.7630. Time: 0.02
+04/12/2022 14:08:37 - INFO - train -   epoch:60, iter: 384. loss: 0.3121. loss_u: 0.2715. loss_x: 0.0406. Mask:85.1094 . LR: 0.7599. Time: 0.02
+04/12/2022 14:09:25 - INFO - train -   epoch:60, iter: 512. loss: 0.3173. loss_u: 0.2730. loss_x: 0.0443. Mask:84.3320 . LR: 0.7530. Time: 0.02
+04/12/2022 14:10:13 - INFO - train -   epoch:60, iter: 640. loss: 0.3175. loss_u: 0.2733. loss_x: 0.0441. Mask:84.0891 . LR: 0.7508. Time: 0.02
+04/12/2022 14:11:01 - INFO - train -   epoch:60, iter: 768. loss: 0.3161. loss_u: 0.2708. loss_x: 0.0453. Mask:83.9961 . LR: 0.7500. Time: 0.02
+04/12/2022 14:11:49 - INFO - train -   epoch:60, iter: 896. loss: 0.3131. loss_u: 0.2692. loss_x: 0.0439. Mask:84.0580 . LR: 0.7505. Time: 0.02
+04/12/2022 14:12:37 - INFO - train -   epoch:60, iter: 1024. loss: 0.3140. loss_u: 0.2699. loss_x: 0.0441. Mask:84.1875 . LR: 0.7517. Time: 0.02
+04/12/2022 14:12:41 - INFO - train -   Epoch 60. Top1: 88.7194. Top5: 99.5772. best_acc: 89.0319 in epoch56
+04/12/2022 14:13:30 - INFO - train -   epoch:61, iter: 128. loss: 0.3041. loss_u: 0.2610. loss_x: 0.0431. Mask:83.2266 . LR: 0.7431. Time: 0.02
+04/12/2022 14:14:18 - INFO - train -   epoch:61, iter: 256. loss: 0.3149. loss_u: 0.2706. loss_x: 0.0443. Mask:84.1055 . LR: 0.7509. Time: 0.02
+04/12/2022 14:15:06 - INFO - train -   epoch:61, iter: 384. loss: 0.3147. loss_u: 0.2693. loss_x: 0.0453. Mask:83.6771 . LR: 0.7471. Time: 0.02
+04/12/2022 14:15:55 - INFO - train -   epoch:61, iter: 512. loss: 0.3108. loss_u: 0.2689. loss_x: 0.0419. Mask:83.9004 . LR: 0.7491. Time: 0.02
+04/12/2022 14:16:43 - INFO - train -   epoch:61, iter: 640. loss: 0.3098. loss_u: 0.2701. loss_x: 0.0397. Mask:84.1109 . LR: 0.7510. Time: 0.02
+04/12/2022 14:17:31 - INFO - train -   epoch:61, iter: 768. loss: 0.3115. loss_u: 0.2705. loss_x: 0.0409. Mask:84.1875 . LR: 0.7517. Time: 0.02
+04/12/2022 14:18:20 - INFO - train -   epoch:61, iter: 896. loss: 0.3139. loss_u: 0.2711. loss_x: 0.0428. Mask:84.0804 . LR: 0.7507. Time: 0.02
+04/12/2022 14:19:08 - INFO - train -   epoch:61, iter: 1024. loss: 0.3124. loss_u: 0.2710. loss_x: 0.0414. Mask:84.0928 . LR: 0.7508. Time: 0.02
+04/12/2022 14:19:12 - INFO - train -   Epoch 61. Top1: 86.9914. Top5: 99.2831. best_acc: 89.0319 in epoch56
+04/12/2022 14:20:01 - INFO - train -   epoch:62, iter: 128. loss: 0.2999. loss_u: 0.2687. loss_x: 0.0311. Mask:86.0156 . LR: 0.7680. Time: 0.02
+04/12/2022 14:20:49 - INFO - train -   epoch:62, iter: 256. loss: 0.3192. loss_u: 0.2692. loss_x: 0.0500. Mask:84.1055 . LR: 0.7509. Time: 0.02
+04/12/2022 14:21:37 - INFO - train -   epoch:62, iter: 384. loss: 0.3199. loss_u: 0.2710. loss_x: 0.0490. Mask:84.1224 . LR: 0.7511. Time: 0.02
+04/12/2022 14:22:26 - INFO - train -   epoch:62, iter: 512. loss: 0.3251. loss_u: 0.2725. loss_x: 0.0526. Mask:83.9590 . LR: 0.7496. Time: 0.02
+04/12/2022 14:23:14 - INFO - train -   epoch:62, iter: 640. loss: 0.3252. loss_u: 0.2699. loss_x: 0.0553. Mask:83.6000 . LR: 0.7464. Time: 0.02
+04/12/2022 14:24:03 - INFO - train -   epoch:62, iter: 768. loss: 0.3236. loss_u: 0.2707. loss_x: 0.0529. Mask:83.7786 . LR: 0.7480. Time: 0.02
+04/12/2022 14:24:51 - INFO - train -   epoch:62, iter: 896. loss: 0.3210. loss_u: 0.2700. loss_x: 0.0509. Mask:83.9989 . LR: 0.7500. Time: 0.02
+04/12/2022 14:25:39 - INFO - train -   epoch:62, iter: 1024. loss: 0.3185. loss_u: 0.2688. loss_x: 0.0497. Mask:84.1357 . LR: 0.7512. Time: 0.02
+04/12/2022 14:25:43 - INFO - train -   Epoch 62. Top1: 89.2034. Top5: 99.5404. best_acc: 89.2034 in epoch62
+04/12/2022 14:26:32 - INFO - train -   epoch:63, iter: 128. loss: 0.3254. loss_u: 0.2807. loss_x: 0.0446. Mask:82.9141 . LR: 0.7403. Time: 0.02
+04/12/2022 14:27:20 - INFO - train -   epoch:63, iter: 256. loss: 0.3112. loss_u: 0.2721. loss_x: 0.0391. Mask:83.6758 . LR: 0.7471. Time: 0.02
+04/12/2022 14:28:07 - INFO - train -   epoch:63, iter: 384. loss: 0.3152. loss_u: 0.2706. loss_x: 0.0446. Mask:83.2969 . LR: 0.7437. Time: 0.02
+04/12/2022 14:28:55 - INFO - train -   epoch:63, iter: 512. loss: 0.3148. loss_u: 0.2696. loss_x: 0.0452. Mask:83.8242 . LR: 0.7484. Time: 0.02
+04/12/2022 14:29:43 - INFO - train -   epoch:63, iter: 640. loss: 0.3182. loss_u: 0.2697. loss_x: 0.0484. Mask:84.1344 . LR: 0.7512. Time: 0.02
+04/12/2022 14:30:31 - INFO - train -   epoch:63, iter: 768. loss: 0.3165. loss_u: 0.2702. loss_x: 0.0463. Mask:84.2812 . LR: 0.7525. Time: 0.02
+04/12/2022 14:31:19 - INFO - train -   epoch:63, iter: 896. loss: 0.3155. loss_u: 0.2688. loss_x: 0.0467. Mask:84.4665 . LR: 0.7542. Time: 0.02
+04/12/2022 14:32:07 - INFO - train -   epoch:63, iter: 1024. loss: 0.3136. loss_u: 0.2684. loss_x: 0.0452. Mask:84.5605 . LR: 0.7550. Time: 0.02
+04/12/2022 14:32:11 - INFO - train -   Epoch 63. Top1: 87.6838. Top5: 99.5588. best_acc: 89.2034 in epoch62
+04/12/2022 14:33:00 - INFO - train -   epoch:64, iter: 128. loss: 0.3324. loss_u: 0.2740. loss_x: 0.0584. Mask:83.1172 . LR: 0.7421. Time: 0.02
+04/12/2022 14:33:48 - INFO - train -   epoch:64, iter: 256. loss: 0.3270. loss_u: 0.2744. loss_x: 0.0527. Mask:83.3750 . LR: 0.7444. Time: 0.02
+04/12/2022 14:34:36 - INFO - train -   epoch:64, iter: 384. loss: 0.3233. loss_u: 0.2737. loss_x: 0.0496. Mask:83.5781 . LR: 0.7462. Time: 0.02
+04/12/2022 14:35:24 - INFO - train -   epoch:64, iter: 512. loss: 0.3202. loss_u: 0.2712. loss_x: 0.0490. Mask:83.3789 . LR: 0.7445. Time: 0.02
+04/12/2022 14:36:12 - INFO - train -   epoch:64, iter: 640. loss: 0.3188. loss_u: 0.2704. loss_x: 0.0484. Mask:83.2891 . LR: 0.7437. Time: 0.02
+04/12/2022 14:37:00 - INFO - train -   epoch:64, iter: 768. loss: 0.3180. loss_u: 0.2712. loss_x: 0.0468. Mask:83.3034 . LR: 0.7438. Time: 0.02
+04/12/2022 14:37:48 - INFO - train -   epoch:64, iter: 896. loss: 0.3137. loss_u: 0.2693. loss_x: 0.0444. Mask:83.5848 . LR: 0.7463. Time: 0.02
+04/12/2022 14:38:35 - INFO - train -   epoch:64, iter: 1024. loss: 0.3124. loss_u: 0.2696. loss_x: 0.0428. Mask:83.6328 . LR: 0.7467. Time: 0.02
+04/12/2022 14:38:40 - INFO - train -   Epoch 64. Top1: 90.0919. Top5: 99.5221. best_acc: 90.0919 in epoch64
+04/12/2022 14:39:28 - INFO - train -   epoch:65, iter: 128. loss: 0.3141. loss_u: 0.2680. loss_x: 0.0461. Mask:84.5156 . LR: 0.7546. Time: 0.02
+04/12/2022 14:40:15 - INFO - train -   epoch:65, iter: 256. loss: 0.3060. loss_u: 0.2662. loss_x: 0.0398. Mask:84.1289 . LR: 0.7512. Time: 0.02
+04/12/2022 14:41:02 - INFO - train -   epoch:65, iter: 384. loss: 0.3058. loss_u: 0.2634. loss_x: 0.0424. Mask:84.2578 . LR: 0.7523. Time: 0.02
+04/12/2022 14:41:49 - INFO - train -   epoch:65, iter: 512. loss: 0.3046. loss_u: 0.2654. loss_x: 0.0392. Mask:84.8203 . LR: 0.7573. Time: 0.02
+04/12/2022 14:42:36 - INFO - train -   epoch:65, iter: 640. loss: 0.3092. loss_u: 0.2663. loss_x: 0.0430. Mask:84.6125 . LR: 0.7555. Time: 0.02
+04/12/2022 14:43:23 - INFO - train -   epoch:65, iter: 768. loss: 0.3095. loss_u: 0.2660. loss_x: 0.0435. Mask:84.5065 . LR: 0.7545. Time: 0.02
+04/12/2022 14:44:10 - INFO - train -   epoch:65, iter: 896. loss: 0.3083. loss_u: 0.2663. loss_x: 0.0420. Mask:84.7098 . LR: 0.7563. Time: 0.02
+04/12/2022 14:44:58 - INFO - train -   epoch:65, iter: 1024. loss: 0.3086. loss_u: 0.2671. loss_x: 0.0415. Mask:84.7188 . LR: 0.7564. Time: 0.02
+04/12/2022 14:45:02 - INFO - train -   Epoch 65. Top1: 87.7941. Top5: 99.3382. best_acc: 90.0919 in epoch64
+04/12/2022 14:45:51 - INFO - train -   epoch:66, iter: 128. loss: 0.3132. loss_u: 0.2692. loss_x: 0.0440. Mask:85.0859 . LR: 0.7597. Time: 0.02
+04/12/2022 14:46:39 - INFO - train -   epoch:66, iter: 256. loss: 0.3119. loss_u: 0.2729. loss_x: 0.0391. Mask:85.5352 . LR: 0.7637. Time: 0.02
+04/12/2022 14:47:26 - INFO - train -   epoch:66, iter: 384. loss: 0.3103. loss_u: 0.2722. loss_x: 0.0381. Mask:85.1328 . LR: 0.7601. Time: 0.02
+04/12/2022 14:48:14 - INFO - train -   epoch:66, iter: 512. loss: 0.3126. loss_u: 0.2700. loss_x: 0.0426. Mask:84.5078 . LR: 0.7545. Time: 0.02
+04/12/2022 14:49:02 - INFO - train -   epoch:66, iter: 640. loss: 0.3134. loss_u: 0.2707. loss_x: 0.0427. Mask:84.7438 . LR: 0.7566. Time: 0.02
+04/12/2022 14:49:51 - INFO - train -   epoch:66, iter: 768. loss: 0.3146. loss_u: 0.2710. loss_x: 0.0436. Mask:84.5482 . LR: 0.7549. Time: 0.02
+04/12/2022 14:50:39 - INFO - train -   epoch:66, iter: 896. loss: 0.3142. loss_u: 0.2703. loss_x: 0.0439. Mask:84.5234 . LR: 0.7547. Time: 0.02
+04/12/2022 14:51:27 - INFO - train -   epoch:66, iter: 1024. loss: 0.3141. loss_u: 0.2689. loss_x: 0.0452. Mask:84.2559 . LR: 0.7523. Time: 0.02
+04/12/2022 14:51:31 - INFO - train -   Epoch 66. Top1: 84.9816. Top5: 99.6140. best_acc: 90.0919 in epoch64
+04/12/2022 14:52:20 - INFO - train -   epoch:67, iter: 128. loss: 0.3095. loss_u: 0.2666. loss_x: 0.0429. Mask:83.5312 . LR: 0.7458. Time: 0.02
+04/12/2022 14:53:07 - INFO - train -   epoch:67, iter: 256. loss: 0.3157. loss_u: 0.2636. loss_x: 0.0521. Mask:83.0625 . LR: 0.7416. Time: 0.02
+04/12/2022 14:53:54 - INFO - train -   epoch:67, iter: 384. loss: 0.3119. loss_u: 0.2654. loss_x: 0.0465. Mask:83.5104 . LR: 0.7456. Time: 0.02
+04/12/2022 14:54:41 - INFO - train -   epoch:67, iter: 512. loss: 0.3110. loss_u: 0.2641. loss_x: 0.0469. Mask:83.7129 . LR: 0.7474. Time: 0.02
+04/12/2022 14:55:29 - INFO - train -   epoch:67, iter: 640. loss: 0.3128. loss_u: 0.2666. loss_x: 0.0462. Mask:84.0328 . LR: 0.7503. Time: 0.02
+04/12/2022 14:56:16 - INFO - train -   epoch:67, iter: 768. loss: 0.3100. loss_u: 0.2641. loss_x: 0.0459. Mask:84.2487 . LR: 0.7522. Time: 0.02
+04/12/2022 14:57:04 - INFO - train -   epoch:67, iter: 896. loss: 0.3104. loss_u: 0.2651. loss_x: 0.0453. Mask:84.2422 . LR: 0.7522. Time: 0.02
+04/12/2022 14:57:52 - INFO - train -   epoch:67, iter: 1024. loss: 0.3099. loss_u: 0.2644. loss_x: 0.0455. Mask:84.1348 . LR: 0.7512. Time: 0.02
+04/12/2022 14:57:56 - INFO - train -   Epoch 67. Top1: 85.7721. Top5: 99.4853. best_acc: 90.0919 in epoch64
+04/12/2022 14:58:44 - INFO - train -   epoch:68, iter: 128. loss: 0.3069. loss_u: 0.2671. loss_x: 0.0397. Mask:85.4375 . LR: 0.7628. Time: 0.02
+04/12/2022 14:59:32 - INFO - train -   epoch:68, iter: 256. loss: 0.3123. loss_u: 0.2673. loss_x: 0.0451. Mask:84.3672 . LR: 0.7533. Time: 0.02
+04/12/2022 15:00:19 - INFO - train -   epoch:68, iter: 384. loss: 0.3102. loss_u: 0.2662. loss_x: 0.0440. Mask:84.5417 . LR: 0.7548. Time: 0.02
+04/12/2022 15:01:07 - INFO - train -   epoch:68, iter: 512. loss: 0.3076. loss_u: 0.2674. loss_x: 0.0402. Mask:85.0742 . LR: 0.7596. Time: 0.02
+04/12/2022 15:01:54 - INFO - train -   epoch:68, iter: 640. loss: 0.3055. loss_u: 0.2670. loss_x: 0.0385. Mask:85.4859 . LR: 0.7633. Time: 0.02
+04/12/2022 15:02:42 - INFO - train -   epoch:68, iter: 768. loss: 0.3057. loss_u: 0.2658. loss_x: 0.0398. Mask:85.3151 . LR: 0.7617. Time: 0.02
+04/12/2022 15:03:30 - INFO - train -   epoch:68, iter: 896. loss: 0.3051. loss_u: 0.2638. loss_x: 0.0413. Mask:84.9520 . LR: 0.7585. Time: 0.02
+04/12/2022 15:04:18 - INFO - train -   epoch:68, iter: 1024. loss: 0.3066. loss_u: 0.2666. loss_x: 0.0401. Mask:85.1914 . LR: 0.7606. Time: 0.02
+04/12/2022 15:04:22 - INFO - train -   Epoch 68. Top1: 87.8493. Top5: 99.5221. best_acc: 90.0919 in epoch64
+04/12/2022 15:05:11 - INFO - train -   epoch:69, iter: 128. loss: 0.3031. loss_u: 0.2604. loss_x: 0.0427. Mask:85.1172 . LR: 0.7600. Time: 0.02
+04/12/2022 15:05:59 - INFO - train -   epoch:69, iter: 256. loss: 0.3043. loss_u: 0.2627. loss_x: 0.0416. Mask:84.2695 . LR: 0.7524. Time: 0.02
+04/12/2022 15:06:47 - INFO - train -   epoch:69, iter: 384. loss: 0.3056. loss_u: 0.2666. loss_x: 0.0390. Mask:84.5391 . LR: 0.7548. Time: 0.02
+04/12/2022 15:07:35 - INFO - train -   epoch:69, iter: 512. loss: 0.3058. loss_u: 0.2675. loss_x: 0.0383. Mask:84.9102 . LR: 0.7581. Time: 0.02
+04/12/2022 15:08:24 - INFO - train -   epoch:69, iter: 640. loss: 0.3097. loss_u: 0.2692. loss_x: 0.0406. Mask:84.9156 . LR: 0.7582. Time: 0.02
+04/12/2022 15:09:12 - INFO - train -   epoch:69, iter: 768. loss: 0.3089. loss_u: 0.2682. loss_x: 0.0407. Mask:85.0130 . LR: 0.7590. Time: 0.02
+04/12/2022 15:10:00 - INFO - train -   epoch:69, iter: 896. loss: 0.3115. loss_u: 0.2680. loss_x: 0.0435. Mask:84.6763 . LR: 0.7560. Time: 0.02
+04/12/2022 15:10:48 - INFO - train -   epoch:69, iter: 1024. loss: 0.3116. loss_u: 0.2670. loss_x: 0.0445. Mask:84.4561 . LR: 0.7541. Time: 0.02
+04/12/2022 15:10:52 - INFO - train -   Epoch 69. Top1: 81.0907. Top5: 99.2279. best_acc: 90.0919 in epoch64
+04/12/2022 15:11:41 - INFO - train -   epoch:70, iter: 128. loss: 0.3183. loss_u: 0.2685. loss_x: 0.0498. Mask:83.8203 . LR: 0.7484. Time: 0.02
+04/12/2022 15:12:29 - INFO - train -   epoch:70, iter: 256. loss: 0.3115. loss_u: 0.2676. loss_x: 0.0439. Mask:84.8750 . LR: 0.7578. Time: 0.02
+04/12/2022 15:13:17 - INFO - train -   epoch:70, iter: 384. loss: 0.3182. loss_u: 0.2650. loss_x: 0.0532. Mask:83.9714 . LR: 0.7497. Time: 0.02
+04/12/2022 15:14:06 - INFO - train -   epoch:70, iter: 512. loss: 0.3197. loss_u: 0.2659. loss_x: 0.0538. Mask:83.8555 . LR: 0.7487. Time: 0.02
+04/12/2022 15:14:54 - INFO - train -   epoch:70, iter: 640. loss: 0.3140. loss_u: 0.2655. loss_x: 0.0485. Mask:84.4188 . LR: 0.7537. Time: 0.02
+04/12/2022 15:15:42 - INFO - train -   epoch:70, iter: 768. loss: 0.3111. loss_u: 0.2649. loss_x: 0.0461. Mask:84.7370 . LR: 0.7566. Time: 0.02
+04/12/2022 15:16:30 - INFO - train -   epoch:70, iter: 896. loss: 0.3087. loss_u: 0.2658. loss_x: 0.0429. Mask:85.1596 . LR: 0.7604. Time: 0.02
+04/12/2022 15:17:18 - INFO - train -   epoch:70, iter: 1024. loss: 0.3091. loss_u: 0.2662. loss_x: 0.0429. Mask:85.3213 . LR: 0.7618. Time: 0.02
+04/12/2022 15:17:22 - INFO - train -   Epoch 70. Top1: 87.1507. Top5: 99.5956. best_acc: 90.0919 in epoch64
+04/12/2022 15:18:12 - INFO - train -   epoch:71, iter: 128. loss: 0.2917. loss_u: 0.2605. loss_x: 0.0312. Mask:86.8359 . LR: 0.7753. Time: 0.02
+04/12/2022 15:18:59 - INFO - train -   epoch:71, iter: 256. loss: 0.3068. loss_u: 0.2634. loss_x: 0.0434. Mask:85.9805 . LR: 0.7677. Time: 0.02
+04/12/2022 15:19:47 - INFO - train -   epoch:71, iter: 384. loss: 0.3141. loss_u: 0.2655. loss_x: 0.0486. Mask:84.9010 . LR: 0.7580. Time: 0.02
+04/12/2022 15:20:35 - INFO - train -   epoch:71, iter: 512. loss: 0.3126. loss_u: 0.2657. loss_x: 0.0470. Mask:84.8711 . LR: 0.7578. Time: 0.02
+04/12/2022 15:21:23 - INFO - train -   epoch:71, iter: 640. loss: 0.3109. loss_u: 0.2671. loss_x: 0.0438. Mask:84.6937 . LR: 0.7562. Time: 0.02
+04/12/2022 15:22:11 - INFO - train -   epoch:71, iter: 768. loss: 0.3129. loss_u: 0.2667. loss_x: 0.0461. Mask:84.2682 . LR: 0.7524. Time: 0.02
+04/12/2022 15:22:59 - INFO - train -   epoch:71, iter: 896. loss: 0.3105. loss_u: 0.2657. loss_x: 0.0448. Mask:84.4330 . LR: 0.7539. Time: 0.02
+04/12/2022 15:23:46 - INFO - train -   epoch:71, iter: 1024. loss: 0.3095. loss_u: 0.2659. loss_x: 0.0436. Mask:84.6748 . LR: 0.7560. Time: 0.02
+04/12/2022 15:23:51 - INFO - train -   Epoch 71. Top1: 87.8125. Top5: 99.3566. best_acc: 90.0919 in epoch64
+04/12/2022 15:24:40 - INFO - train -   epoch:72, iter: 128. loss: 0.3257. loss_u: 0.2771. loss_x: 0.0486. Mask:84.4141 . LR: 0.7537. Time: 0.02
+04/12/2022 15:25:28 - INFO - train -   epoch:72, iter: 256. loss: 0.3139. loss_u: 0.2662. loss_x: 0.0478. Mask:84.3203 . LR: 0.7529. Time: 0.02
+04/12/2022 15:26:16 - INFO - train -   epoch:72, iter: 384. loss: 0.3051. loss_u: 0.2654. loss_x: 0.0396. Mask:84.8906 . LR: 0.7580. Time: 0.02
+04/12/2022 15:27:04 - INFO - train -   epoch:72, iter: 512. loss: 0.3076. loss_u: 0.2650. loss_x: 0.0425. Mask:84.8398 . LR: 0.7575. Time: 0.02
+04/12/2022 15:27:52 - INFO - train -   epoch:72, iter: 640. loss: 0.3096. loss_u: 0.2660. loss_x: 0.0436. Mask:84.6562 . LR: 0.7559. Time: 0.02
+04/12/2022 15:28:40 - INFO - train -   epoch:72, iter: 768. loss: 0.3086. loss_u: 0.2652. loss_x: 0.0434. Mask:84.5768 . LR: 0.7552. Time: 0.02
+04/12/2022 15:29:28 - INFO - train -   epoch:72, iter: 896. loss: 0.3099. loss_u: 0.2654. loss_x: 0.0446. Mask:84.6306 . LR: 0.7556. Time: 0.02
+04/12/2022 15:30:16 - INFO - train -   epoch:72, iter: 1024. loss: 0.3073. loss_u: 0.2654. loss_x: 0.0419. Mask:84.8887 . LR: 0.7579. Time: 0.02
+04/12/2022 15:30:20 - INFO - train -   Epoch 72. Top1: 89.9265. Top5: 99.6875. best_acc: 90.0919 in epoch64
+04/12/2022 15:31:08 - INFO - train -   epoch:73, iter: 128. loss: 0.3076. loss_u: 0.2705. loss_x: 0.0371. Mask:87.9375 . LR: 0.7852. Time: 0.02
+04/12/2022 15:31:56 - INFO - train -   epoch:73, iter: 256. loss: 0.3077. loss_u: 0.2670. loss_x: 0.0407. Mask:86.5742 . LR: 0.7730. Time: 0.02
+04/12/2022 15:32:43 - INFO - train -   epoch:73, iter: 384. loss: 0.3024. loss_u: 0.2608. loss_x: 0.0417. Mask:86.0521 . LR: 0.7683. Time: 0.02
+04/12/2022 15:33:30 - INFO - train -   epoch:73, iter: 512. loss: 0.3006. loss_u: 0.2631. loss_x: 0.0376. Mask:86.3457 . LR: 0.7709. Time: 0.02
+04/12/2022 15:34:18 - INFO - train -   epoch:73, iter: 640. loss: 0.2977. loss_u: 0.2626. loss_x: 0.0351. Mask:86.4766 . LR: 0.7721. Time: 0.02
+04/12/2022 15:35:06 - INFO - train -   epoch:73, iter: 768. loss: 0.2967. loss_u: 0.2623. loss_x: 0.0344. Mask:86.7057 . LR: 0.7742. Time: 0.02
+04/12/2022 15:35:53 - INFO - train -   epoch:73, iter: 896. loss: 0.2965. loss_u: 0.2631. loss_x: 0.0333. Mask:86.8650 . LR: 0.7756. Time: 0.02
+04/12/2022 15:36:41 - INFO - train -   epoch:73, iter: 1024. loss: 0.2960. loss_u: 0.2627. loss_x: 0.0332. Mask:87.0469 . LR: 0.7772. Time: 0.02
+04/12/2022 15:36:45 - INFO - train -   Epoch 73. Top1: 87.9963. Top5: 99.5588. best_acc: 90.0919 in epoch64
+04/12/2022 15:37:34 - INFO - train -   epoch:74, iter: 128. loss: 0.3147. loss_u: 0.2546. loss_x: 0.0601. Mask:84.5938 . LR: 0.7553. Time: 0.02
+04/12/2022 15:38:22 - INFO - train -   epoch:74, iter: 256. loss: 0.3182. loss_u: 0.2599. loss_x: 0.0583. Mask:83.9453 . LR: 0.7495. Time: 0.02
+04/12/2022 15:39:10 - INFO - train -   epoch:74, iter: 384. loss: 0.3208. loss_u: 0.2597. loss_x: 0.0611. Mask:83.3880 . LR: 0.7445. Time: 0.02
+04/12/2022 15:39:58 - INFO - train -   epoch:74, iter: 512. loss: 0.3217. loss_u: 0.2638. loss_x: 0.0579. Mask:83.2363 . LR: 0.7432. Time: 0.02
+04/12/2022 15:40:46 - INFO - train -   epoch:74, iter: 640. loss: 0.3172. loss_u: 0.2619. loss_x: 0.0553. Mask:83.6469 . LR: 0.7468. Time: 0.02
+04/12/2022 15:41:34 - INFO - train -   epoch:74, iter: 768. loss: 0.3140. loss_u: 0.2624. loss_x: 0.0516. Mask:84.1784 . LR: 0.7516. Time: 0.02
+04/12/2022 15:42:22 - INFO - train -   epoch:74, iter: 896. loss: 0.3127. loss_u: 0.2624. loss_x: 0.0503. Mask:84.2935 . LR: 0.7526. Time: 0.02
+04/12/2022 15:43:10 - INFO - train -   epoch:74, iter: 1024. loss: 0.3112. loss_u: 0.2628. loss_x: 0.0484. Mask:84.4932 . LR: 0.7544. Time: 0.02
+04/12/2022 15:43:14 - INFO - train -   Epoch 74. Top1: 88.4375. Top5: 99.5588. best_acc: 90.0919 in epoch64
+04/12/2022 15:44:03 - INFO - train -   epoch:75, iter: 128. loss: 0.3025. loss_u: 0.2739. loss_x: 0.0286. Mask:87.4922 . LR: 0.7812. Time: 0.02
+04/12/2022 15:44:51 - INFO - train -   epoch:75, iter: 256. loss: 0.3003. loss_u: 0.2703. loss_x: 0.0300. Mask:86.8477 . LR: 0.7754. Time: 0.02
+04/12/2022 15:45:39 - INFO - train -   epoch:75, iter: 384. loss: 0.3024. loss_u: 0.2707. loss_x: 0.0317. Mask:86.9844 . LR: 0.7766. Time: 0.02
+04/12/2022 15:46:27 - INFO - train -   epoch:75, iter: 512. loss: 0.3008. loss_u: 0.2684. loss_x: 0.0324. Mask:86.7461 . LR: 0.7745. Time: 0.02
+04/12/2022 15:47:15 - INFO - train -   epoch:75, iter: 640. loss: 0.3022. loss_u: 0.2681. loss_x: 0.0341. Mask:86.6859 . LR: 0.7740. Time: 0.02
+04/12/2022 15:48:03 - INFO - train -   epoch:75, iter: 768. loss: 0.3052. loss_u: 0.2693. loss_x: 0.0359. Mask:86.3464 . LR: 0.7709. Time: 0.02
+04/12/2022 15:48:51 - INFO - train -   epoch:75, iter: 896. loss: 0.3054. loss_u: 0.2694. loss_x: 0.0360. Mask:86.2522 . LR: 0.7701. Time: 0.02
+04/12/2022 15:49:39 - INFO - train -   epoch:75, iter: 1024. loss: 0.3030. loss_u: 0.2673. loss_x: 0.0357. Mask:86.2266 . LR: 0.7699. Time: 0.02
+04/12/2022 15:49:43 - INFO - train -   Epoch 75. Top1: 90.8150. Top5: 99.6875. best_acc: 90.8150 in epoch75
+04/12/2022 15:50:32 - INFO - train -   epoch:76, iter: 128. loss: 0.2944. loss_u: 0.2675. loss_x: 0.0269. Mask:87.9531 . LR: 0.7853. Time: 0.02
+04/12/2022 15:51:20 - INFO - train -   epoch:76, iter: 256. loss: 0.2951. loss_u: 0.2655. loss_x: 0.0297. Mask:87.3789 . LR: 0.7802. Time: 0.02
+04/12/2022 15:52:08 - INFO - train -   epoch:76, iter: 384. loss: 0.2973. loss_u: 0.2647. loss_x: 0.0326. Mask:87.0755 . LR: 0.7775. Time: 0.02
+04/12/2022 15:52:56 - INFO - train -   epoch:76, iter: 512. loss: 0.2985. loss_u: 0.2658. loss_x: 0.0327. Mask:86.8008 . LR: 0.7750. Time: 0.02
+04/12/2022 15:53:44 - INFO - train -   epoch:76, iter: 640. loss: 0.3009. loss_u: 0.2672. loss_x: 0.0337. Mask:86.8594 . LR: 0.7755. Time: 0.02
+04/12/2022 15:54:32 - INFO - train -   epoch:76, iter: 768. loss: 0.2999. loss_u: 0.2678. loss_x: 0.0321. Mask:87.0964 . LR: 0.7776. Time: 0.02
+04/12/2022 15:55:20 - INFO - train -   epoch:76, iter: 896. loss: 0.2991. loss_u: 0.2668. loss_x: 0.0324. Mask:86.9788 . LR: 0.7766. Time: 0.02
+04/12/2022 15:56:08 - INFO - train -   epoch:76, iter: 1024. loss: 0.2995. loss_u: 0.2659. loss_x: 0.0336. Mask:86.8135 . LR: 0.7751. Time: 0.02
+04/12/2022 15:56:12 - INFO - train -   Epoch 76. Top1: 88.4007. Top5: 99.5404. best_acc: 90.8150 in epoch75
+04/12/2022 15:57:01 - INFO - train -   epoch:77, iter: 128. loss: 0.3055. loss_u: 0.2645. loss_x: 0.0410. Mask:85.2734 . LR: 0.7614. Time: 0.02
+04/12/2022 15:57:49 - INFO - train -   epoch:77, iter: 256. loss: 0.2944. loss_u: 0.2607. loss_x: 0.0337. Mask:85.2266 . LR: 0.7610. Time: 0.02
+04/12/2022 15:58:37 - INFO - train -   epoch:77, iter: 384. loss: 0.2981. loss_u: 0.2610. loss_x: 0.0370. Mask:85.3307 . LR: 0.7619. Time: 0.02
+04/12/2022 15:59:25 - INFO - train -   epoch:77, iter: 512. loss: 0.3026. loss_u: 0.2638. loss_x: 0.0389. Mask:85.1211 . LR: 0.7600. Time: 0.02
+04/12/2022 16:00:13 - INFO - train -   epoch:77, iter: 640. loss: 0.3022. loss_u: 0.2638. loss_x: 0.0383. Mask:85.4125 . LR: 0.7626. Time: 0.02
+04/12/2022 16:01:00 - INFO - train -   epoch:77, iter: 768. loss: 0.3027. loss_u: 0.2639. loss_x: 0.0388. Mask:85.6263 . LR: 0.7645. Time: 0.02
+04/12/2022 16:01:48 - INFO - train -   epoch:77, iter: 896. loss: 0.3039. loss_u: 0.2637. loss_x: 0.0402. Mask:85.5491 . LR: 0.7638. Time: 0.02
+04/12/2022 16:02:36 - INFO - train -   epoch:77, iter: 1024. loss: 0.3021. loss_u: 0.2629. loss_x: 0.0391. Mask:85.6670 . LR: 0.7649. Time: 0.02
+04/12/2022 16:02:40 - INFO - train -   Epoch 77. Top1: 88.5478. Top5: 99.4853. best_acc: 90.8150 in epoch75
+04/12/2022 16:03:30 - INFO - train -   epoch:78, iter: 128. loss: 0.3076. loss_u: 0.2701. loss_x: 0.0374. Mask:85.7109 . LR: 0.7653. Time: 0.02
+04/12/2022 16:04:18 - INFO - train -   epoch:78, iter: 256. loss: 0.3091. loss_u: 0.2739. loss_x: 0.0352. Mask:86.2773 . LR: 0.7703. Time: 0.02
+04/12/2022 16:05:06 - INFO - train -   epoch:78, iter: 384. loss: 0.3090. loss_u: 0.2712. loss_x: 0.0378. Mask:86.5339 . LR: 0.7726. Time: 0.02
+04/12/2022 16:05:53 - INFO - train -   epoch:78, iter: 512. loss: 0.3069. loss_u: 0.2667. loss_x: 0.0403. Mask:86.1133 . LR: 0.7689. Time: 0.02
+04/12/2022 16:06:41 - INFO - train -   epoch:78, iter: 640. loss: 0.3045. loss_u: 0.2643. loss_x: 0.0402. Mask:86.0547 . LR: 0.7683. Time: 0.02
+04/12/2022 16:07:28 - INFO - train -   epoch:78, iter: 768. loss: 0.3057. loss_u: 0.2647. loss_x: 0.0411. Mask:86.0911 . LR: 0.7687. Time: 0.02
+04/12/2022 16:08:16 - INFO - train -   epoch:78, iter: 896. loss: 0.3023. loss_u: 0.2631. loss_x: 0.0392. Mask:86.2712 . LR: 0.7703. Time: 0.02
+04/12/2022 16:09:04 - INFO - train -   epoch:78, iter: 1024. loss: 0.3030. loss_u: 0.2647. loss_x: 0.0383. Mask:86.4404 . LR: 0.7718. Time: 0.02
+04/12/2022 16:09:08 - INFO - train -   Epoch 78. Top1: 89.4547. Top5: 99.1728. best_acc: 90.8150 in epoch75
+04/12/2022 16:09:57 - INFO - train -   epoch:79, iter: 128. loss: 0.2977. loss_u: 0.2624. loss_x: 0.0353. Mask:86.0312 . LR: 0.7681. Time: 0.02
+04/12/2022 16:10:45 - INFO - train -   epoch:79, iter: 256. loss: 0.3074. loss_u: 0.2627. loss_x: 0.0447. Mask:85.1602 . LR: 0.7604. Time: 0.02
+04/12/2022 16:11:33 - INFO - train -   epoch:79, iter: 384. loss: 0.3035. loss_u: 0.2629. loss_x: 0.0407. Mask:85.6224 . LR: 0.7645. Time: 0.02
+04/12/2022 16:12:20 - INFO - train -   epoch:79, iter: 512. loss: 0.3039. loss_u: 0.2628. loss_x: 0.0411. Mask:85.6855 . LR: 0.7650. Time: 0.02
+04/12/2022 16:13:08 - INFO - train -   epoch:79, iter: 640. loss: 0.3049. loss_u: 0.2647. loss_x: 0.0402. Mask:86.0609 . LR: 0.7684. Time: 0.02
+04/12/2022 16:13:56 - INFO - train -   epoch:79, iter: 768. loss: 0.3033. loss_u: 0.2639. loss_x: 0.0394. Mask:86.3203 . LR: 0.7707. Time: 0.02
+04/12/2022 16:14:44 - INFO - train -   epoch:79, iter: 896. loss: 0.3048. loss_u: 0.2658. loss_x: 0.0390. Mask:86.4788 . LR: 0.7721. Time: 0.02
+04/12/2022 16:15:32 - INFO - train -   epoch:79, iter: 1024. loss: 0.3033. loss_u: 0.2638. loss_x: 0.0394. Mask:86.3623 . LR: 0.7711. Time: 0.02
+04/12/2022 16:15:35 - INFO - train -   Epoch 79. Top1: 88.4498. Top5: 99.0502. best_acc: 90.8150 in epoch75
+04/12/2022 16:16:25 - INFO - train -   epoch:80, iter: 128. loss: 0.3163. loss_u: 0.2790. loss_x: 0.0373. Mask:86.5156 . LR: 0.7725. Time: 0.02
+04/12/2022 16:17:13 - INFO - train -   epoch:80, iter: 256. loss: 0.3034. loss_u: 0.2701. loss_x: 0.0333. Mask:86.3164 . LR: 0.7707. Time: 0.02
+04/12/2022 16:18:01 - INFO - train -   epoch:80, iter: 384. loss: 0.3030. loss_u: 0.2671. loss_x: 0.0359. Mask:86.5964 . LR: 0.7732. Time: 0.02
+04/12/2022 16:18:50 - INFO - train -   epoch:80, iter: 512. loss: 0.3029. loss_u: 0.2660. loss_x: 0.0369. Mask:86.9180 . LR: 0.7761. Time: 0.02
+04/12/2022 16:19:38 - INFO - train -   epoch:80, iter: 640. loss: 0.3060. loss_u: 0.2685. loss_x: 0.0375. Mask:86.7938 . LR: 0.7749. Time: 0.02
+04/12/2022 16:20:26 - INFO - train -   epoch:80, iter: 768. loss: 0.3057. loss_u: 0.2672. loss_x: 0.0385. Mask:86.6159 . LR: 0.7734. Time: 0.02
+04/12/2022 16:21:14 - INFO - train -   epoch:80, iter: 896. loss: 0.3043. loss_u: 0.2660. loss_x: 0.0384. Mask:86.6451 . LR: 0.7736. Time: 0.02
+04/12/2022 16:22:02 - INFO - train -   epoch:80, iter: 1024. loss: 0.3040. loss_u: 0.2663. loss_x: 0.0376. Mask:86.6230 . LR: 0.7734. Time: 0.02
+04/12/2022 16:22:06 - INFO - train -   Epoch 80. Top1: 90.8027. Top5: 99.6875. best_acc: 90.8150 in epoch75
+04/12/2022 16:22:56 - INFO - train -   epoch:81, iter: 128. loss: 0.2845. loss_u: 0.2662. loss_x: 0.0183. Mask:90.2266 . LR: 0.8056. Time: 0.02
+04/12/2022 16:23:44 - INFO - train -   epoch:81, iter: 256. loss: 0.2893. loss_u: 0.2647. loss_x: 0.0246. Mask:89.5547 . LR: 0.7996. Time: 0.02
+04/12/2022 16:24:32 - INFO - train -   epoch:81, iter: 384. loss: 0.2862. loss_u: 0.2599. loss_x: 0.0263. Mask:89.2188 . LR: 0.7966. Time: 0.02
+04/12/2022 16:25:20 - INFO - train -   epoch:81, iter: 512. loss: 0.2903. loss_u: 0.2605. loss_x: 0.0298. Mask:88.8809 . LR: 0.7936. Time: 0.02
+04/12/2022 16:26:08 - INFO - train -   epoch:81, iter: 640. loss: 0.2894. loss_u: 0.2604. loss_x: 0.0290. Mask:88.8672 . LR: 0.7935. Time: 0.02
+04/12/2022 16:26:57 - INFO - train -   epoch:81, iter: 768. loss: 0.2879. loss_u: 0.2589. loss_x: 0.0289. Mask:88.8372 . LR: 0.7932. Time: 0.02
+04/12/2022 16:27:45 - INFO - train -   epoch:81, iter: 896. loss: 0.2894. loss_u: 0.2593. loss_x: 0.0300. Mask:88.6049 . LR: 0.7911. Time: 0.02
+04/12/2022 16:28:33 - INFO - train -   epoch:81, iter: 1024. loss: 0.2922. loss_u: 0.2607. loss_x: 0.0315. Mask:88.5342 . LR: 0.7905. Time: 0.02
+04/12/2022 16:28:37 - INFO - train -   Epoch 81. Top1: 83.3885. Top5: 98.9706. best_acc: 90.8150 in epoch75
+04/12/2022 16:29:26 - INFO - train -   epoch:82, iter: 128. loss: 0.3077. loss_u: 0.2745. loss_x: 0.0332. Mask:87.6094 . LR: 0.7822. Time: 0.02
+04/12/2022 16:30:14 - INFO - train -   epoch:82, iter: 256. loss: 0.2994. loss_u: 0.2699. loss_x: 0.0294. Mask:88.5000 . LR: 0.7902. Time: 0.02
+04/12/2022 16:31:02 - INFO - train -   epoch:82, iter: 384. loss: 0.2977. loss_u: 0.2702. loss_x: 0.0275. Mask:88.7005 . LR: 0.7920. Time: 0.02
+04/12/2022 16:31:50 - INFO - train -   epoch:82, iter: 512. loss: 0.2990. loss_u: 0.2682. loss_x: 0.0307. Mask:88.0078 . LR: 0.7858. Time: 0.02
+04/12/2022 16:32:39 - INFO - train -   epoch:82, iter: 640. loss: 0.3003. loss_u: 0.2688. loss_x: 0.0315. Mask:87.9719 . LR: 0.7855. Time: 0.02
+04/12/2022 16:33:27 - INFO - train -   epoch:82, iter: 768. loss: 0.2994. loss_u: 0.2672. loss_x: 0.0322. Mask:87.8581 . LR: 0.7844. Time: 0.02
+04/12/2022 16:34:15 - INFO - train -   epoch:82, iter: 896. loss: 0.2978. loss_u: 0.2665. loss_x: 0.0313. Mask:87.9699 . LR: 0.7854. Time: 0.02
+04/12/2022 16:35:04 - INFO - train -   epoch:82, iter: 1024. loss: 0.2976. loss_u: 0.2661. loss_x: 0.0315. Mask:87.9902 . LR: 0.7856. Time: 0.02
+04/12/2022 16:35:08 - INFO - train -   Epoch 82. Top1: 90.6311. Top5: 99.7610. best_acc: 90.8150 in epoch75
+04/12/2022 16:35:57 - INFO - train -   epoch:83, iter: 128. loss: 0.3009. loss_u: 0.2686. loss_x: 0.0324. Mask:88.1641 . LR: 0.7872. Time: 0.02
+04/12/2022 16:36:46 - INFO - train -   epoch:83, iter: 256. loss: 0.2997. loss_u: 0.2641. loss_x: 0.0356. Mask:87.6562 . LR: 0.7826. Time: 0.02
+04/12/2022 16:37:34 - INFO - train -   epoch:83, iter: 384. loss: 0.2985. loss_u: 0.2617. loss_x: 0.0368. Mask:87.4062 . LR: 0.7804. Time: 0.02
+04/12/2022 16:38:22 - INFO - train -   epoch:83, iter: 512. loss: 0.2954. loss_u: 0.2610. loss_x: 0.0344. Mask:87.3750 . LR: 0.7801. Time: 0.02
+04/12/2022 16:39:11 - INFO - train -   epoch:83, iter: 640. loss: 0.2921. loss_u: 0.2587. loss_x: 0.0334. Mask:87.0938 . LR: 0.7776. Time: 0.02
+04/12/2022 16:39:59 - INFO - train -   epoch:83, iter: 768. loss: 0.2921. loss_u: 0.2577. loss_x: 0.0344. Mask:87.1224 . LR: 0.7779. Time: 0.02
+04/12/2022 16:40:47 - INFO - train -   epoch:83, iter: 896. loss: 0.2911. loss_u: 0.2584. loss_x: 0.0327. Mask:87.2109 . LR: 0.7787. Time: 0.02
+04/12/2022 16:41:36 - INFO - train -   epoch:83, iter: 1024. loss: 0.2895. loss_u: 0.2586. loss_x: 0.0309. Mask:87.3818 . LR: 0.7802. Time: 0.02
+04/12/2022 16:41:40 - INFO - train -   Epoch 83. Top1: 89.8713. Top5: 99.6691. best_acc: 90.8150 in epoch75
+04/12/2022 16:42:30 - INFO - train -   epoch:84, iter: 128. loss: 0.2869. loss_u: 0.2553. loss_x: 0.0316. Mask:88.6562 . LR: 0.7916. Time: 0.02
+04/12/2022 16:43:18 - INFO - train -   epoch:84, iter: 256. loss: 0.2903. loss_u: 0.2562. loss_x: 0.0342. Mask:88.7266 . LR: 0.7922. Time: 0.02
+04/12/2022 16:44:07 - INFO - train -   epoch:84, iter: 384. loss: 0.2945. loss_u: 0.2599. loss_x: 0.0346. Mask:88.3854 . LR: 0.7892. Time: 0.02
+04/12/2022 16:44:55 - INFO - train -   epoch:84, iter: 512. loss: 0.2940. loss_u: 0.2571. loss_x: 0.0369. Mask:87.7988 . LR: 0.7839. Time: 0.02
+04/12/2022 16:45:44 - INFO - train -   epoch:84, iter: 640. loss: 0.2963. loss_u: 0.2599. loss_x: 0.0364. Mask:87.9609 . LR: 0.7854. Time: 0.02
+04/12/2022 16:46:32 - INFO - train -   epoch:84, iter: 768. loss: 0.2943. loss_u: 0.2601. loss_x: 0.0342. Mask:87.9427 . LR: 0.7852. Time: 0.02
+04/12/2022 16:47:21 - INFO - train -   epoch:84, iter: 896. loss: 0.2933. loss_u: 0.2601. loss_x: 0.0333. Mask:88.0725 . LR: 0.7864. Time: 0.02
+04/12/2022 16:48:09 - INFO - train -   epoch:84, iter: 1024. loss: 0.2928. loss_u: 0.2599. loss_x: 0.0329. Mask:87.9346 . LR: 0.7851. Time: 0.02
+04/12/2022 16:48:14 - INFO - train -   Epoch 84. Top1: 86.7034. Top5: 99.4853. best_acc: 90.8150 in epoch75
+04/12/2022 16:49:03 - INFO - train -   epoch:85, iter: 128. loss: 0.2916. loss_u: 0.2591. loss_x: 0.0325. Mask:87.3203 . LR: 0.7796. Time: 0.02
+04/12/2022 16:49:51 - INFO - train -   epoch:85, iter: 256. loss: 0.2903. loss_u: 0.2614. loss_x: 0.0289. Mask:88.3281 . LR: 0.7886. Time: 0.02
+04/12/2022 16:50:38 - INFO - train -   epoch:85, iter: 384. loss: 0.2967. loss_u: 0.2636. loss_x: 0.0331. Mask:87.7266 . LR: 0.7833. Time: 0.02
+04/12/2022 16:51:26 - INFO - train -   epoch:85, iter: 512. loss: 0.3005. loss_u: 0.2654. loss_x: 0.0352. Mask:87.3984 . LR: 0.7803. Time: 0.02
+04/12/2022 16:52:13 - INFO - train -   epoch:85, iter: 640. loss: 0.3000. loss_u: 0.2637. loss_x: 0.0363. Mask:87.0219 . LR: 0.7770. Time: 0.02
+04/12/2022 16:53:01 - INFO - train -   epoch:85, iter: 768. loss: 0.2997. loss_u: 0.2635. loss_x: 0.0362. Mask:86.9870 . LR: 0.7767. Time: 0.02
+04/12/2022 16:53:49 - INFO - train -   epoch:85, iter: 896. loss: 0.2983. loss_u: 0.2621. loss_x: 0.0362. Mask:86.9286 . LR: 0.7761. Time: 0.02
+04/12/2022 16:54:36 - INFO - train -   epoch:85, iter: 1024. loss: 0.2993. loss_u: 0.2622. loss_x: 0.0371. Mask:86.9824 . LR: 0.7766. Time: 0.02
+04/12/2022 16:54:40 - INFO - train -   Epoch 85. Top1: 88.6336. Top5: 99.4485. best_acc: 90.8150 in epoch75
+04/12/2022 16:55:29 - INFO - train -   epoch:86, iter: 128. loss: 0.2975. loss_u: 0.2534. loss_x: 0.0441. Mask:85.1406 . LR: 0.7602. Time: 0.02
+04/12/2022 16:56:18 - INFO - train -   epoch:86, iter: 256. loss: 0.2915. loss_u: 0.2540. loss_x: 0.0375. Mask:86.1133 . LR: 0.7689. Time: 0.02
+04/12/2022 16:57:06 - INFO - train -   epoch:86, iter: 384. loss: 0.2936. loss_u: 0.2570. loss_x: 0.0366. Mask:86.7865 . LR: 0.7749. Time: 0.02
+04/12/2022 16:57:55 - INFO - train -   epoch:86, iter: 512. loss: 0.2947. loss_u: 0.2575. loss_x: 0.0372. Mask:86.6211 . LR: 0.7734. Time: 0.02
+04/12/2022 16:58:44 - INFO - train -   epoch:86, iter: 640. loss: 0.2956. loss_u: 0.2578. loss_x: 0.0378. Mask:86.6188 . LR: 0.7734. Time: 0.02
+04/12/2022 16:59:32 - INFO - train -   epoch:86, iter: 768. loss: 0.2964. loss_u: 0.2582. loss_x: 0.0382. Mask:86.5964 . LR: 0.7732. Time: 0.02
+04/12/2022 17:00:21 - INFO - train -   epoch:86, iter: 896. loss: 0.2951. loss_u: 0.2584. loss_x: 0.0367. Mask:86.5301 . LR: 0.7726. Time: 0.02
+04/12/2022 17:01:09 - INFO - train -   epoch:86, iter: 1024. loss: 0.2940. loss_u: 0.2588. loss_x: 0.0352. Mask:86.8066 . LR: 0.7751. Time: 0.02
+04/12/2022 17:01:13 - INFO - train -   Epoch 86. Top1: 86.8934. Top5: 99.3199. best_acc: 90.8150 in epoch75
+04/12/2022 17:02:02 - INFO - train -   epoch:87, iter: 128. loss: 0.2979. loss_u: 0.2618. loss_x: 0.0361. Mask:88.1172 . LR: 0.7868. Time: 0.02
+04/12/2022 17:02:49 - INFO - train -   epoch:87, iter: 256. loss: 0.3093. loss_u: 0.2625. loss_x: 0.0468. Mask:87.2031 . LR: 0.7786. Time: 0.02
+04/12/2022 17:03:37 - INFO - train -   epoch:87, iter: 384. loss: 0.3039. loss_u: 0.2606. loss_x: 0.0433. Mask:86.3281 . LR: 0.7708. Time: 0.02
+04/12/2022 17:04:24 - INFO - train -   epoch:87, iter: 512. loss: 0.3001. loss_u: 0.2609. loss_x: 0.0392. Mask:86.7910 . LR: 0.7749. Time: 0.02
+04/12/2022 17:05:12 - INFO - train -   epoch:87, iter: 640. loss: 0.2998. loss_u: 0.2601. loss_x: 0.0397. Mask:86.6953 . LR: 0.7741. Time: 0.02
+04/12/2022 17:06:00 - INFO - train -   epoch:87, iter: 768. loss: 0.2991. loss_u: 0.2605. loss_x: 0.0386. Mask:86.7812 . LR: 0.7748. Time: 0.02
+04/12/2022 17:06:47 - INFO - train -   epoch:87, iter: 896. loss: 0.2985. loss_u: 0.2621. loss_x: 0.0364. Mask:87.0971 . LR: 0.7777. Time: 0.02
+04/12/2022 17:07:35 - INFO - train -   epoch:87, iter: 1024. loss: 0.2968. loss_u: 0.2615. loss_x: 0.0353. Mask:87.1953 . LR: 0.7785. Time: 0.02
+04/12/2022 17:07:40 - INFO - train -   Epoch 87. Top1: 89.5159. Top5: 99.6875. best_acc: 90.8150 in epoch75
+04/12/2022 17:08:28 - INFO - train -   epoch:88, iter: 128. loss: 0.2916. loss_u: 0.2632. loss_x: 0.0284. Mask:88.6172 . LR: 0.7912. Time: 0.02
+04/12/2022 17:09:16 - INFO - train -   epoch:88, iter: 256. loss: 0.2897. loss_u: 0.2601. loss_x: 0.0296. Mask:88.1875 . LR: 0.7874. Time: 0.02
+04/12/2022 17:10:04 - INFO - train -   epoch:88, iter: 384. loss: 0.2912. loss_u: 0.2608. loss_x: 0.0304. Mask:88.2839 . LR: 0.7882. Time: 0.02
+04/12/2022 17:10:51 - INFO - train -   epoch:88, iter: 512. loss: 0.2962. loss_u: 0.2591. loss_x: 0.0370. Mask:87.4062 . LR: 0.7804. Time: 0.02
+04/12/2022 17:11:39 - INFO - train -   epoch:88, iter: 640. loss: 0.3024. loss_u: 0.2623. loss_x: 0.0401. Mask:86.6750 . LR: 0.7739. Time: 0.02
+04/12/2022 17:12:26 - INFO - train -   epoch:88, iter: 768. loss: 0.2994. loss_u: 0.2622. loss_x: 0.0373. Mask:87.1120 . LR: 0.7778. Time: 0.02
+04/12/2022 17:13:14 - INFO - train -   epoch:88, iter: 896. loss: 0.3018. loss_u: 0.2626. loss_x: 0.0392. Mask:86.9464 . LR: 0.7763. Time: 0.02
+04/12/2022 17:14:02 - INFO - train -   epoch:88, iter: 1024. loss: 0.3029. loss_u: 0.2632. loss_x: 0.0397. Mask:86.8105 . LR: 0.7751. Time: 0.02
+04/12/2022 17:14:06 - INFO - train -   Epoch 88. Top1: 80.7721. Top5: 98.4559. best_acc: 90.8150 in epoch75
+04/12/2022 17:14:55 - INFO - train -   epoch:89, iter: 128. loss: 0.2850. loss_u: 0.2628. loss_x: 0.0222. Mask:88.9609 . LR: 0.7943. Time: 0.02
+04/12/2022 17:15:43 - INFO - train -   epoch:89, iter: 256. loss: 0.2880. loss_u: 0.2624. loss_x: 0.0256. Mask:88.5977 . LR: 0.7911. Time: 0.02
+04/12/2022 17:16:32 - INFO - train -   epoch:89, iter: 384. loss: 0.2889. loss_u: 0.2612. loss_x: 0.0278. Mask:88.4714 . LR: 0.7899. Time: 0.02
+04/12/2022 17:17:20 - INFO - train -   epoch:89, iter: 512. loss: 0.2870. loss_u: 0.2599. loss_x: 0.0271. Mask:88.7520 . LR: 0.7924. Time: 0.02
+04/12/2022 17:18:07 - INFO - train -   epoch:89, iter: 640. loss: 0.2864. loss_u: 0.2588. loss_x: 0.0276. Mask:88.8719 . LR: 0.7935. Time: 0.02
+04/12/2022 17:18:55 - INFO - train -   epoch:89, iter: 768. loss: 0.2869. loss_u: 0.2597. loss_x: 0.0272. Mask:88.8594 . LR: 0.7934. Time: 0.02
+04/12/2022 17:19:43 - INFO - train -   epoch:89, iter: 896. loss: 0.2869. loss_u: 0.2594. loss_x: 0.0276. Mask:88.8940 . LR: 0.7937. Time: 0.02
+04/12/2022 17:20:31 - INFO - train -   epoch:89, iter: 1024. loss: 0.2868. loss_u: 0.2591. loss_x: 0.0277. Mask:88.8086 . LR: 0.7929. Time: 0.02
+04/12/2022 17:20:35 - INFO - train -   Epoch 89. Top1: 89.9203. Top5: 99.5404. best_acc: 90.8150 in epoch75
+04/12/2022 17:21:25 - INFO - train -   epoch:90, iter: 128. loss: 0.2846. loss_u: 0.2560. loss_x: 0.0285. Mask:89.0547 . LR: 0.7951. Time: 0.02
+04/12/2022 17:22:12 - INFO - train -   epoch:90, iter: 256. loss: 0.2829. loss_u: 0.2563. loss_x: 0.0266. Mask:89.8711 . LR: 0.8024. Time: 0.02
+04/12/2022 17:23:00 - INFO - train -   epoch:90, iter: 384. loss: 0.2856. loss_u: 0.2582. loss_x: 0.0274. Mask:89.8385 . LR: 0.8021. Time: 0.02
+04/12/2022 17:23:48 - INFO - train -   epoch:90, iter: 512. loss: 0.2875. loss_u: 0.2616. loss_x: 0.0259. Mask:89.9355 . LR: 0.8030. Time: 0.02
+04/12/2022 17:24:36 - INFO - train -   epoch:90, iter: 640. loss: 0.2874. loss_u: 0.2598. loss_x: 0.0275. Mask:89.7094 . LR: 0.8010. Time: 0.02
+04/12/2022 17:25:24 - INFO - train -   epoch:90, iter: 768. loss: 0.2869. loss_u: 0.2573. loss_x: 0.0296. Mask:89.5664 . LR: 0.7997. Time: 0.02
+04/12/2022 17:26:13 - INFO - train -   epoch:90, iter: 896. loss: 0.2889. loss_u: 0.2577. loss_x: 0.0312. Mask:89.3326 . LR: 0.7976. Time: 0.02
+04/12/2022 17:27:00 - INFO - train -   epoch:90, iter: 1024. loss: 0.2903. loss_u: 0.2578. loss_x: 0.0326. Mask:89.2832 . LR: 0.7972. Time: 0.02
+04/12/2022 17:27:04 - INFO - train -   Epoch 90. Top1: 88.2537. Top5: 99.5956. best_acc: 90.8150 in epoch75
+04/12/2022 17:27:53 - INFO - train -   epoch:91, iter: 128. loss: 0.2798. loss_u: 0.2469. loss_x: 0.0329. Mask:88.4609 . LR: 0.7898. Time: 0.02
+04/12/2022 17:28:41 - INFO - train -   epoch:91, iter: 256. loss: 0.2892. loss_u: 0.2519. loss_x: 0.0373. Mask:88.5117 . LR: 0.7903. Time: 0.02
+04/12/2022 17:29:30 - INFO - train -   epoch:91, iter: 384. loss: 0.2875. loss_u: 0.2532. loss_x: 0.0343. Mask:88.3906 . LR: 0.7892. Time: 0.02
+04/12/2022 17:30:18 - INFO - train -   epoch:91, iter: 512. loss: 0.2915. loss_u: 0.2559. loss_x: 0.0356. Mask:88.2930 . LR: 0.7883. Time: 0.02
+04/12/2022 17:31:06 - INFO - train -   epoch:91, iter: 640. loss: 0.2915. loss_u: 0.2565. loss_x: 0.0350. Mask:88.2562 . LR: 0.7880. Time: 0.02
+04/12/2022 17:31:54 - INFO - train -   epoch:91, iter: 768. loss: 0.2904. loss_u: 0.2558. loss_x: 0.0346. Mask:87.9674 . LR: 0.7854. Time: 0.02
+04/12/2022 17:32:42 - INFO - train -   epoch:91, iter: 896. loss: 0.2878. loss_u: 0.2550. loss_x: 0.0328. Mask:87.9643 . LR: 0.7854. Time: 0.02
+04/12/2022 17:33:31 - INFO - train -   epoch:91, iter: 1024. loss: 0.2849. loss_u: 0.2542. loss_x: 0.0306. Mask:88.2012 . LR: 0.7875. Time: 0.02
+04/12/2022 17:33:35 - INFO - train -   Epoch 91. Top1: 88.8787. Top5: 99.4301. best_acc: 90.8150 in epoch75
+04/12/2022 17:34:24 - INFO - train -   epoch:92, iter: 128. loss: 0.2789. loss_u: 0.2542. loss_x: 0.0247. Mask:90.0000 . LR: 0.8036. Time: 0.02
+04/12/2022 17:35:12 - INFO - train -   epoch:92, iter: 256. loss: 0.2866. loss_u: 0.2572. loss_x: 0.0294. Mask:89.7188 . LR: 0.8011. Time: 0.02
+04/12/2022 17:36:01 - INFO - train -   epoch:92, iter: 384. loss: 0.2830. loss_u: 0.2576. loss_x: 0.0255. Mask:89.4870 . LR: 0.7990. Time: 0.02
+04/12/2022 17:36:49 - INFO - train -   epoch:92, iter: 512. loss: 0.2846. loss_u: 0.2573. loss_x: 0.0272. Mask:89.4961 . LR: 0.7991. Time: 0.02
+04/12/2022 17:37:37 - INFO - train -   epoch:92, iter: 640. loss: 0.2850. loss_u: 0.2564. loss_x: 0.0286. Mask:88.7031 . LR: 0.7920. Time: 0.02
+04/12/2022 17:38:25 - INFO - train -   epoch:92, iter: 768. loss: 0.2868. loss_u: 0.2571. loss_x: 0.0298. Mask:88.5417 . LR: 0.7906. Time: 0.02
+04/12/2022 17:39:14 - INFO - train -   epoch:92, iter: 896. loss: 0.2857. loss_u: 0.2565. loss_x: 0.0292. Mask:88.4888 . LR: 0.7901. Time: 0.02
+04/12/2022 17:40:02 - INFO - train -   epoch:92, iter: 1024. loss: 0.2854. loss_u: 0.2565. loss_x: 0.0289. Mask:88.5225 . LR: 0.7904. Time: 0.02
+04/12/2022 17:40:06 - INFO - train -   Epoch 92. Top1: 89.9816. Top5: 99.5956. best_acc: 90.8150 in epoch75
+04/12/2022 17:40:56 - INFO - train -   epoch:93, iter: 128. loss: 0.2928. loss_u: 0.2588. loss_x: 0.0339. Mask:87.1797 . LR: 0.7784. Time: 0.02
+04/12/2022 17:41:44 - INFO - train -   epoch:93, iter: 256. loss: 0.2960. loss_u: 0.2618. loss_x: 0.0342. Mask:87.3633 . LR: 0.7800. Time: 0.02
+04/12/2022 17:42:33 - INFO - train -   epoch:93, iter: 384. loss: 0.2919. loss_u: 0.2611. loss_x: 0.0308. Mask:87.8307 . LR: 0.7842. Time: 0.02
+04/12/2022 17:43:21 - INFO - train -   epoch:93, iter: 512. loss: 0.2913. loss_u: 0.2614. loss_x: 0.0298. Mask:88.0703 . LR: 0.7863. Time: 0.02
+04/12/2022 17:44:10 - INFO - train -   epoch:93, iter: 640. loss: 0.2912. loss_u: 0.2621. loss_x: 0.0291. Mask:88.1078 . LR: 0.7867. Time: 0.02
+04/12/2022 17:44:59 - INFO - train -   epoch:93, iter: 768. loss: 0.2886. loss_u: 0.2599. loss_x: 0.0287. Mask:88.3568 . LR: 0.7889. Time: 0.02
+04/12/2022 17:45:47 - INFO - train -   epoch:93, iter: 896. loss: 0.2897. loss_u: 0.2606. loss_x: 0.0291. Mask:88.4721 . LR: 0.7899. Time: 0.02
+04/12/2022 17:46:35 - INFO - train -   epoch:93, iter: 1024. loss: 0.2926. loss_u: 0.2609. loss_x: 0.0318. Mask:88.1846 . LR: 0.7874. Time: 0.02
+04/12/2022 17:46:39 - INFO - train -   Epoch 93. Top1: 85.7414. Top5: 99.4301. best_acc: 90.8150 in epoch75
+04/12/2022 17:47:28 - INFO - train -   epoch:94, iter: 128. loss: 0.2761. loss_u: 0.2498. loss_x: 0.0263. Mask:87.2812 . LR: 0.7793. Time: 0.02
+04/12/2022 17:48:16 - INFO - train -   epoch:94, iter: 256. loss: 0.2826. loss_u: 0.2524. loss_x: 0.0302. Mask:87.8047 . LR: 0.7840. Time: 0.02
+04/12/2022 17:49:04 - INFO - train -   epoch:94, iter: 384. loss: 0.2815. loss_u: 0.2539. loss_x: 0.0276. Mask:88.3464 . LR: 0.7888. Time: 0.02
+04/12/2022 17:49:52 - INFO - train -   epoch:94, iter: 512. loss: 0.2798. loss_u: 0.2538. loss_x: 0.0260. Mask:88.4668 . LR: 0.7899. Time: 0.02
+04/12/2022 17:50:41 - INFO - train -   epoch:94, iter: 640. loss: 0.2788. loss_u: 0.2537. loss_x: 0.0250. Mask:88.8625 . LR: 0.7934. Time: 0.02
+04/12/2022 17:51:29 - INFO - train -   epoch:94, iter: 768. loss: 0.2813. loss_u: 0.2548. loss_x: 0.0265. Mask:88.6914 . LR: 0.7919. Time: 0.02
+04/12/2022 17:52:17 - INFO - train -   epoch:94, iter: 896. loss: 0.2822. loss_u: 0.2546. loss_x: 0.0276. Mask:88.5926 . LR: 0.7910. Time: 0.02
+04/12/2022 17:53:06 - INFO - train -   epoch:94, iter: 1024. loss: 0.2817. loss_u: 0.2544. loss_x: 0.0273. Mask:88.5713 . LR: 0.7908. Time: 0.02
+04/12/2022 17:53:10 - INFO - train -   Epoch 94. Top1: 89.8039. Top5: 99.5956. best_acc: 90.8150 in epoch75
+04/12/2022 17:53:59 - INFO - train -   epoch:95, iter: 128. loss: 0.2632. loss_u: 0.2470. loss_x: 0.0162. Mask:91.2344 . LR: 0.8146. Time: 0.02
+04/12/2022 17:54:46 - INFO - train -   epoch:95, iter: 256. loss: 0.2699. loss_u: 0.2511. loss_x: 0.0188. Mask:90.8242 . LR: 0.8109. Time: 0.02
+04/12/2022 17:55:34 - INFO - train -   epoch:95, iter: 384. loss: 0.2795. loss_u: 0.2560. loss_x: 0.0235. Mask:90.2604 . LR: 0.8059. Time: 0.02
+04/12/2022 17:56:21 - INFO - train -   epoch:95, iter: 512. loss: 0.2839. loss_u: 0.2577. loss_x: 0.0261. Mask:89.5293 . LR: 0.7994. Time: 0.02
+04/12/2022 17:57:08 - INFO - train -   epoch:95, iter: 640. loss: 0.2863. loss_u: 0.2575. loss_x: 0.0288. Mask:89.0719 . LR: 0.7953. Time: 0.02
+04/12/2022 17:57:55 - INFO - train -   epoch:95, iter: 768. loss: 0.2910. loss_u: 0.2578. loss_x: 0.0332. Mask:88.6055 . LR: 0.7911. Time: 0.02
+04/12/2022 17:58:43 - INFO - train -   epoch:95, iter: 896. loss: 0.2888. loss_u: 0.2564. loss_x: 0.0324. Mask:88.2790 . LR: 0.7882. Time: 0.02
+04/12/2022 17:59:31 - INFO - train -   epoch:95, iter: 1024. loss: 0.2917. loss_u: 0.2581. loss_x: 0.0336. Mask:88.1025 . LR: 0.7866. Time: 0.02
+04/12/2022 17:59:35 - INFO - train -   Epoch 95. Top1: 87.2917. Top5: 99.4485. best_acc: 90.8150 in epoch75
+04/12/2022 18:00:25 - INFO - train -   epoch:96, iter: 128. loss: 0.2812. loss_u: 0.2485. loss_x: 0.0327. Mask:86.4922 . LR: 0.7723. Time: 0.02
+04/12/2022 18:01:13 - INFO - train -   epoch:96, iter: 256. loss: 0.2780. loss_u: 0.2483. loss_x: 0.0297. Mask:88.1094 . LR: 0.7867. Time: 0.02
+04/12/2022 18:02:01 - INFO - train -   epoch:96, iter: 384. loss: 0.2846. loss_u: 0.2566. loss_x: 0.0281. Mask:88.4427 . LR: 0.7897. Time: 0.02
+04/12/2022 18:02:49 - INFO - train -   epoch:96, iter: 512. loss: 0.2844. loss_u: 0.2568. loss_x: 0.0276. Mask:88.3535 . LR: 0.7889. Time: 0.02
+04/12/2022 18:03:37 - INFO - train -   epoch:96, iter: 640. loss: 0.2831. loss_u: 0.2563. loss_x: 0.0268. Mask:88.6063 . LR: 0.7911. Time: 0.02
+04/12/2022 18:04:25 - INFO - train -   epoch:96, iter: 768. loss: 0.2811. loss_u: 0.2553. loss_x: 0.0258. Mask:88.8529 . LR: 0.7933. Time: 0.02
+04/12/2022 18:05:14 - INFO - train -   epoch:96, iter: 896. loss: 0.2804. loss_u: 0.2553. loss_x: 0.0251. Mask:89.1395 . LR: 0.7959. Time: 0.02
+04/12/2022 18:06:02 - INFO - train -   epoch:96, iter: 1024. loss: 0.2804. loss_u: 0.2564. loss_x: 0.0239. Mask:89.3359 . LR: 0.7976. Time: 0.02
+04/12/2022 18:06:06 - INFO - train -   Epoch 96. Top1: 90.1103. Top5: 99.6507. best_acc: 90.8150 in epoch75
+04/12/2022 18:06:55 - INFO - train -   epoch:97, iter: 128. loss: 0.2783. loss_u: 0.2544. loss_x: 0.0240. Mask:90.1562 . LR: 0.8050. Time: 0.02
+04/12/2022 18:07:44 - INFO - train -   epoch:97, iter: 256. loss: 0.2844. loss_u: 0.2585. loss_x: 0.0259. Mask:89.7148 . LR: 0.8010. Time: 0.02
+04/12/2022 18:08:32 - INFO - train -   epoch:97, iter: 384. loss: 0.2799. loss_u: 0.2565. loss_x: 0.0234. Mask:90.0833 . LR: 0.8043. Time: 0.02
+04/12/2022 18:09:20 - INFO - train -   epoch:97, iter: 512. loss: 0.2853. loss_u: 0.2573. loss_x: 0.0280. Mask:89.7070 . LR: 0.8010. Time: 0.02
+04/12/2022 18:10:09 - INFO - train -   epoch:97, iter: 640. loss: 0.2853. loss_u: 0.2567. loss_x: 0.0286. Mask:89.6672 . LR: 0.8006. Time: 0.01
+04/12/2022 18:10:58 - INFO - train -   epoch:97, iter: 768. loss: 0.2880. loss_u: 0.2572. loss_x: 0.0308. Mask:89.1510 . LR: 0.7960. Time: 0.01
+04/12/2022 18:11:46 - INFO - train -   epoch:97, iter: 896. loss: 0.2869. loss_u: 0.2572. loss_x: 0.0297. Mask:89.0547 . LR: 0.7951. Time: 0.01
+04/12/2022 18:12:35 - INFO - train -   epoch:97, iter: 1024. loss: 0.2857. loss_u: 0.2574. loss_x: 0.0283. Mask:89.2334 . LR: 0.7967. Time: 0.01
+04/12/2022 18:12:39 - INFO - train -   Epoch 97. Top1: 90.7598. Top5: 99.6691. best_acc: 90.8150 in epoch75
+04/12/2022 18:13:29 - INFO - train -   epoch:98, iter: 128. loss: 0.2830. loss_u: 0.2467. loss_x: 0.0362. Mask:89.2031 . LR: 0.7965. Time: 0.01
+04/12/2022 18:14:17 - INFO - train -   epoch:98, iter: 256. loss: 0.2798. loss_u: 0.2506. loss_x: 0.0292. Mask:89.9141 . LR: 0.8028. Time: 0.01
+04/12/2022 18:15:05 - INFO - train -   epoch:98, iter: 384. loss: 0.2861. loss_u: 0.2591. loss_x: 0.0270. Mask:89.8750 . LR: 0.8025. Time: 0.01
+04/12/2022 18:15:53 - INFO - train -   epoch:98, iter: 512. loss: 0.2954. loss_u: 0.2616. loss_x: 0.0338. Mask:89.2188 . LR: 0.7966. Time: 0.01
+04/12/2022 18:16:41 - INFO - train -   epoch:98, iter: 640. loss: 0.2930. loss_u: 0.2611. loss_x: 0.0319. Mask:89.2297 . LR: 0.7967. Time: 0.01
+04/12/2022 18:17:30 - INFO - train -   epoch:98, iter: 768. loss: 0.2899. loss_u: 0.2599. loss_x: 0.0300. Mask:89.2331 . LR: 0.7967. Time: 0.01
+04/12/2022 18:18:18 - INFO - train -   epoch:98, iter: 896. loss: 0.2891. loss_u: 0.2596. loss_x: 0.0295. Mask:89.3415 . LR: 0.7977. Time: 0.01
+04/12/2022 18:19:07 - INFO - train -   epoch:98, iter: 1024. loss: 0.2882. loss_u: 0.2590. loss_x: 0.0292. Mask:89.4004 . LR: 0.7982. Time: 0.01
+04/12/2022 18:19:11 - INFO - train -   Epoch 98. Top1: 90.4228. Top5: 99.5588. best_acc: 90.8150 in epoch75
+04/12/2022 18:20:00 - INFO - train -   epoch:99, iter: 128. loss: 0.2872. loss_u: 0.2630. loss_x: 0.0242. Mask:89.6641 . LR: 0.8006. Time: 0.01
+04/12/2022 18:20:48 - INFO - train -   epoch:99, iter: 256. loss: 0.2775. loss_u: 0.2580. loss_x: 0.0195. Mask:90.4023 . LR: 0.8072. Time: 0.01
+04/12/2022 18:21:36 - INFO - train -   epoch:99, iter: 384. loss: 0.2784. loss_u: 0.2567. loss_x: 0.0218. Mask:90.3411 . LR: 0.8066. Time: 0.01
+04/12/2022 18:22:24 - INFO - train -   epoch:99, iter: 512. loss: 0.2798. loss_u: 0.2580. loss_x: 0.0218. Mask:90.1855 . LR: 0.8052. Time: 0.01
+04/12/2022 18:23:12 - INFO - train -   epoch:99, iter: 640. loss: 0.2794. loss_u: 0.2576. loss_x: 0.0218. Mask:90.1766 . LR: 0.8051. Time: 0.01
+04/12/2022 18:24:00 - INFO - train -   epoch:99, iter: 768. loss: 0.2801. loss_u: 0.2579. loss_x: 0.0222. Mask:90.2773 . LR: 0.8060. Time: 0.01
+04/12/2022 18:24:47 - INFO - train -   epoch:99, iter: 896. loss: 0.2779. loss_u: 0.2556. loss_x: 0.0223. Mask:90.1719 . LR: 0.8051. Time: 0.01
+04/12/2022 18:25:35 - INFO - train -   epoch:99, iter: 1024. loss: 0.2784. loss_u: 0.2562. loss_x: 0.0223. Mask:90.1426 . LR: 0.8048. Time: 0.01
+04/12/2022 18:25:39 - INFO - train -   Epoch 99. Top1: 90.5637. Top5: 99.7243. best_acc: 90.8150 in epoch75
+04/12/2022 18:26:29 - INFO - train -   epoch:100, iter: 128. loss: 0.2796. loss_u: 0.2527. loss_x: 0.0269. Mask:90.7891 . LR: 0.8106. Time: 0.01
+04/12/2022 18:27:17 - INFO - train -   epoch:100, iter: 256. loss: 0.2831. loss_u: 0.2588. loss_x: 0.0243. Mask:90.3203 . LR: 0.8064. Time: 0.01
+04/12/2022 18:28:06 - INFO - train -   epoch:100, iter: 384. loss: 0.2838. loss_u: 0.2579. loss_x: 0.0259. Mask:90.2708 . LR: 0.8060. Time: 0.01
+04/12/2022 18:28:54 - INFO - train -   epoch:100, iter: 512. loss: 0.2824. loss_u: 0.2583. loss_x: 0.0242. Mask:90.4922 . LR: 0.8080. Time: 0.01
+04/12/2022 18:29:42 - INFO - train -   epoch:100, iter: 640. loss: 0.2843. loss_u: 0.2590. loss_x: 0.0253. Mask:90.3625 . LR: 0.8068. Time: 0.01
+04/12/2022 18:30:30 - INFO - train -   epoch:100, iter: 768. loss: 0.2806. loss_u: 0.2561. loss_x: 0.0245. Mask:90.4258 . LR: 0.8074. Time: 0.01
+04/12/2022 18:31:18 - INFO - train -   epoch:100, iter: 896. loss: 0.2808. loss_u: 0.2562. loss_x: 0.0246. Mask:90.5837 . LR: 0.8088. Time: 0.01
+04/12/2022 18:32:06 - INFO - train -   epoch:100, iter: 1024. loss: 0.2821. loss_u: 0.2563. loss_x: 0.0258. Mask:90.3965 . LR: 0.8071. Time: 0.01
+04/12/2022 18:32:10 - INFO - train -   Epoch 100. Top1: 86.5748. Top5: 99.2831. best_acc: 90.8150 in epoch75
+04/12/2022 18:32:59 - INFO - train -   epoch:101, iter: 128. loss: 0.2679. loss_u: 0.2534. loss_x: 0.0145. Mask:91.1875 . LR: 0.8142. Time: 0.01
+04/12/2022 18:33:48 - INFO - train -   epoch:101, iter: 256. loss: 0.2818. loss_u: 0.2599. loss_x: 0.0219. Mask:90.6758 . LR: 0.8096. Time: 0.01
+04/12/2022 18:34:36 - INFO - train -   epoch:101, iter: 384. loss: 0.2833. loss_u: 0.2604. loss_x: 0.0229. Mask:90.0859 . LR: 0.8043. Time: 0.01
+04/12/2022 18:35:24 - INFO - train -   epoch:101, iter: 512. loss: 0.2842. loss_u: 0.2586. loss_x: 0.0256. Mask:90.0742 . LR: 0.8042. Time: 0.01
+04/12/2022 18:36:13 - INFO - train -   epoch:101, iter: 640. loss: 0.2853. loss_u: 0.2582. loss_x: 0.0271. Mask:89.9469 . LR: 0.8031. Time: 0.01
+04/12/2022 18:37:01 - INFO - train -   epoch:101, iter: 768. loss: 0.2841. loss_u: 0.2587. loss_x: 0.0254. Mask:90.0807 . LR: 0.8043. Time: 0.01
+04/12/2022 18:37:49 - INFO - train -   epoch:101, iter: 896. loss: 0.2854. loss_u: 0.2599. loss_x: 0.0255. Mask:89.8850 . LR: 0.8025. Time: 0.01
+04/12/2022 18:38:37 - INFO - train -   epoch:101, iter: 1024. loss: 0.2846. loss_u: 0.2596. loss_x: 0.0250. Mask:89.9531 . LR: 0.8032. Time: 0.01
+04/12/2022 18:38:41 - INFO - train -   Epoch 101. Top1: 89.5588. Top5: 99.5956. best_acc: 90.8150 in epoch75
+04/12/2022 18:39:30 - INFO - train -   epoch:102, iter: 128. loss: 0.2681. loss_u: 0.2429. loss_x: 0.0252. Mask:89.9688 . LR: 0.8033. Time: 0.01
+04/12/2022 18:40:17 - INFO - train -   epoch:102, iter: 256. loss: 0.2779. loss_u: 0.2496. loss_x: 0.0283. Mask:90.1836 . LR: 0.8052. Time: 0.01
+04/12/2022 18:41:05 - INFO - train -   epoch:102, iter: 384. loss: 0.2878. loss_u: 0.2546. loss_x: 0.0332. Mask:89.8177 . LR: 0.8019. Time: 0.01
+04/12/2022 18:41:52 - INFO - train -   epoch:102, iter: 512. loss: 0.2897. loss_u: 0.2549. loss_x: 0.0348. Mask:89.3555 . LR: 0.7978. Time: 0.01
+04/12/2022 18:42:39 - INFO - train -   epoch:102, iter: 640. loss: 0.2864. loss_u: 0.2536. loss_x: 0.0328. Mask:89.0891 . LR: 0.7954. Time: 0.01
+04/12/2022 18:43:26 - INFO - train -   epoch:102, iter: 768. loss: 0.2850. loss_u: 0.2542. loss_x: 0.0308. Mask:89.2656 . LR: 0.7970. Time: 0.01
+04/12/2022 18:44:14 - INFO - train -   epoch:102, iter: 896. loss: 0.2819. loss_u: 0.2531. loss_x: 0.0288. Mask:89.4665 . LR: 0.7988. Time: 0.01
+04/12/2022 18:45:01 - INFO - train -   epoch:102, iter: 1024. loss: 0.2825. loss_u: 0.2540. loss_x: 0.0285. Mask:89.5557 . LR: 0.7996. Time: 0.01
+04/12/2022 18:45:06 - INFO - train -   Epoch 102. Top1: 89.8897. Top5: 99.5956. best_acc: 90.8150 in epoch75
+04/12/2022 18:45:56 - INFO - train -   epoch:103, iter: 128. loss: 0.2852. loss_u: 0.2568. loss_x: 0.0283. Mask:90.5078 . LR: 0.8081. Time: 0.01
+04/12/2022 18:46:44 - INFO - train -   epoch:103, iter: 256. loss: 0.2729. loss_u: 0.2503. loss_x: 0.0226. Mask:90.9453 . LR: 0.8120. Time: 0.01
+04/12/2022 18:47:32 - INFO - train -   epoch:103, iter: 384. loss: 0.2713. loss_u: 0.2510. loss_x: 0.0202. Mask:91.3073 . LR: 0.8152. Time: 0.01
+04/12/2022 18:48:20 - INFO - train -   epoch:103, iter: 512. loss: 0.2729. loss_u: 0.2511. loss_x: 0.0217. Mask:91.1016 . LR: 0.8134. Time: 0.01
+04/12/2022 18:49:09 - INFO - train -   epoch:103, iter: 640. loss: 0.2734. loss_u: 0.2507. loss_x: 0.0227. Mask:90.6422 . LR: 0.8093. Time: 0.01
+04/12/2022 18:49:57 - INFO - train -   epoch:103, iter: 768. loss: 0.2740. loss_u: 0.2510. loss_x: 0.0230. Mask:90.7188 . LR: 0.8100. Time: 0.01
+04/12/2022 18:50:45 - INFO - train -   epoch:103, iter: 896. loss: 0.2727. loss_u: 0.2510. loss_x: 0.0218. Mask:91.0022 . LR: 0.8125. Time: 0.01
+04/12/2022 18:51:33 - INFO - train -   epoch:103, iter: 1024. loss: 0.2733. loss_u: 0.2511. loss_x: 0.0222. Mask:90.8955 . LR: 0.8116. Time: 0.01
+04/12/2022 18:51:37 - INFO - train -   Epoch 103. Top1: 88.9216. Top5: 99.5037. best_acc: 90.8150 in epoch75
+04/12/2022 18:52:26 - INFO - train -   epoch:104, iter: 128. loss: 0.2680. loss_u: 0.2496. loss_x: 0.0183. Mask:89.9766 . LR: 0.8034. Time: 0.01
+04/12/2022 18:53:13 - INFO - train -   epoch:104, iter: 256. loss: 0.2631. loss_u: 0.2453. loss_x: 0.0178. Mask:90.7969 . LR: 0.8107. Time: 0.01
+04/12/2022 18:54:01 - INFO - train -   epoch:104, iter: 384. loss: 0.2661. loss_u: 0.2487. loss_x: 0.0174. Mask:91.4974 . LR: 0.8169. Time: 0.01
+04/12/2022 18:54:49 - INFO - train -   epoch:104, iter: 512. loss: 0.2650. loss_u: 0.2482. loss_x: 0.0168. Mask:91.4961 . LR: 0.8169. Time: 0.01
+04/12/2022 18:55:37 - INFO - train -   epoch:104, iter: 640. loss: 0.2653. loss_u: 0.2492. loss_x: 0.0160. Mask:91.5547 . LR: 0.8175. Time: 0.01
+04/12/2022 18:56:25 - INFO - train -   epoch:104, iter: 768. loss: 0.2681. loss_u: 0.2501. loss_x: 0.0180. Mask:91.6341 . LR: 0.8182. Time: 0.01
+04/12/2022 18:57:13 - INFO - train -   epoch:104, iter: 896. loss: 0.2680. loss_u: 0.2491. loss_x: 0.0189. Mask:91.5714 . LR: 0.8176. Time: 0.01
+04/12/2022 18:58:01 - INFO - train -   epoch:104, iter: 1024. loss: 0.2713. loss_u: 0.2508. loss_x: 0.0204. Mask:91.3115 . LR: 0.8153. Time: 0.01
+04/12/2022 18:58:05 - INFO - train -   Epoch 104. Top1: 90.0061. Top5: 99.6507. best_acc: 90.8150 in epoch75
+04/12/2022 18:58:54 - INFO - train -   epoch:105, iter: 128. loss: 0.2893. loss_u: 0.2588. loss_x: 0.0305. Mask:89.6250 . LR: 0.8002. Time: 0.01
+04/12/2022 18:59:42 - INFO - train -   epoch:105, iter: 256. loss: 0.2826. loss_u: 0.2584. loss_x: 0.0242. Mask:90.3047 . LR: 0.8063. Time: 0.01
+04/12/2022 19:00:30 - INFO - train -   epoch:105, iter: 384. loss: 0.2804. loss_u: 0.2566. loss_x: 0.0238. Mask:90.5365 . LR: 0.8084. Time: 0.01
+04/12/2022 19:01:18 - INFO - train -   epoch:105, iter: 512. loss: 0.2787. loss_u: 0.2557. loss_x: 0.0230. Mask:90.4473 . LR: 0.8076. Time: 0.01
+04/12/2022 19:02:06 - INFO - train -   epoch:105, iter: 640. loss: 0.2742. loss_u: 0.2529. loss_x: 0.0213. Mask:90.8187 . LR: 0.8109. Time: 0.01
+04/12/2022 19:02:53 - INFO - train -   epoch:105, iter: 768. loss: 0.2771. loss_u: 0.2545. loss_x: 0.0225. Mask:90.9453 . LR: 0.8120. Time: 0.01
+04/12/2022 19:03:42 - INFO - train -   epoch:105, iter: 896. loss: 0.2761. loss_u: 0.2539. loss_x: 0.0222. Mask:90.9754 . LR: 0.8123. Time: 0.01
+04/12/2022 19:04:30 - INFO - train -   epoch:105, iter: 1024. loss: 0.2765. loss_u: 0.2530. loss_x: 0.0234. Mask:90.8066 . LR: 0.8108. Time: 0.01
+04/12/2022 19:04:34 - INFO - train -   Epoch 105. Top1: 90.1164. Top5: 99.5404. best_acc: 90.8150 in epoch75
+04/12/2022 19:05:23 - INFO - train -   epoch:106, iter: 128. loss: 0.2824. loss_u: 0.2581. loss_x: 0.0244. Mask:89.4141 . LR: 0.7983. Time: 0.01
+04/12/2022 19:06:11 - INFO - train -   epoch:106, iter: 256. loss: 0.2830. loss_u: 0.2550. loss_x: 0.0280. Mask:89.7188 . LR: 0.8011. Time: 0.01
+04/12/2022 19:06:59 - INFO - train -   epoch:106, iter: 384. loss: 0.2819. loss_u: 0.2548. loss_x: 0.0271. Mask:89.9401 . LR: 0.8030. Time: 0.01
+04/12/2022 19:07:47 - INFO - train -   epoch:106, iter: 512. loss: 0.2833. loss_u: 0.2574. loss_x: 0.0259. Mask:90.2949 . LR: 0.8062. Time: 0.01
+04/12/2022 19:08:35 - INFO - train -   epoch:106, iter: 640. loss: 0.2808. loss_u: 0.2566. loss_x: 0.0242. Mask:90.4313 . LR: 0.8074. Time: 0.01
+04/12/2022 19:09:22 - INFO - train -   epoch:106, iter: 768. loss: 0.2815. loss_u: 0.2554. loss_x: 0.0261. Mask:90.3177 . LR: 0.8064. Time: 0.01
+04/12/2022 19:10:10 - INFO - train -   epoch:106, iter: 896. loss: 0.2789. loss_u: 0.2540. loss_x: 0.0249. Mask:90.3616 . LR: 0.8068. Time: 0.01
+04/12/2022 19:10:58 - INFO - train -   epoch:106, iter: 1024. loss: 0.2818. loss_u: 0.2553. loss_x: 0.0265. Mask:90.2510 . LR: 0.8058. Time: 0.01
+04/12/2022 19:11:03 - INFO - train -   Epoch 106. Top1: 88.8971. Top5: 99.0625. best_acc: 90.8150 in epoch75
+04/12/2022 19:11:52 - INFO - train -   epoch:107, iter: 128. loss: 0.2704. loss_u: 0.2503. loss_x: 0.0200. Mask:90.2031 . LR: 0.8054. Time: 0.01
+04/12/2022 19:12:40 - INFO - train -   epoch:107, iter: 256. loss: 0.2679. loss_u: 0.2490. loss_x: 0.0189. Mask:90.8789 . LR: 0.8114. Time: 0.01
+04/12/2022 19:13:28 - INFO - train -   epoch:107, iter: 384. loss: 0.2744. loss_u: 0.2522. loss_x: 0.0222. Mask:90.6719 . LR: 0.8096. Time: 0.01
+04/12/2022 19:14:16 - INFO - train -   epoch:107, iter: 512. loss: 0.2725. loss_u: 0.2499. loss_x: 0.0226. Mask:90.9609 . LR: 0.8122. Time: 0.01
+04/12/2022 19:15:04 - INFO - train -   epoch:107, iter: 640. loss: 0.2752. loss_u: 0.2523. loss_x: 0.0230. Mask:90.9062 . LR: 0.8117. Time: 0.01
+04/12/2022 19:15:52 - INFO - train -   epoch:107, iter: 768. loss: 0.2741. loss_u: 0.2511. loss_x: 0.0229. Mask:91.0143 . LR: 0.8126. Time: 0.01
+04/12/2022 19:16:40 - INFO - train -   epoch:107, iter: 896. loss: 0.2737. loss_u: 0.2516. loss_x: 0.0221. Mask:91.1116 . LR: 0.8135. Time: 0.01
+04/12/2022 19:17:28 - INFO - train -   epoch:107, iter: 1024. loss: 0.2741. loss_u: 0.2519. loss_x: 0.0222. Mask:91.2109 . LR: 0.8144. Time: 0.01
+04/12/2022 19:17:32 - INFO - train -   Epoch 107. Top1: 91.6728. Top5: 99.7794. best_acc: 91.6728 in epoch107
+04/12/2022 19:18:21 - INFO - train -   epoch:108, iter: 128. loss: 0.2901. loss_u: 0.2627. loss_x: 0.0274. Mask:90.3672 . LR: 0.8068. Time: 0.01
+04/12/2022 19:19:09 - INFO - train -   epoch:108, iter: 256. loss: 0.2818. loss_u: 0.2562. loss_x: 0.0256. Mask:90.8867 . LR: 0.8115. Time: 0.01
+04/12/2022 19:19:57 - INFO - train -   epoch:108, iter: 384. loss: 0.2769. loss_u: 0.2561. loss_x: 0.0208. Mask:91.2500 . LR: 0.8147. Time: 0.01
+04/12/2022 19:20:45 - INFO - train -   epoch:108, iter: 512. loss: 0.2796. loss_u: 0.2547. loss_x: 0.0249. Mask:91.0215 . LR: 0.8127. Time: 0.01
+04/12/2022 19:21:33 - INFO - train -   epoch:108, iter: 640. loss: 0.2841. loss_u: 0.2585. loss_x: 0.0256. Mask:90.3797 . LR: 0.8070. Time: 0.01
+04/12/2022 19:22:21 - INFO - train -   epoch:108, iter: 768. loss: 0.2823. loss_u: 0.2560. loss_x: 0.0263. Mask:90.0625 . LR: 0.8041. Time: 0.01
+04/12/2022 19:23:09 - INFO - train -   epoch:108, iter: 896. loss: 0.2803. loss_u: 0.2552. loss_x: 0.0250. Mask:90.0413 . LR: 0.8039. Time: 0.01
+04/12/2022 19:23:57 - INFO - train -   epoch:108, iter: 1024. loss: 0.2804. loss_u: 0.2551. loss_x: 0.0253. Mask:90.0410 . LR: 0.8039. Time: 0.01
+04/12/2022 19:24:01 - INFO - train -   Epoch 108. Top1: 88.3517. Top5: 99.3934. best_acc: 91.6728 in epoch107
+04/12/2022 19:24:50 - INFO - train -   epoch:109, iter: 128. loss: 0.2672. loss_u: 0.2473. loss_x: 0.0198. Mask:91.5703 . LR: 0.8176. Time: 0.01
+04/12/2022 19:25:39 - INFO - train -   epoch:109, iter: 256. loss: 0.2699. loss_u: 0.2465. loss_x: 0.0234. Mask:90.9531 . LR: 0.8121. Time: 0.01
+04/12/2022 19:26:27 - INFO - train -   epoch:109, iter: 384. loss: 0.2722. loss_u: 0.2482. loss_x: 0.0240. Mask:90.4531 . LR: 0.8076. Time: 0.01
+04/12/2022 19:27:16 - INFO - train -   epoch:109, iter: 512. loss: 0.2700. loss_u: 0.2477. loss_x: 0.0223. Mask:90.6309 . LR: 0.8092. Time: 0.01
+04/12/2022 19:28:04 - INFO - train -   epoch:109, iter: 640. loss: 0.2702. loss_u: 0.2471. loss_x: 0.0231. Mask:90.5453 . LR: 0.8084. Time: 0.01
+04/12/2022 19:28:52 - INFO - train -   epoch:109, iter: 768. loss: 0.2712. loss_u: 0.2484. loss_x: 0.0229. Mask:90.5052 . LR: 0.8081. Time: 0.01
+04/12/2022 19:29:41 - INFO - train -   epoch:109, iter: 896. loss: 0.2714. loss_u: 0.2486. loss_x: 0.0228. Mask:90.3638 . LR: 0.8068. Time: 0.01
+04/12/2022 19:30:29 - INFO - train -   epoch:109, iter: 1024. loss: 0.2699. loss_u: 0.2480. loss_x: 0.0219. Mask:90.4033 . LR: 0.8072. Time: 0.01
+04/12/2022 19:30:33 - INFO - train -   Epoch 109. Top1: 91.4032. Top5: 99.6140. best_acc: 91.6728 in epoch107
+04/12/2022 19:31:23 - INFO - train -   epoch:110, iter: 128. loss: 0.2589. loss_u: 0.2441. loss_x: 0.0148. Mask:91.3984 . LR: 0.8161. Time: 0.01
+04/12/2022 19:32:11 - INFO - train -   epoch:110, iter: 256. loss: 0.2627. loss_u: 0.2437. loss_x: 0.0189. Mask:91.4141 . LR: 0.8162. Time: 0.01
+04/12/2022 19:32:59 - INFO - train -   epoch:110, iter: 384. loss: 0.2696. loss_u: 0.2498. loss_x: 0.0198. Mask:91.3984 . LR: 0.8161. Time: 0.01
+04/12/2022 19:33:47 - INFO - train -   epoch:110, iter: 512. loss: 0.2697. loss_u: 0.2484. loss_x: 0.0213. Mask:91.4121 . LR: 0.8162. Time: 0.01
+04/12/2022 19:34:35 - INFO - train -   epoch:110, iter: 640. loss: 0.2711. loss_u: 0.2504. loss_x: 0.0208. Mask:91.5156 . LR: 0.8171. Time: 0.01
+04/12/2022 19:35:24 - INFO - train -   epoch:110, iter: 768. loss: 0.2713. loss_u: 0.2493. loss_x: 0.0220. Mask:91.2565 . LR: 0.8148. Time: 0.01
+04/12/2022 19:36:12 - INFO - train -   epoch:110, iter: 896. loss: 0.2696. loss_u: 0.2474. loss_x: 0.0221. Mask:91.2645 . LR: 0.8149. Time: 0.01
+04/12/2022 19:37:00 - INFO - train -   epoch:110, iter: 1024. loss: 0.2715. loss_u: 0.2491. loss_x: 0.0224. Mask:91.0859 . LR: 0.8133. Time: 0.01
+04/12/2022 19:37:04 - INFO - train -   Epoch 110. Top1: 88.6581. Top5: 99.7243. best_acc: 91.6728 in epoch107
+04/12/2022 19:37:54 - INFO - train -   epoch:111, iter: 128. loss: 0.2768. loss_u: 0.2544. loss_x: 0.0224. Mask:90.3672 . LR: 0.8068. Time: 0.01
+04/12/2022 19:38:42 - INFO - train -   epoch:111, iter: 256. loss: 0.2771. loss_u: 0.2549. loss_x: 0.0222. Mask:90.9219 . LR: 0.8118. Time: 0.01
+04/12/2022 19:39:30 - INFO - train -   epoch:111, iter: 384. loss: 0.2740. loss_u: 0.2528. loss_x: 0.0212. Mask:91.2682 . LR: 0.8149. Time: 0.01
+04/12/2022 19:40:19 - INFO - train -   epoch:111, iter: 512. loss: 0.2734. loss_u: 0.2534. loss_x: 0.0200. Mask:91.6172 . LR: 0.8180. Time: 0.01
+04/12/2022 19:41:07 - INFO - train -   epoch:111, iter: 640. loss: 0.2745. loss_u: 0.2543. loss_x: 0.0202. Mask:91.6609 . LR: 0.8184. Time: 0.01
+04/12/2022 19:41:56 - INFO - train -   epoch:111, iter: 768. loss: 0.2757. loss_u: 0.2535. loss_x: 0.0222. Mask:91.5234 . LR: 0.8172. Time: 0.01
+04/12/2022 19:42:44 - INFO - train -   epoch:111, iter: 896. loss: 0.2733. loss_u: 0.2522. loss_x: 0.0211. Mask:91.4353 . LR: 0.8164. Time: 0.01
+04/12/2022 19:43:32 - INFO - train -   epoch:111, iter: 1024. loss: 0.2727. loss_u: 0.2509. loss_x: 0.0217. Mask:91.4980 . LR: 0.8169. Time: 0.01
+04/12/2022 19:43:36 - INFO - train -   Epoch 111. Top1: 90.7230. Top5: 99.6507. best_acc: 91.6728 in epoch107
+04/12/2022 19:44:26 - INFO - train -   epoch:112, iter: 128. loss: 0.2710. loss_u: 0.2510. loss_x: 0.0200. Mask:91.2266 . LR: 0.8145. Time: 0.01
+04/12/2022 19:45:14 - INFO - train -   epoch:112, iter: 256. loss: 0.2721. loss_u: 0.2529. loss_x: 0.0191. Mask:91.9727 . LR: 0.8212. Time: 0.01
+04/12/2022 19:46:02 - INFO - train -   epoch:112, iter: 384. loss: 0.2693. loss_u: 0.2508. loss_x: 0.0184. Mask:92.1927 . LR: 0.8231. Time: 0.01
+04/12/2022 19:46:51 - INFO - train -   epoch:112, iter: 512. loss: 0.2675. loss_u: 0.2516. loss_x: 0.0159. Mask:92.2969 . LR: 0.8241. Time: 0.01
+04/12/2022 19:47:39 - INFO - train -   epoch:112, iter: 640. loss: 0.2670. loss_u: 0.2499. loss_x: 0.0170. Mask:92.3953 . LR: 0.8250. Time: 0.01
+04/12/2022 19:48:28 - INFO - train -   epoch:112, iter: 768. loss: 0.2650. loss_u: 0.2494. loss_x: 0.0156. Mask:92.5443 . LR: 0.8263. Time: 0.01
+04/12/2022 19:49:17 - INFO - train -   epoch:112, iter: 896. loss: 0.2669. loss_u: 0.2493. loss_x: 0.0176. Mask:92.3739 . LR: 0.8248. Time: 0.01
+04/12/2022 19:50:05 - INFO - train -   epoch:112, iter: 1024. loss: 0.2671. loss_u: 0.2505. loss_x: 0.0166. Mask:92.4229 . LR: 0.8252. Time: 0.01
+04/12/2022 19:50:10 - INFO - train -   Epoch 112. Top1: 90.7966. Top5: 99.7059. best_acc: 91.6728 in epoch107
+04/12/2022 19:50:59 - INFO - train -   epoch:113, iter: 128. loss: 0.2761. loss_u: 0.2505. loss_x: 0.0256. Mask:91.5625 . LR: 0.8175. Time: 0.01
+04/12/2022 19:51:48 - INFO - train -   epoch:113, iter: 256. loss: 0.2711. loss_u: 0.2468. loss_x: 0.0243. Mask:91.6016 . LR: 0.8179. Time: 0.01
+04/12/2022 19:52:36 - INFO - train -   epoch:113, iter: 384. loss: 0.2748. loss_u: 0.2492. loss_x: 0.0256. Mask:91.3255 . LR: 0.8154. Time: 0.01
+04/12/2022 19:53:24 - INFO - train -   epoch:113, iter: 512. loss: 0.2732. loss_u: 0.2475. loss_x: 0.0257. Mask:90.9609 . LR: 0.8122. Time: 0.01
+04/12/2022 19:54:12 - INFO - train -   epoch:113, iter: 640. loss: 0.2712. loss_u: 0.2478. loss_x: 0.0234. Mask:91.3141 . LR: 0.8153. Time: 0.01
+04/12/2022 19:55:00 - INFO - train -   epoch:113, iter: 768. loss: 0.2669. loss_u: 0.2452. loss_x: 0.0217. Mask:91.5052 . LR: 0.8170. Time: 0.01
+04/12/2022 19:55:48 - INFO - train -   epoch:113, iter: 896. loss: 0.2664. loss_u: 0.2459. loss_x: 0.0205. Mask:91.6674 . LR: 0.8185. Time: 0.01
+04/12/2022 19:56:36 - INFO - train -   epoch:113, iter: 1024. loss: 0.2693. loss_u: 0.2474. loss_x: 0.0219. Mask:91.6797 . LR: 0.8186. Time: 0.01
+04/12/2022 19:56:40 - INFO - train -   Epoch 113. Top1: 89.2708. Top5: 99.5772. best_acc: 91.6728 in epoch107
+04/12/2022 19:57:30 - INFO - train -   epoch:114, iter: 128. loss: 0.2746. loss_u: 0.2476. loss_x: 0.0269. Mask:91.1328 . LR: 0.8137. Time: 0.01
+04/12/2022 19:58:19 - INFO - train -   epoch:114, iter: 256. loss: 0.2717. loss_u: 0.2484. loss_x: 0.0233. Mask:91.6328 . LR: 0.8182. Time: 0.01
+04/12/2022 19:59:07 - INFO - train -   epoch:114, iter: 384. loss: 0.2705. loss_u: 0.2466. loss_x: 0.0240. Mask:91.3932 . LR: 0.8160. Time: 0.01
+04/12/2022 19:59:55 - INFO - train -   epoch:114, iter: 512. loss: 0.2702. loss_u: 0.2478. loss_x: 0.0225. Mask:91.5879 . LR: 0.8177. Time: 0.01
+04/12/2022 20:00:43 - INFO - train -   epoch:114, iter: 640. loss: 0.2706. loss_u: 0.2488. loss_x: 0.0219. Mask:91.5875 . LR: 0.8177. Time: 0.01
+04/12/2022 20:01:31 - INFO - train -   epoch:114, iter: 768. loss: 0.2706. loss_u: 0.2489. loss_x: 0.0217. Mask:91.6758 . LR: 0.8185. Time: 0.01
+04/12/2022 20:02:19 - INFO - train -   epoch:114, iter: 896. loss: 0.2707. loss_u: 0.2473. loss_x: 0.0234. Mask:91.4275 . LR: 0.8163. Time: 0.01
+04/12/2022 20:03:08 - INFO - train -   epoch:114, iter: 1024. loss: 0.2689. loss_u: 0.2464. loss_x: 0.0226. Mask:91.4766 . LR: 0.8168. Time: 0.01
+04/12/2022 20:03:12 - INFO - train -   Epoch 114. Top1: 87.9350. Top5: 99.3199. best_acc: 91.6728 in epoch107
+04/12/2022 20:04:01 - INFO - train -   epoch:115, iter: 128. loss: 0.2565. loss_u: 0.2482. loss_x: 0.0084. Mask:93.1875 . LR: 0.8320. Time: 0.01
+04/12/2022 20:04:49 - INFO - train -   epoch:115, iter: 256. loss: 0.2635. loss_u: 0.2501. loss_x: 0.0134. Mask:92.8516 . LR: 0.8290. Time: 0.01
+04/12/2022 20:05:37 - INFO - train -   epoch:115, iter: 384. loss: 0.2648. loss_u: 0.2510. loss_x: 0.0137. Mask:92.7083 . LR: 0.8278. Time: 0.01
+04/12/2022 20:06:25 - INFO - train -   epoch:115, iter: 512. loss: 0.2634. loss_u: 0.2482. loss_x: 0.0152. Mask:92.6074 . LR: 0.8269. Time: 0.01
+04/12/2022 20:07:13 - INFO - train -   epoch:115, iter: 640. loss: 0.2633. loss_u: 0.2470. loss_x: 0.0164. Mask:92.5906 . LR: 0.8267. Time: 0.01
+04/12/2022 20:08:01 - INFO - train -   epoch:115, iter: 768. loss: 0.2626. loss_u: 0.2470. loss_x: 0.0155. Mask:92.5430 . LR: 0.8263. Time: 0.01
+04/12/2022 20:08:49 - INFO - train -   epoch:115, iter: 896. loss: 0.2629. loss_u: 0.2468. loss_x: 0.0161. Mask:92.6250 . LR: 0.8270. Time: 0.01
+04/12/2022 20:09:37 - INFO - train -   epoch:115, iter: 1024. loss: 0.2627. loss_u: 0.2474. loss_x: 0.0153. Mask:92.6875 . LR: 0.8276. Time: 0.01
+04/12/2022 20:09:42 - INFO - train -   Epoch 115. Top1: 92.3775. Top5: 99.8529. best_acc: 92.3775 in epoch115
+04/12/2022 20:10:31 - INFO - train -   epoch:116, iter: 128. loss: 0.2741. loss_u: 0.2579. loss_x: 0.0162. Mask:93.2109 . LR: 0.8322. Time: 0.01
+04/12/2022 20:11:19 - INFO - train -   epoch:116, iter: 256. loss: 0.2689. loss_u: 0.2489. loss_x: 0.0201. Mask:92.4727 . LR: 0.8256. Time: 0.01
+04/12/2022 20:12:07 - INFO - train -   epoch:116, iter: 384. loss: 0.2754. loss_u: 0.2517. loss_x: 0.0237. Mask:91.3672 . LR: 0.8158. Time: 0.01
+04/12/2022 20:12:55 - INFO - train -   epoch:116, iter: 512. loss: 0.2730. loss_u: 0.2499. loss_x: 0.0231. Mask:91.3965 . LR: 0.8160. Time: 0.01
+04/12/2022 20:13:43 - INFO - train -   epoch:116, iter: 640. loss: 0.2736. loss_u: 0.2505. loss_x: 0.0231. Mask:91.3953 . LR: 0.8160. Time: 0.01
+04/12/2022 20:14:31 - INFO - train -   epoch:116, iter: 768. loss: 0.2711. loss_u: 0.2500. loss_x: 0.0211. Mask:91.6719 . LR: 0.8185. Time: 0.01
+04/12/2022 20:15:19 - INFO - train -   epoch:116, iter: 896. loss: 0.2694. loss_u: 0.2491. loss_x: 0.0203. Mask:91.8036 . LR: 0.8197. Time: 0.01
+04/12/2022 20:16:07 - INFO - train -   epoch:116, iter: 1024. loss: 0.2680. loss_u: 0.2485. loss_x: 0.0195. Mask:91.9648 . LR: 0.8211. Time: 0.01
+04/12/2022 20:16:11 - INFO - train -   Epoch 116. Top1: 91.5564. Top5: 99.6691. best_acc: 92.3775 in epoch115
+04/12/2022 20:17:01 - INFO - train -   epoch:117, iter: 128. loss: 0.2702. loss_u: 0.2470. loss_x: 0.0231. Mask:91.9375 . LR: 0.8209. Time: 0.01
+04/12/2022 20:17:49 - INFO - train -   epoch:117, iter: 256. loss: 0.2654. loss_u: 0.2450. loss_x: 0.0204. Mask:92.2422 . LR: 0.8236. Time: 0.01
+04/12/2022 20:18:37 - INFO - train -   epoch:117, iter: 384. loss: 0.2620. loss_u: 0.2438. loss_x: 0.0182. Mask:92.2865 . LR: 0.8240. Time: 0.01
+04/12/2022 20:19:25 - INFO - train -   epoch:117, iter: 512. loss: 0.2623. loss_u: 0.2434. loss_x: 0.0189. Mask:92.2812 . LR: 0.8239. Time: 0.01
+04/12/2022 20:20:13 - INFO - train -   epoch:117, iter: 640. loss: 0.2642. loss_u: 0.2430. loss_x: 0.0212. Mask:92.2422 . LR: 0.8236. Time: 0.01
+04/12/2022 20:21:00 - INFO - train -   epoch:117, iter: 768. loss: 0.2633. loss_u: 0.2430. loss_x: 0.0203. Mask:92.3776 . LR: 0.8248. Time: 0.01
+04/12/2022 20:21:48 - INFO - train -   epoch:117, iter: 896. loss: 0.2641. loss_u: 0.2439. loss_x: 0.0202. Mask:92.4085 . LR: 0.8251. Time: 0.01
+04/12/2022 20:22:36 - INFO - train -   epoch:117, iter: 1024. loss: 0.2627. loss_u: 0.2435. loss_x: 0.0191. Mask:92.5762 . LR: 0.8266. Time: 0.01
+04/12/2022 20:22:40 - INFO - train -   Epoch 117. Top1: 91.3664. Top5: 99.7426. best_acc: 92.3775 in epoch115
+04/12/2022 20:23:30 - INFO - train -   epoch:118, iter: 128. loss: 0.2660. loss_u: 0.2454. loss_x: 0.0206. Mask:93.5078 . LR: 0.8349. Time: 0.01
+04/12/2022 20:24:18 - INFO - train -   epoch:118, iter: 256. loss: 0.2580. loss_u: 0.2422. loss_x: 0.0157. Mask:93.7148 . LR: 0.8367. Time: 0.01
+04/12/2022 20:25:06 - INFO - train -   epoch:118, iter: 384. loss: 0.2617. loss_u: 0.2478. loss_x: 0.0140. Mask:94.1276 . LR: 0.8404. Time: 0.01
+04/12/2022 20:25:54 - INFO - train -   epoch:118, iter: 512. loss: 0.2634. loss_u: 0.2480. loss_x: 0.0154. Mask:93.9297 . LR: 0.8387. Time: 0.01
+04/12/2022 20:26:42 - INFO - train -   epoch:118, iter: 640. loss: 0.2661. loss_u: 0.2501. loss_x: 0.0160. Mask:93.7094 . LR: 0.8367. Time: 0.01
+04/12/2022 20:27:30 - INFO - train -   epoch:118, iter: 768. loss: 0.2625. loss_u: 0.2475. loss_x: 0.0149. Mask:93.6354 . LR: 0.8360. Time: 0.01
+04/12/2022 20:28:18 - INFO - train -   epoch:118, iter: 896. loss: 0.2638. loss_u: 0.2473. loss_x: 0.0165. Mask:93.5346 . LR: 0.8351. Time: 0.01
+04/12/2022 20:29:05 - INFO - train -   epoch:118, iter: 1024. loss: 0.2627. loss_u: 0.2464. loss_x: 0.0163. Mask:93.3721 . LR: 0.8337. Time: 0.01
+04/12/2022 20:29:09 - INFO - train -   Epoch 118. Top1: 91.2316. Top5: 99.7243. best_acc: 92.3775 in epoch115
+04/12/2022 20:29:59 - INFO - train -   epoch:119, iter: 128. loss: 0.2581. loss_u: 0.2466. loss_x: 0.0115. Mask:93.1016 . LR: 0.8313. Time: 0.01
+04/12/2022 20:30:46 - INFO - train -   epoch:119, iter: 256. loss: 0.2588. loss_u: 0.2447. loss_x: 0.0141. Mask:93.0039 . LR: 0.8304. Time: 0.01
+04/12/2022 20:31:33 - INFO - train -   epoch:119, iter: 384. loss: 0.2603. loss_u: 0.2437. loss_x: 0.0167. Mask:92.8411 . LR: 0.8289. Time: 0.01
+04/12/2022 20:32:20 - INFO - train -   epoch:119, iter: 512. loss: 0.2589. loss_u: 0.2430. loss_x: 0.0159. Mask:93.2656 . LR: 0.8327. Time: 0.01
+04/12/2022 20:33:08 - INFO - train -   epoch:119, iter: 640. loss: 0.2591. loss_u: 0.2433. loss_x: 0.0158. Mask:93.4406 . LR: 0.8343. Time: 0.01
+04/12/2022 20:33:56 - INFO - train -   epoch:119, iter: 768. loss: 0.2600. loss_u: 0.2453. loss_x: 0.0147. Mask:93.3880 . LR: 0.8338. Time: 0.01
+04/12/2022 20:34:43 - INFO - train -   epoch:119, iter: 896. loss: 0.2592. loss_u: 0.2452. loss_x: 0.0139. Mask:93.3069 . LR: 0.8331. Time: 0.01
+04/12/2022 20:35:31 - INFO - train -   epoch:119, iter: 1024. loss: 0.2591. loss_u: 0.2446. loss_x: 0.0144. Mask:93.3916 . LR: 0.8339. Time: 0.01
+04/12/2022 20:35:35 - INFO - train -   Epoch 119. Top1: 90.9252. Top5: 99.4853. best_acc: 92.3775 in epoch115
+04/12/2022 20:36:24 - INFO - train -   epoch:120, iter: 128. loss: 0.2540. loss_u: 0.2433. loss_x: 0.0106. Mask:94.1719 . LR: 0.8408. Time: 0.01
+04/12/2022 20:37:13 - INFO - train -   epoch:120, iter: 256. loss: 0.2567. loss_u: 0.2450. loss_x: 0.0117. Mask:93.9805 . LR: 0.8391. Time: 0.01
+04/12/2022 20:38:01 - INFO - train -   epoch:120, iter: 384. loss: 0.2580. loss_u: 0.2470. loss_x: 0.0110. Mask:93.7396 . LR: 0.8370. Time: 0.01
+04/12/2022 20:38:50 - INFO - train -   epoch:120, iter: 512. loss: 0.2595. loss_u: 0.2432. loss_x: 0.0163. Mask:92.8887 . LR: 0.8294. Time: 0.01
+04/12/2022 20:39:38 - INFO - train -   epoch:120, iter: 640. loss: 0.2610. loss_u: 0.2438. loss_x: 0.0172. Mask:92.8672 . LR: 0.8292. Time: 0.01
+04/12/2022 20:40:26 - INFO - train -   epoch:120, iter: 768. loss: 0.2597. loss_u: 0.2434. loss_x: 0.0164. Mask:92.8464 . LR: 0.8290. Time: 0.01
+04/12/2022 20:41:15 - INFO - train -   epoch:120, iter: 896. loss: 0.2596. loss_u: 0.2433. loss_x: 0.0163. Mask:92.7277 . LR: 0.8279. Time: 0.01
+04/12/2022 20:42:03 - INFO - train -   epoch:120, iter: 1024. loss: 0.2615. loss_u: 0.2442. loss_x: 0.0173. Mask:92.7607 . LR: 0.8282. Time: 0.01
+04/12/2022 20:42:07 - INFO - train -   Epoch 120. Top1: 91.2990. Top5: 99.6691. best_acc: 92.3775 in epoch115
+04/12/2022 20:42:57 - INFO - train -   epoch:121, iter: 128. loss: 0.2626. loss_u: 0.2445. loss_x: 0.0180. Mask:93.7344 . LR: 0.8369. Time: 0.01
+04/12/2022 20:43:46 - INFO - train -   epoch:121, iter: 256. loss: 0.2590. loss_u: 0.2412. loss_x: 0.0178. Mask:93.8711 . LR: 0.8381. Time: 0.01
+04/12/2022 20:44:35 - INFO - train -   epoch:121, iter: 384. loss: 0.2543. loss_u: 0.2387. loss_x: 0.0156. Mask:93.9479 . LR: 0.8388. Time: 0.01
+04/12/2022 20:45:23 - INFO - train -   epoch:121, iter: 512. loss: 0.2562. loss_u: 0.2409. loss_x: 0.0153. Mask:94.0742 . LR: 0.8399. Time: 0.01
+04/12/2022 20:46:11 - INFO - train -   epoch:121, iter: 640. loss: 0.2572. loss_u: 0.2417. loss_x: 0.0155. Mask:94.2109 . LR: 0.8412. Time: 0.01
+04/12/2022 20:46:59 - INFO - train -   epoch:121, iter: 768. loss: 0.2568. loss_u: 0.2409. loss_x: 0.0159. Mask:94.2096 . LR: 0.8412. Time: 0.01
+04/12/2022 20:47:47 - INFO - train -   epoch:121, iter: 896. loss: 0.2568. loss_u: 0.2414. loss_x: 0.0154. Mask:94.0848 . LR: 0.8400. Time: 0.01
+04/12/2022 20:48:35 - INFO - train -   epoch:121, iter: 1024. loss: 0.2582. loss_u: 0.2424. loss_x: 0.0158. Mask:94.0791 . LR: 0.8400. Time: 0.01
+04/12/2022 20:48:40 - INFO - train -   Epoch 121. Top1: 91.3971. Top5: 99.5956. best_acc: 92.3775 in epoch115
+04/12/2022 20:49:29 - INFO - train -   epoch:122, iter: 128. loss: 0.2618. loss_u: 0.2435. loss_x: 0.0183. Mask:92.9688 . LR: 0.8301. Time: 0.01
+04/12/2022 20:50:17 - INFO - train -   epoch:122, iter: 256. loss: 0.2622. loss_u: 0.2425. loss_x: 0.0197. Mask:92.7188 . LR: 0.8278. Time: 0.01
+04/12/2022 20:51:06 - INFO - train -   epoch:122, iter: 384. loss: 0.2638. loss_u: 0.2456. loss_x: 0.0183. Mask:92.7161 . LR: 0.8278. Time: 0.01
+04/12/2022 20:51:55 - INFO - train -   epoch:122, iter: 512. loss: 0.2600. loss_u: 0.2432. loss_x: 0.0168. Mask:92.9336 . LR: 0.8298. Time: 0.01
+04/12/2022 20:52:43 - INFO - train -   epoch:122, iter: 640. loss: 0.2587. loss_u: 0.2428. loss_x: 0.0159. Mask:93.0500 . LR: 0.8308. Time: 0.01
+04/12/2022 20:53:32 - INFO - train -   epoch:122, iter: 768. loss: 0.2588. loss_u: 0.2430. loss_x: 0.0158. Mask:93.1302 . LR: 0.8315. Time: 0.01
+04/12/2022 20:54:20 - INFO - train -   epoch:122, iter: 896. loss: 0.2584. loss_u: 0.2421. loss_x: 0.0162. Mask:93.2087 . LR: 0.8322. Time: 0.01
+04/12/2022 20:55:09 - INFO - train -   epoch:122, iter: 1024. loss: 0.2597. loss_u: 0.2430. loss_x: 0.0168. Mask:93.2979 . LR: 0.8330. Time: 0.01
+04/12/2022 20:55:13 - INFO - train -   Epoch 122. Top1: 89.7794. Top5: 99.8162. best_acc: 92.3775 in epoch115
+04/12/2022 20:56:02 - INFO - train -   epoch:123, iter: 128. loss: 0.2598. loss_u: 0.2466. loss_x: 0.0131. Mask:94.8906 . LR: 0.8472. Time: 0.01
+04/12/2022 20:56:49 - INFO - train -   epoch:123, iter: 256. loss: 0.2612. loss_u: 0.2504. loss_x: 0.0108. Mask:94.9062 . LR: 0.8474. Time: 0.01
+04/12/2022 20:57:37 - INFO - train -   epoch:123, iter: 384. loss: 0.2594. loss_u: 0.2471. loss_x: 0.0122. Mask:94.7109 . LR: 0.8456. Time: 0.01
+04/12/2022 20:58:25 - INFO - train -   epoch:123, iter: 512. loss: 0.2567. loss_u: 0.2445. loss_x: 0.0122. Mask:94.4395 . LR: 0.8432. Time: 0.01
+04/12/2022 20:59:13 - INFO - train -   epoch:123, iter: 640. loss: 0.2558. loss_u: 0.2434. loss_x: 0.0124. Mask:94.4547 . LR: 0.8433. Time: 0.01
+04/12/2022 21:00:01 - INFO - train -   epoch:123, iter: 768. loss: 0.2561. loss_u: 0.2429. loss_x: 0.0132. Mask:94.3451 . LR: 0.8424. Time: 0.01
+04/12/2022 21:00:49 - INFO - train -   epoch:123, iter: 896. loss: 0.2562. loss_u: 0.2422. loss_x: 0.0140. Mask:94.3694 . LR: 0.8426. Time: 0.01
+04/12/2022 21:01:37 - INFO - train -   epoch:123, iter: 1024. loss: 0.2578. loss_u: 0.2422. loss_x: 0.0157. Mask:94.3086 . LR: 0.8420. Time: 0.01
+04/12/2022 21:01:41 - INFO - train -   Epoch 123. Top1: 91.3664. Top5: 99.7426. best_acc: 92.3775 in epoch115
+04/12/2022 21:02:29 - INFO - train -   epoch:124, iter: 128. loss: 0.2573. loss_u: 0.2435. loss_x: 0.0138. Mask:92.7266 . LR: 0.8279. Time: 0.01
+04/12/2022 21:03:17 - INFO - train -   epoch:124, iter: 256. loss: 0.2458. loss_u: 0.2354. loss_x: 0.0103. Mask:94.0938 . LR: 0.8401. Time: 0.01
+04/12/2022 21:04:05 - INFO - train -   epoch:124, iter: 384. loss: 0.2508. loss_u: 0.2397. loss_x: 0.0112. Mask:94.5573 . LR: 0.8443. Time: 0.01
+04/12/2022 21:04:53 - INFO - train -   epoch:124, iter: 512. loss: 0.2516. loss_u: 0.2409. loss_x: 0.0107. Mask:94.7012 . LR: 0.8455. Time: 0.01
+04/12/2022 21:05:40 - INFO - train -   epoch:124, iter: 640. loss: 0.2511. loss_u: 0.2413. loss_x: 0.0098. Mask:94.6266 . LR: 0.8449. Time: 0.01
+04/12/2022 21:06:28 - INFO - train -   epoch:124, iter: 768. loss: 0.2508. loss_u: 0.2413. loss_x: 0.0095. Mask:94.6224 . LR: 0.8448. Time: 0.01
+04/12/2022 21:07:16 - INFO - train -   epoch:124, iter: 896. loss: 0.2512. loss_u: 0.2414. loss_x: 0.0098. Mask:94.7065 . LR: 0.8456. Time: 0.01
+04/12/2022 21:08:04 - INFO - train -   epoch:124, iter: 1024. loss: 0.2515. loss_u: 0.2418. loss_x: 0.0097. Mask:94.8047 . LR: 0.8465. Time: 0.01
+04/12/2022 21:08:08 - INFO - train -   Epoch 124. Top1: 92.6164. Top5: 99.7426. best_acc: 92.6164 in epoch124
+04/12/2022 21:08:57 - INFO - train -   epoch:125, iter: 128. loss: 0.2464. loss_u: 0.2294. loss_x: 0.0169. Mask:94.9062 . LR: 0.8474. Time: 0.01
+04/12/2022 21:09:44 - INFO - train -   epoch:125, iter: 256. loss: 0.2498. loss_u: 0.2348. loss_x: 0.0150. Mask:94.7148 . LR: 0.8457. Time: 0.01
+04/12/2022 21:10:32 - INFO - train -   epoch:125, iter: 384. loss: 0.2533. loss_u: 0.2392. loss_x: 0.0142. Mask:94.8594 . LR: 0.8470. Time: 0.01
+04/12/2022 21:11:20 - INFO - train -   epoch:125, iter: 512. loss: 0.2534. loss_u: 0.2410. loss_x: 0.0124. Mask:95.0293 . LR: 0.8485. Time: 0.01
+04/12/2022 21:12:07 - INFO - train -   epoch:125, iter: 640. loss: 0.2512. loss_u: 0.2394. loss_x: 0.0118. Mask:95.0219 . LR: 0.8484. Time: 0.01
+04/12/2022 21:12:55 - INFO - train -   epoch:125, iter: 768. loss: 0.2540. loss_u: 0.2400. loss_x: 0.0140. Mask:94.7865 . LR: 0.8463. Time: 0.01
+04/12/2022 21:13:42 - INFO - train -   epoch:125, iter: 896. loss: 0.2536. loss_u: 0.2395. loss_x: 0.0141. Mask:94.7087 . LR: 0.8456. Time: 0.01
+04/12/2022 21:14:30 - INFO - train -   epoch:125, iter: 1024. loss: 0.2521. loss_u: 0.2384. loss_x: 0.0137. Mask:94.7969 . LR: 0.8464. Time: 0.01
+04/12/2022 21:14:34 - INFO - train -   Epoch 125. Top1: 92.0527. Top5: 99.5404. best_acc: 92.6164 in epoch124
+04/12/2022 21:15:24 - INFO - train -   epoch:126, iter: 128. loss: 0.2323. loss_u: 0.2249. loss_x: 0.0074. Mask:95.0391 . LR: 0.8486. Time: 0.01
+04/12/2022 21:16:13 - INFO - train -   epoch:126, iter: 256. loss: 0.2419. loss_u: 0.2327. loss_x: 0.0092. Mask:95.2617 . LR: 0.8506. Time: 0.01
+04/12/2022 21:17:02 - INFO - train -   epoch:126, iter: 384. loss: 0.2429. loss_u: 0.2314. loss_x: 0.0115. Mask:95.2760 . LR: 0.8507. Time: 0.01
+04/12/2022 21:17:51 - INFO - train -   epoch:126, iter: 512. loss: 0.2415. loss_u: 0.2303. loss_x: 0.0112. Mask:95.0117 . LR: 0.8483. Time: 0.01
+04/12/2022 21:18:40 - INFO - train -   epoch:126, iter: 640. loss: 0.2434. loss_u: 0.2324. loss_x: 0.0110. Mask:95.0047 . LR: 0.8483. Time: 0.01
+04/12/2022 21:19:29 - INFO - train -   epoch:126, iter: 768. loss: 0.2441. loss_u: 0.2327. loss_x: 0.0114. Mask:95.0378 . LR: 0.8486. Time: 0.01
+04/12/2022 21:20:18 - INFO - train -   epoch:126, iter: 896. loss: 0.2447. loss_u: 0.2330. loss_x: 0.0117. Mask:95.0569 . LR: 0.8487. Time: 0.01
+04/12/2022 21:21:07 - INFO - train -   epoch:126, iter: 1024. loss: 0.2458. loss_u: 0.2342. loss_x: 0.0116. Mask:95.0166 . LR: 0.8484. Time: 0.01
+04/12/2022 21:21:11 - INFO - train -   Epoch 126. Top1: 92.8493. Top5: 99.8162. best_acc: 92.8493 in epoch126
+04/12/2022 21:22:01 - INFO - train -   epoch:127, iter: 128. loss: 0.2634. loss_u: 0.2476. loss_x: 0.0158. Mask:94.8281 . LR: 0.8467. Time: 0.01
+04/12/2022 21:22:49 - INFO - train -   epoch:127, iter: 256. loss: 0.2540. loss_u: 0.2417. loss_x: 0.0123. Mask:94.6680 . LR: 0.8452. Time: 0.01
+04/12/2022 21:23:37 - INFO - train -   epoch:127, iter: 384. loss: 0.2530. loss_u: 0.2414. loss_x: 0.0116. Mask:95.0000 . LR: 0.8482. Time: 0.01
+04/12/2022 21:24:26 - INFO - train -   epoch:127, iter: 512. loss: 0.2509. loss_u: 0.2398. loss_x: 0.0111. Mask:94.9551 . LR: 0.8478. Time: 0.01
+04/12/2022 21:25:14 - INFO - train -   epoch:127, iter: 640. loss: 0.2521. loss_u: 0.2409. loss_x: 0.0112. Mask:94.9266 . LR: 0.8476. Time: 0.01
+04/12/2022 21:26:02 - INFO - train -   epoch:127, iter: 768. loss: 0.2516. loss_u: 0.2405. loss_x: 0.0111. Mask:94.8685 . LR: 0.8470. Time: 0.01
+04/12/2022 21:26:50 - INFO - train -   epoch:127, iter: 896. loss: 0.2489. loss_u: 0.2383. loss_x: 0.0107. Mask:94.9152 . LR: 0.8475. Time: 0.01
+04/12/2022 21:27:38 - INFO - train -   epoch:127, iter: 1024. loss: 0.2492. loss_u: 0.2380. loss_x: 0.0112. Mask:94.9678 . LR: 0.8479. Time: 0.01
+04/12/2022 21:27:43 - INFO - train -   Epoch 127. Top1: 91.3113. Top5: 99.5956. best_acc: 92.8493 in epoch126
