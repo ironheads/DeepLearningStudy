@@ -1,7 +1,0 @@
-04/12/2022 07:34:50 - INFO - train -   ***** Running training *****
-04/12/2022 07:34:50 - INFO - train -     Task = dataset@250
-04/12/2022 07:34:50 - INFO - train -     Num Epochs = 1024
-04/12/2022 07:34:50 - INFO - train -     Batch size per GPU = 32
-04/12/2022 07:34:50 - INFO - train -     Total optimization steps = 131072
-04/12/2022 07:34:50 - INFO - train -   Total params: 11.18M
-04/12/2022 07:34:50 - INFO - train -   -----------start training--------------
