@@ -29,7 +29,8 @@ class LMModel(nn.Module):
         self.decoder.weight.data.uniform_(-init_uniform, init_uniform)
         
     def forward(self, input, states):
-        embeddings = self.drop(self.encoder(input))
+        embeddings = self.encoder(input)
+        embeddings = self.drop(embeddings)
 
         # WRITE CODE HERE within two '#' bar
         ########################################

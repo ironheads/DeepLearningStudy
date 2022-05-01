@@ -130,19 +130,4 @@ dmypy.json
 
 .DS_Store
 
-*/logs/
-
-*/runs/
-
-logs_part_*/
-
-output/
-
-
-.log
-
-# dataset/
-
-# data/
-
 .vscode

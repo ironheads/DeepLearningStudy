@@ -1,5 +1,6 @@
 # coding: utf-8
 import argparse
+from cgi import print_environ
 from pickletools import optimize
 import time
 import math
@@ -16,25 +17,25 @@ import numpy as np
 from torch.utils.tensorboard import SummaryWriter
 
 parser = argparse.ArgumentParser(description='PyTorch ptb Language Model')
-parser.add_argument('--epochs', type=int, default=40,
+parser.add_argument('--epochs', type=int, default=128,
                     help='upper epoch limit')
 parser.add_argument('--train_batch_size', type=int, default=20, metavar='N',
                     help='train batch size')
 parser.add_argument('--eval_batch_size', type=int, default=10, metavar='N',
                     help='evaluate batch size')
-parser.add_argument('--max_sql', type=int, default=35,
+parser.add_argument('--max_sql', type=int, default=30,
                     help='sequence length')
 parser.add_argument('--seed', type=int, default=1234,
                     help='set random seed')
 parser.add_argument('--cuda', action='store_true', help='use CUDA device')
 parser.add_argument('--gpu_id', default=0, type=int, help='GPU device id used')
-parser.add_argument('--embedding_dim', default=64, type=int,
+parser.add_argument('--embedding_dim', default=128, type=int,
                     help='the dimension of the word embeddings')
-parser.add_argument('--hidden_dim', default=64, type=int,
+parser.add_argument('--hidden_dim', default=1500, type=int,
                     help='the dimension of the hidden layer of GRU')
 parser.add_argument('--hidden_layer_num', default=2, type=int,
                     help='the number of the hidden layers')
-parser.add_argument('--learning_rate',default=0.01,type=float,help='learning rate')
+parser.add_argument('--learning_rate',default=0.002,type=float,help='learning rate')
 
 
 args = parser.parse_args()
@@ -95,8 +96,8 @@ def train(num_epoch:int,model:nn.Module,data_loader: data.Corpus,criterion:nn.Mo
         optimizer.step()
 
         # log
-        if num_iter%(data_loader.train_batch_num//10)==0:
-            logger.info("{} perplexity: {:8.2f}".format(num_iter * 1.0 / data_loader.train_batch_num, np.exp(costs / iters)))
+        if num_iter%(data_loader.train_batch_num//(5*data_loader.max_sql))==0:
+            logger.info("Epoch:[{}/{}]:{:.0%}, Loss:{:8.2f}, Perplexity: {:8.2f}".format(num_epoch,args.epochs, data_loader.max_sql* num_iter * 1.0 / data_loader.train_batch_num, loss.item(),np.exp(loss.item())))
         if end_flag==True:
             break
     perplexity=np.exp(costs / iters)
@@ -133,8 +134,8 @@ def evaluate(num_epoch:int,model:nn.Module,data_loader: data.Corpus,criterion:nn
             costs += loss.item() * data_loader.max_sql
             iters += data_loader.max_sql
             # log
-            if num_iter%(data_loader.valid_batch_num//10)==0:
-                logger.info("{} perplexity: {:8.2f}".format(num_iter * 1.0 / data_loader.valid_batch_num, np.exp(costs / iters)))
+            # if num_iter%(data_loader.valid_batch_num//(10*data_loader.max_sql))==0:
+            #     logger.info("Epoch:[{}/{}]:{:.0%}, Loss:{:8.2f}, Perplexity: {:8.2f}".format(num_epoch,args.epochs,data_loader.max_sql*num_iter * 1.0 / data_loader.valid_batch_num, loss.item(),np.exp(loss.item())))
             if end_flag==True:
                 break
     perplexity=np.exp(costs / iters)
@@ -155,7 +156,7 @@ if __name__ == '__main__':
     criterion = nn.CrossEntropyLoss()
 
     logger,writer = logger.setup_default_logging(args)
-    optimizer = torch.optim.SGD(lm_model.parameters(),lr=args.learning_rate,momentum=0.8)
+    optimizer = torch.optim.Adam(lm_model.parameters(),lr=args.learning_rate)
     # Loop over epochs.
     for epoch in range(1, args.epochs+1):
         # train()
