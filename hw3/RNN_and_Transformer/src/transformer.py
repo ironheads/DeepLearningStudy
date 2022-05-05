@@ -4,9 +4,14 @@ import math
 import numpy as np
 import argparse
 # Transformer模型
-
+from logger import setup_default_logging
 import os
 import torch
+from logging import Logger
+import os.path as osp
+import numpy as np
+import random
+from torch.utils.tensorboard import SummaryWriter
 
 class Corpus(object):
     def __init__(self, path, batch_size, max_sql):
@@ -25,8 +30,12 @@ class Corpus(object):
         self.valid_batch_num = self.valid.size(0) // self.batch_size["valid"]
         self.train = self.train.narrow(0, 0, self.batch_size["train"] * self.train_batch_num)
         self.valid = self.valid.narrow(0, 0, self.batch_size["valid"] * self.valid_batch_num)
-        self.train = self.train.view(self.batch_size["train"], -1).t().contiguous()
-        self.valid = self.valid.view(self.batch_size["valid"], -1).t().contiguous()
+        self.train = self.train.view(self.batch_size["train"], -1).contiguous()
+        self.valid = self.valid.view(self.batch_size["valid"], -1).contiguous()
+
+    @property
+    def vocab_size(self):
+        return len(self.vocabulary)
 
     def set_train(self):
         self.dset_flag = "train"
@@ -39,14 +48,10 @@ class Corpus(object):
     def tokenize(self, file_name):
         file_lines = open(file_name, 'r').readlines()
         num_of_words = 0
-        self.word_id['<pad>'] = len(self.vocabulary)
-        self.vocabulary.append('<pad>')
-        self.word_id['<start>'] = len(self.vocabulary)
-        self.vocabulary.append('<start>')
-        self.word_id['<end>'] = len(self.vocabulary)
-        self.vocabulary.append('<end>')
+        # self.word_id['<pad>']=0
+        # self.vocabulary.append('<pad>')
         for line in file_lines:
-            words = line.split() + ['<pad>']
+            words = ['<bos>'] + line.split() + ['<eos>']
             num_of_words += len(words)
             for word in words:
                 if word not in self.word_id:
@@ -55,7 +60,7 @@ class Corpus(object):
         file_tokens = torch.LongTensor(num_of_words)
         token_id = 0
         for line in file_lines:
-            words = line.split() + ['<pad>']
+            words = ['<bos>'] +line.split() + ['<eos>']
             for word in words:
                 file_tokens[token_id] = self.word_id[word]
                 token_id += 1
@@ -65,29 +70,30 @@ class Corpus(object):
         ## train_si and valid_si indicates the index of the start point of the current mini-batch
         if self.dset_flag == "train":
             start_index = self.train_si
-            seq_len = min(self.max_sql, self.train.size(0)-self.train_si-1)
+            seq_len = min(self.max_sql, self.train.size(1)-self.train_si-1)
             data_loader = self.train
             self.train_si = self.train_si + seq_len
         else:
             start_index = self.valid_si
-            seq_len = min(self.max_sql, self.valid.size(0)-self.valid_si-1)
+            seq_len = min(self.max_sql, self.valid.size(1)-self.valid_si-1)
             data_loader = self.valid
             self.valid_si = self.valid_si + seq_len
-        data = data_loader[start_index:start_index+seq_len, :]
-        target = data_loader[start_index+1:start_index+seq_len+1, :].view(-1)
+        data = data_loader[:,start_index:start_index+seq_len]
+        target = data_loader[:,start_index+1:start_index+seq_len+1]
 
         ## end_flag indicates whether a epoch (train or valid epoch) has been ended
-        if self.dset_flag == "train" and self.train_si+1 == self.train.size(0):
+        if self.dset_flag == "train" and self.train_si+1 == self.train.size(1):
             end_flag = True
             self.train_si = 0
-        elif self.dset_flag == "valid" and self.valid_si+1 == self.valid.size(0):
+        elif self.dset_flag == "valid" and self.valid_si+1 == self.valid.size(1):
             end_flag = True
             self.valid_si = 0
         else:
             end_flag = False
         return data, target, end_flag
 
-parser = argparse.ArgumentParser(description='PyTorch ptb Language Model with Transformer')
+parser = argparse.ArgumentParser(
+    description='PyTorch ptb Language Model with Transformer')
 parser.add_argument('--epochs', type=int, default=128,
                     help='upper epoch limit')
 parser.add_argument('--train_batch_size', type=int, default=20, metavar='N',
@@ -132,17 +138,96 @@ else:
 train_batch_size = args.train_batch_size
 eval_batch_size = args.eval_batch_size
 batch_size = {'train': train_batch_size, 'valid': eval_batch_size}
-data_loader = Corpus("../data/ptb", batch_size, args.max_sql)
+# data_loader = Corpus("../data/ptb", batch_size, args.max_sql)
+data_loader=Corpus('../data/ptb',batch_size,args.max_sql)
 d_k = args.d_k
 d_v = args.d_v
 n_heads = args.n_heads
-src_vocab_size = len(data_loader.vocabulary)
+src_vocab_size = data_loader.vocab_size
 tgt_vocab_size = src_vocab_size
 d_model = args.d_model
 n_layers = args.n_layers
 d_ff = args.d_ff
 
+# Train Function
+def train(num_epoch:int,model:nn.Module,data_loader: Corpus,criterion:nn.Module,optimizer:torch.optim.Optimizer,scheduler:torch.optim.lr_scheduler._LRScheduler,logger:Logger,writer:SummaryWriter):
+    costs = 0.0
+    iters = 0   
+    model.train()
+    data_loader.set_train()
+    num_iter = 0 
+    while True:
+        num_iter += 1
+        data, target, end_flag = data_loader.get_batch()
+        data = data.to(device)
+        target  = target.to(device)
+        # print(data.shape)
+        #############################################
+        output, enc_self_attns, dec_self_attns, dec_enc_attns = model(data,target)
+        #############################################
+        loss = criterion(output.view(-1,data_loader.vocab_size),target.reshape(-1))
+        costs += loss.item() * data_loader.max_sql
+        iters += data_loader.max_sql
+        # backward and optimize
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+        # log
+        if num_iter%(data_loader.train_batch_num//(5*data_loader.max_sql))==0:
+            logger.info("Epoch:[{}/{}]:{:.0%}, Loss:{:8.2f}, Perplexity: {:8.2f}".format(num_epoch,args.epochs, data_loader.max_sql* num_iter * 1.0 / data_loader.train_batch_num, loss.item(),np.exp(loss.item())))
+        if end_flag==True:
+            break
+    perplexity=np.exp(costs / iters)
+    logger.info('Train perplexity at epoch {}: {:8.2f}'.format(num_epoch, perplexity))
+    writer.add_scalar('train/1.loss', costs/iters, num_epoch)
+    writer.add_scalar('train/2.perplexity', perplexity, num_epoch)
+    if scheduler is not None:
+        scheduler.step()
+    return perplexity
+    
+#######################################
+# WRITE CODE HERE within two '#' bar
+########################################
+# Evaluation Function
+# Calculate the average cross-entropy loss between the prediction and the ground truth word.
+# And then exp(average cross-entropy loss) is perplexity.
+
+def evaluate(num_epoch: int, model: nn.Module, data_loader:Corpus, criterion: nn.Module, logger: Logger, writer: SummaryWriter):
+    costs = 0.0
+    iters = 0
+    model.eval()
+    data_loader.set_valid()
+    with torch.no_grad():
+        num_iter = 0
+        while True:
+            num_iter += 1
+            data, target, end_flag = data_loader.get_batch()
+            data = data.to(device)
+            target = target.to(device)
+            #############################################
+            output, enc_self_attns, dec_self_attns, dec_enc_attns = model(data, target)
+            #############################################
+            loss = criterion(
+                output.view(-1, data_loader.vocab_size), target.reshape(-1))
+            costs += loss.item() * data_loader.max_sql
+            iters += data_loader.max_sql
+            # log
+            # if num_iter%(data_loader.valid_batch_num//(10*data_loader.max_sql))==0:
+            #     logger.info("Epoch:[{}/{}]:{:.0%}, Loss:{:8.2f}, Perplexity: {:8.2f}".format(num_epoch,args.epochs,data_loader.max_sql*num_iter * 1.0 / data_loader.valid_batch_num, loss.item(),np.exp(loss.item())))
+            if end_flag == True:
+                break
+    perplexity = np.exp(costs / iters)
+    logger.info('Valid perplexity at epoch {}: {:8.2f}'.format(
+        num_epoch, perplexity))
+    writer.add_scalar('valid/1.loss', costs/iters, num_epoch)
+    writer.add_scalar('valid/2.perplexity', perplexity, num_epoch)
+    return perplexity
+########################################
+
 # positional embedding
+
+
 class PositionalEncoding(nn.Module):
     def __init__(self, d_model, dropout=0.1, max_len=5000):
         super(PositionalEncoding, self).__init__()
@@ -445,3 +530,18 @@ class Transformer(nn.Module):
         # dec_outputs: [batch_size, tgt_len, d_model] -> dec_logits: [batch_size, tgt_len, tgt_vocab_size]
         dec_logits = self.projection(dec_outputs)
         return dec_logits.view(-1, dec_logits.size(-1)), enc_self_attns, dec_self_attns, dec_enc_attns
+
+if __name__ == '__main__':
+    criterion = nn.CrossEntropyLoss()
+    model = Transformer()
+    model = model.to(device)
+    logger,writer=setup_default_logging(args,'TransformerLM')
+    optimizer = torch.optim.Adam(model.parameters(),lr=args.learning_rate)
+    scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer,0.9)
+    # Loop over epochs.
+    for epoch in range(1, args.epochs+1):
+        # train()
+        train(epoch,model,data_loader,criterion,optimizer,scheduler,logger,writer)
+        evaluate(epoch,model,data_loader,criterion,logger,writer)
+        # evaluate()
+    writer.close()

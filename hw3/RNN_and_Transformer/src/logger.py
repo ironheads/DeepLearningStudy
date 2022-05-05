@@ -11,14 +11,14 @@ def time_str(fmt=None):
     #     time.strftime(format[, t])
     return datetime.today().strftime(fmt)
 
-def setup_default_logging(args, default_level=logging.INFO,
+def setup_default_logging(args, model_name= 'RNNLM',default_level=logging.INFO,
                           format="%(asctime)s - %(levelname)s - %(name)s - %(message)s"):
-    output_dir = os.path.join('logs','RNNLM')
+    output_dir = os.path.join('logs',model_name)
     os.makedirs(output_dir, exist_ok=True)
 
-    writer = SummaryWriter(comment=f'{args.embedding_dim}—{args.hidden_dim}-{args.hidden_layer_num}-{args.learning_rate}')
+    writer = SummaryWriter(comment=f'{model_name}-{args.learning_rate}')
 
-    logger = logging.getLogger('RNNLM')
+    logger = logging.getLogger(model_name)
 
     logging.basicConfig(  # unlike the root logger, a custom logger can’t be configured using basicConfig()
         filename=os.path.join(output_dir, f'{time_str()}.log'),
