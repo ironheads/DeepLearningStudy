@@ -32,8 +32,10 @@ class Corpus(object):
     def tokenize(self, file_name):
         file_lines = open(file_name, 'r').readlines()
         num_of_words = 0
+        self.word_id['<pad>']=0
+        self.vocabulary.append('<pad>')
         for line in file_lines:
-            words = line.split() + ['<eos>']
+            words = line.split() + ['<pad>']
             num_of_words += len(words)
             for word in words:
                 if word not in self.word_id:
@@ -42,7 +44,7 @@ class Corpus(object):
         file_tokens = torch.LongTensor(num_of_words)
         token_id = 0
         for line in file_lines:
-            words = line.split() + ['<eos>']
+            words = line.split() + ['<pad>']
             for word in words:
                 file_tokens[token_id] = self.word_id[word]
                 token_id += 1

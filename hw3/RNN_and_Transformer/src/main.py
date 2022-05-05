@@ -2,6 +2,7 @@
 import argparse
 from cgi import print_environ
 from pickletools import optimize
+import sched
 import time
 import math
 import torch
@@ -15,6 +16,7 @@ from logging import Logger
 import os.path as osp
 import numpy as np
 from torch.utils.tensorboard import SummaryWriter
+from torch.autograd import Variable
 
 parser = argparse.ArgumentParser(description='PyTorch ptb Language Model')
 parser.add_argument('--epochs', type=int, default=128,
@@ -35,8 +37,8 @@ parser.add_argument('--hidden_dim', default=1500, type=int,
                     help='the dimension of the hidden layer of GRU')
 parser.add_argument('--hidden_layer_num', default=2, type=int,
                     help='the number of the hidden layers')
-parser.add_argument('--learning_rate',default=0.002,type=float,help='learning rate')
-
+parser.add_argument('--learning_rate',default=4e-3,type=float,help='learning rate')
+parser.add_argument('--dropout',default=0.3,type=float,help='dropout')
 
 args = parser.parse_args()
 
@@ -63,14 +65,14 @@ hidden_layer_num = args.hidden_layer_num
 num_vocabulary = len(data_loader.vocabulary)
 
 # detach the hidden state to avoid backpropagation
-def detach(states):
-    return states.detach()
+def detach(h):
+    return h.detach()
 
 
 # WRITE CODE HERE within two '#' bar
 ########################################
 # Train Function
-def train(num_epoch:int,model:nn.Module,data_loader: data.Corpus,criterion:nn.Module,optimizer:torch.optim.Optimizer,logger:Logger,writer:SummaryWriter):
+def train(num_epoch:int,model:nn.Module,data_loader: data.Corpus,criterion:nn.Module,optimizer:torch.optim.Optimizer,scheduler:torch.optim.lr_scheduler._LRScheduler,logger:Logger,writer:SummaryWriter):
     costs = 0.0
     iters = 0   
     model.train()
@@ -92,7 +94,7 @@ def train(num_epoch:int,model:nn.Module,data_loader: data.Corpus,criterion:nn.Mo
         # backward and optimize
         optimizer.zero_grad()
         loss.backward()
-        clip_grad_norm_(model.parameters(),0.25)
+        clip_grad_norm_(model.parameters(),0.5)
         optimizer.step()
 
         # log
@@ -102,6 +104,10 @@ def train(num_epoch:int,model:nn.Module,data_loader: data.Corpus,criterion:nn.Mo
             break
     perplexity=np.exp(costs / iters)
     logger.info('Train perplexity at epoch {}: {:8.2f}'.format(num_epoch, perplexity))
+    writer.add_scalar('train/1.loss', costs/iters, num_epoch)
+    writer.add_scalar('train/2.perplexity', perplexity, num_epoch)
+    if scheduler is not None:
+        scheduler.step()
     return perplexity
     
 ########################################
@@ -140,6 +146,8 @@ def evaluate(num_epoch:int,model:nn.Module,data_loader: data.Corpus,criterion:nn
                 break
     perplexity=np.exp(costs / iters)
     logger.info('Valid perplexity at epoch {}: {:8.2f}'.format(num_epoch, perplexity))
+    writer.add_scalar('valid/1.loss', costs/iters, num_epoch)
+    writer.add_scalar('valid/2.perplexity', perplexity, num_epoch)
     return perplexity
 ########################################
 
@@ -149,7 +157,7 @@ if __name__ == '__main__':
     # WRITE CODE HERE within two '#' bar
     ########################################
     # Build LMModel model (bulid your language model here)
-    lm_model = model.LMModel(num_vocabulary,input_dim,hidden_dim,hidden_layer_num)
+    lm_model = model.LMModel(num_vocabulary,input_dim,hidden_dim,hidden_layer_num,dropout=args.dropout)
     lm_model.to(device)
     ########################################
 
@@ -157,10 +165,11 @@ if __name__ == '__main__':
 
     logger,writer = logger.setup_default_logging(args)
     optimizer = torch.optim.Adam(lm_model.parameters(),lr=args.learning_rate)
+    scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer,0.9)
     # Loop over epochs.
     for epoch in range(1, args.epochs+1):
         # train()
-        train(epoch,lm_model,data_loader,criterion,optimizer,logger,writer)
+        train(epoch,lm_model,data_loader,criterion,optimizer,scheduler,logger,writer)
         evaluate(epoch,lm_model,data_loader,criterion,logger,writer)
         # evaluate()
     writer.close()

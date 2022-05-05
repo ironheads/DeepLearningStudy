@@ -18,7 +18,7 @@ def setup_default_logging(args, default_level=logging.INFO,
 
     writer = SummaryWriter(comment=f'{args.embedding_dim}—{args.hidden_dim}-{args.hidden_layer_num}-{args.learning_rate}')
 
-    logger = logging.getLogger('train')
+    logger = logging.getLogger('RNNLM')
 
     logging.basicConfig(  # unlike the root logger, a custom logger can’t be configured using basicConfig()
         filename=os.path.join(output_dir, f'{time_str()}.log'),
