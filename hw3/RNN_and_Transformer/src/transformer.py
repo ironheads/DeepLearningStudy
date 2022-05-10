@@ -12,6 +12,7 @@ import os.path as osp
 import numpy as np
 import random
 from torch.utils.tensorboard import SummaryWriter
+# device = torch.device('cpu')
 
 class Corpus(object):
     def __init__(self, path, batch_size, max_sql):
@@ -36,6 +37,12 @@ class Corpus(object):
     @property
     def vocab_size(self):
         return len(self.vocabulary)
+    @property
+    def pad_idx(self):
+        if '<pad>' not in self.word_id:
+            return None
+        else:
+            return self.word_id['<pad>']
 
     def set_train(self):
         self.dset_flag = "train"
@@ -48,8 +55,6 @@ class Corpus(object):
     def tokenize(self, file_name):
         file_lines = open(file_name, 'r').readlines()
         num_of_words = 0
-        # self.word_id['<pad>']=0
-        # self.vocabulary.append('<pad>')
         for line in file_lines:
             words = ['<bos>'] + line.split() + ['<eos>']
             num_of_words += len(words)
@@ -92,65 +97,12 @@ class Corpus(object):
             end_flag = False
         return data, target, end_flag
 
-parser = argparse.ArgumentParser(
-    description='PyTorch ptb Language Model with Transformer')
-parser.add_argument('--epochs', type=int, default=128,
-                    help='upper epoch limit')
-parser.add_argument('--train_batch_size', type=int, default=20, metavar='N',
-                    help='train batch size')
-parser.add_argument('--eval_batch_size', type=int, default=10, metavar='N',
-                    help='evaluate batch size')
-parser.add_argument('--max_sql', type=int, default=35,
-                    help='sequence length')
-parser.add_argument('--seed', type=int, default=1234,
-                    help='set random seed')
-parser.add_argument('--cuda', action='store_true', help='use CUDA device')
-parser.add_argument('--gpu_id', default=0, type=int, help='GPU device id used')
-parser.add_argument('--learning_rate', default=1e-2,
-                    type=float, help='learning rate')
-parser.add_argument('--d_model', default=512, type=int,
-                    help='the dimension of the word embeddings')
-parser.add_argument('--d_k', default=128, type=int,
-                    help='the dimension of Keys')
-parser.add_argument('--d_v', default=128, type=int,
-                    help='the dimension of Values')
-parser.add_argument('--n_heads', default=8, type=int,
-                    help='the number of heads')
-parser.add_argument('--n_layers', default=6, type=int,
-                    help='the number of the encoder & decoder layers')
-parser.add_argument('--d_ff', default=2048, type=int,
-                    help='FeedForward Dimension')
-args = parser.parse_args()
 
-# Set the random seed manually for reproducibility.
-torch.manual_seed(args.seed)
 
-# Use gpu or cpu to train
-use_gpu = args.cuda
 
-if use_gpu:
-    torch.cuda.set_device(args.gpu_id)
-    device = torch.device(args.gpu_id)
-else:
-    device = torch.device("cpu")
-
-# load data
-train_batch_size = args.train_batch_size
-eval_batch_size = args.eval_batch_size
-batch_size = {'train': train_batch_size, 'valid': eval_batch_size}
-# data_loader = Corpus("../data/ptb", batch_size, args.max_sql)
-data_loader=Corpus('../data/ptb',batch_size,args.max_sql)
-d_k = args.d_k
-d_v = args.d_v
-n_heads = args.n_heads
-src_vocab_size = data_loader.vocab_size
-tgt_vocab_size = src_vocab_size
-d_model = args.d_model
-n_layers = args.n_layers
-d_ff = args.d_ff
 
 # Train Function
-def train(num_epoch:int,model:nn.Module,data_loader: Corpus,criterion:nn.Module,optimizer:torch.optim.Optimizer,scheduler:torch.optim.lr_scheduler._LRScheduler,logger:Logger,writer:SummaryWriter):
+def train(num_epoch:int,model:nn.Module,data_loader: Corpus,criterion:nn.Module,optimizer:torch.optim.Optimizer,scheduler:torch.optim.lr_scheduler._LRScheduler,logger:Logger,writer:SummaryWriter,device = torch.device('cpu')):
     costs = 0.0
     iters = 0   
     model.train()
@@ -193,7 +145,7 @@ def train(num_epoch:int,model:nn.Module,data_loader: Corpus,criterion:nn.Module,
 # Calculate the average cross-entropy loss between the prediction and the ground truth word.
 # And then exp(average cross-entropy loss) is perplexity.
 
-def evaluate(num_epoch: int, model: nn.Module, data_loader:Corpus, criterion: nn.Module, logger: Logger, writer: SummaryWriter):
+def evaluate(num_epoch: int, model: nn.Module, data_loader:Corpus, criterion: nn.Module, logger: Logger, writer: SummaryWriter,device = torch.device('cpu')):
     costs = 0.0
     iters = 0
     model.eval()
@@ -246,20 +198,8 @@ class PositionalEncoding(nn.Module):
         return self.dropout(x)
 
 
-def make_src_pad_mask(seq,pad_idx=0):
-    src_mask = (seq!=pad_idx).unsqueeze(1).unsqueeze(2)
-    return src_mask
 
-def make_target_mask(target,pad_idx=0):
-    target_pad_mask = (target != pad_idx).unsqueeze(1).unsqueeze(3)
-    target_len = target.shape[1]
-    target_sub_mask = torch.tril(torch.ones(target_len,target_len)).type(torch.ByteTensor)
-    target_mask = target_pad_mask & target_sub_mask
-    return target_mask
-
-    
-
-def get_attn_pad_mask(seq_q, seq_k):
+def get_attn_pad_mask(seq_q, seq_k, pad_idx:int = 0):
     # pad mask的作用：在对value向量加权平均的时候，可以让pad对应的alpha_ij=0，这样注意力就不会考虑到pad向量
     """这里的q,k表示的是两个序列(跟注意力机制的q,k没有关系)例如encoder_inputs (x1,x2,..xm)和encoder_inputs (x1,x2..xm)
     encoder和decoder都可能调用这个函数,所以seq_len视情况而定
@@ -273,9 +213,10 @@ def get_attn_pad_mask(seq_q, seq_k):
     # eq(zero) is PAD token
     # 例如:seq_k = [[1,2,3,4,0], [1,2,3,5,0]]
     # [batch_size, 1, len_k], True is masked
-    pad_attn_mask = seq_k.data.eq(0).unsqueeze(1)
+    # print(pad_idx)
+    pad_attn_mask = seq_k.data.eq(pad_idx).unsqueeze(1)
     # [batch_size, len_q, len_k] 构成一个立方体(batch_size个这样的矩阵)
-    return pad_attn_mask.expand(batch_size, len_q, len_k)
+    return pad_attn_mask.expand(batch_size, len_q, len_k).to(device)
 
 
 def get_attn_subsequence_mask(seq):
@@ -286,7 +227,7 @@ def get_attn_subsequence_mask(seq):
     # attn_shape: [batch_size, tgt_len, tgt_len]
     subsequence_mask = np.triu(np.ones(attn_shape), k=1)  # 生成一个上三角矩阵
     subsequence_mask = torch.from_numpy(subsequence_mask).byte()
-    return subsequence_mask  # [batch_size, tgt_len, tgt_len]
+    return subsequence_mask.to(device)  # [batch_size, tgt_len, tgt_len]
 
 
 # ==========================================================================================
@@ -330,7 +271,7 @@ class MultiHeadAttention(nn.Module):
     Encoder-Decoder的Attention
     """
 
-    def __init__(self,d_model,n_heads,dropout=0.1):
+    def __init__(self,d_model,n_heads,dropout=0):
         super(MultiHeadAttention, self).__init__()
         self.d_model =d_model
         self.n_heads = n_heads
@@ -362,13 +303,13 @@ class MultiHeadAttention(nn.Module):
 
         # 因为是多头，所以mask矩阵要扩充成4维的
         # attn_mask: [batch_size, seq_len, seq_len] -> [batch_size, n_heads, seq_len, seq_len]
-        attn_mask = attn_mask.unsqueeze(1).repeat(1, n_heads, 1, 1)
+        attn_mask = attn_mask.unsqueeze(1).repeat(1, self.n_heads, 1, 1)
 
-        # context: [batch_size, n_heads, len_q, d_v], attn: [batch_size, n_heads, len_q, len_k]
+        # context: [batch_size, n_heads, len_q, d_heads], attn: [batch_size, n_heads, len_q, len_k]
         context, attn = self.scaled_dot_product_attention(Q, K, V, attn_mask)
         # 下面将不同头的输出向量拼接在一起
-        # context: [batch_size, n_heads, len_q, d_v] -> [batch_size, len_q, n_heads * d_v]
-        context = context.transpose(1, 2).reshape(batch_size, -1, n_heads * d_v)
+        # context: [batch_size, n_heads, len_q, d_heads] -> [batch_size, len_q, n_heads * d_heads]
+        context = context.transpose(1, 2).reshape(batch_size, -1, self.n_heads * self.d_heads)
         # 再做一个projection
         output = self.fc(context)  # [batch_size, len_q, d_model]
         output = self.dropout(output)
@@ -378,7 +319,7 @@ class MultiHeadAttention(nn.Module):
 
 # Pytorch中的Linear只会对最后一维操作，所以正好是我们希望的每个位置用同一个全连接网络
 class PoswiseFeedForwardNet(nn.Module):
-    def __init__(self,d_model,d_hidden,dropout = 0.1):
+    def __init__(self,d_model,d_hidden,dropout = 0):
         super(PoswiseFeedForwardNet, self).__init__()
         self.fc = nn.Sequential(
             nn.Linear(d_model, d_hidden),
@@ -401,7 +342,7 @@ class PoswiseFeedForwardNet(nn.Module):
 class EncoderLayer(nn.Module):
     def __init__(self,d_model,d_hidden,n_heads,dropout=0):
         super(EncoderLayer, self).__init__()
-        self.attn = MultiHeadAttention(d_model,n_heads,dropout)
+        self.attn = MultiHeadAttention(d_model,n_heads)
         self.norm1 = nn.LayerNorm(d_model)
         self.dropout1 = nn.Dropout(dropout)
         self.ffn = PoswiseFeedForwardNet(d_model,d_hidden,dropout)
@@ -417,8 +358,8 @@ class EncoderLayer(nn.Module):
         # 第一个enc_inputs * W_Q = Q
         # 第二个enc_inputs * W_K = K
         # 第三个enc_inputs * W_V = V
-        _x = x
-        x , attn= self.attn(x,x,x,attn_mask=enc_self_attn_mask)
+        _x = enc_inputs
+        x , attn= self.attn(enc_inputs,enc_inputs,enc_inputs,attn_mask=enc_self_attn_mask)
         x =self.norm1(x+_x)
         x=self.dropout1(x)
         # enc_outputs: [batch_size, src_len, d_model]
@@ -430,11 +371,17 @@ class EncoderLayer(nn.Module):
 
 
 class DecoderLayer(nn.Module):
-    def __init__(self):
+    def __init__(self,d_model,d_hidden,n_heads,dropout):
         super(DecoderLayer, self).__init__()
-        self.dec_self_attn = MultiHeadAttention()
-        self.dec_enc_attn = MultiHeadAttention()
-        self.pos_ffn = PoswiseFeedForwardNet()
+        self.self_attn = MultiHeadAttention(d_model,n_heads)
+        self.norm1 = nn.LayerNorm(d_model)
+        self.dropout1 = nn.Dropout(dropout)
+        self.enc_dec_attention = MultiHeadAttention(d_model,n_heads)
+        self.norm2 = nn.LayerNorm(d_model)
+        self.dropout2 = nn.Dropout(dropout)
+        self.ffn = PoswiseFeedForwardNet(d_model,d_hidden,dropout)
+        self.norm3 = nn.LayerNorm(d_model)
+        self.dropout3 = nn.Dropout(dropout)
 
     def forward(self, dec_inputs, enc_outputs, dec_self_attn_mask, dec_enc_attn_mask):
         """
@@ -444,101 +391,104 @@ class DecoderLayer(nn.Module):
         dec_enc_attn_mask: [batch_size, tgt_len, src_len]
         """
         # dec_outputs: [batch_size, tgt_len, d_model], dec_self_attn: [batch_size, n_heads, tgt_len, tgt_len]
-        dec_outputs, dec_self_attn = self.dec_self_attn(dec_inputs, dec_inputs, dec_inputs,
-                                                        dec_self_attn_mask)  # 这里的Q,K,V全是Decoder自己的输入
-        # dec_outputs: [batch_size, tgt_len, d_model], dec_enc_attn: [batch_size, h_heads, tgt_len, src_len]
-        dec_outputs, dec_enc_attn = self.dec_enc_attn(dec_outputs, enc_outputs, enc_outputs,
-                                                      dec_enc_attn_mask)  # Attention层的Q(来自decoder) 和 K,V(来自encoder)
-        # [batch_size, tgt_len, d_model]
-        dec_outputs = self.pos_ffn(dec_outputs)
+        _x = dec_inputs
+        x, dec_self_attn = self.self_attn(dec_inputs, dec_inputs, dec_inputs,attn_mask=dec_self_attn_mask)
+        x = self.norm1(x+_x)
+        x = self.dropout1(x)
+        
+        if enc_outputs is not None:
+            _x = x
+            x ,dec_enc_attn = self.enc_dec_attention(x, enc_outputs, enc_outputs, dec_enc_attn_mask)
+            x = self.norm2(x+_x)
+            x = self.dropout2(x)
+
+     
+        _x = x
+        x = self.ffn(x)
+        x = self.norm3(x+_x)
+        x = self.dropout3(x)
+        
         # dec_self_attn, dec_enc_attn这两个是为了可视化的
-        return dec_outputs, dec_self_attn, dec_enc_attn
+        return x, dec_self_attn, dec_enc_attn
 
 
 class Encoder(nn.Module):
-    def __init__(self):
+    def __init__(self,n_voc,max_len,d_model,d_hidden,n_heads,n_layers,dropout,pad_idx=0):
         super(Encoder, self).__init__()
-        self.src_emb = nn.Embedding(src_vocab_size, d_model)  # token Embedding
-        self.pos_emb = PositionalEncoding(
-            d_model)  # Transformer中位置编码时固定的，不需要学习
-        self.layers = nn.ModuleList([EncoderLayer() for _ in range(n_layers)])
+        self.pad_idx= pad_idx
+        # print(self.pad_idx)
+        self.src_emb = nn.Embedding(n_voc, d_model)  # token Embedding
+        self.pos_emb = PositionalEncoding(d_model=d_model,dropout=dropout,max_len=max_len)  # Transformer中位置编码时固定的，不需要学习
+        self.layers = nn.ModuleList([EncoderLayer(d_model,d_hidden,n_heads,dropout) for _ in range(n_layers)])
 
     def forward(self, enc_inputs):
         """
         enc_inputs: [batch_size, src_len]
         """
-        enc_outputs = self.src_emb(
-            enc_inputs)  # [batch_size, src_len, d_model]
-        enc_outputs = self.pos_emb(enc_outputs.transpose(0, 1)).transpose(
-            0, 1)  # [batch_size, src_len, d_model]
+        enc_outputs = self.src_emb(enc_inputs)  # [batch_size, src_len, d_model]
+        enc_outputs = self.pos_emb(enc_outputs.transpose(0, 1)).transpose(0, 1)  # [batch_size, src_len, d_model]
         # Encoder输入序列的pad mask矩阵
-        enc_self_attn_mask = get_attn_pad_mask(
-            enc_inputs, enc_inputs)  # [batch_size, src_len, src_len]
+        enc_self_attn_mask = get_attn_pad_mask(enc_inputs, enc_inputs, self.pad_idx)  # [batch_size, src_len, src_len]
         enc_self_attns = []  # 在计算中不需要用到，它主要用来保存你接下来返回的attention的值（这个主要是为了你画热力图等，用来看各个词之间的关系
         for layer in self.layers:  # for循环访问nn.ModuleList对象
             # 上一个block的输出enc_outputs作为当前block的输入
             # enc_outputs: [batch_size, src_len, d_model], enc_self_attn: [batch_size, n_heads, src_len, src_len]
-            enc_outputs, enc_self_attn = layer(enc_outputs,
-                                               enc_self_attn_mask)  # 传入的enc_outputs其实是input，传入mask矩阵是因为你要做self attention
+            enc_outputs, enc_self_attn = layer(enc_outputs, enc_self_attn_mask)  # 传入的enc_outputs其实是input，传入mask矩阵是因为你要做self attention
             enc_self_attns.append(enc_self_attn)  # 这个只是为了可视化
         return enc_outputs, enc_self_attns
 
 
 class Decoder(nn.Module):
-    def __init__(self):
+    def __init__(self,n_voc,max_len,d_model,d_hidden,n_heads,n_layers,dropout,src_pad_idx=0,target_pad_idx=0):
         super(Decoder, self).__init__()
-        self.tgt_emb = nn.Embedding(
-            tgt_vocab_size, d_model)  # Decoder输入的embed词表
-        self.pos_emb = PositionalEncoding(d_model)
-        self.layers = nn.ModuleList([DecoderLayer()
-                                    for _ in range(n_layers)])  # Decoder的blocks
+        self.target_emb = nn.Embedding(n_voc, d_model)  # Decoder输入的embed词表
+        self.pos_emb = PositionalEncoding(d_model,dropout,max_len) 
+        self.src_pad_idx=src_pad_idx
+        self.target_pad_idx = target_pad_idx
+        self.layers = nn.ModuleList([DecoderLayer(d_model,d_hidden,n_heads,dropout) for _ in range(n_layers)])  # Decoder的blocks
 
     def forward(self, dec_inputs, enc_inputs, enc_outputs):
         """
-        dec_inputs: [batch_size, tgt_len]
+        dec_inputs: [batch_size, target_len]
         enc_inputs: [batch_size, src_len]
         enc_outputs: [batch_size, src_len, d_model]   # 用在Encoder-Decoder Attention层
         """
-        dec_outputs = self.tgt_emb(
-            dec_inputs)  # [batch_size, tgt_len, d_model]
-        dec_outputs = self.pos_emb(dec_outputs.transpose(0, 1)).transpose(0, 1).to(
-            device)  # [batch_size, tgt_len, d_model]
-        # Decoder输入序列的pad mask矩阵（这个例子中decoder是没有加pad的，实际应用中都是有pad填充的）
-        dec_self_attn_pad_mask = get_attn_pad_mask(dec_inputs, dec_inputs).to(
-            device)  # [batch_size, tgt_len, tgt_len]
+        dec_outputs = self.target_emb(dec_inputs)  # [batch_size, target_len, d_model]
+        dec_outputs = self.pos_emb(dec_outputs.transpose(0, 1)).transpose(0, 1)  # [batch_size, target_len, d_model]
+        # Decoder输入序列的pad mask矩阵
+        dec_self_attn_pad_mask = get_attn_pad_mask(dec_inputs, dec_inputs,self.target_pad_idx)  # [batch_size, target_len, target_len]
         # Masked Self_Attention：当前时刻是看不到未来的信息的
-        dec_self_attn_subsequence_mask = get_attn_subsequence_mask(dec_inputs).to(
-            device)  # [batch_size, tgt_len, tgt_len]
+        dec_self_attn_subsequence_mask = get_attn_subsequence_mask(dec_inputs)  # [batch_size, target_len, target_len]
 
         # Decoder中把两种mask矩阵相加（既屏蔽了pad的信息，也屏蔽了未来时刻的信息）
-        dec_self_attn_mask = torch.gt((dec_self_attn_pad_mask + dec_self_attn_subsequence_mask),
-                                      0).to(device)  # [batch_size, tgt_len, tgt_len]; torch.gt比较两个矩阵的元素，大于则返回1，否则返回0
+        dec_self_attn_mask = torch.gt((dec_self_attn_pad_mask + dec_self_attn_subsequence_mask),0)  # [batch_size, target_len, target_len]; torch.gt比较两个矩阵的元素，大于则返回1，否则返回0
 
         # 这个mask主要用于encoder-decoder attention层
         # get_attn_pad_mask主要是enc_inputs的pad mask矩阵(因为enc是处理K,V的，求Attention时是用v1,v2,..vm去加权的，要把pad对应的v_i的相关系数设为0，这样注意力就不会关注pad向量)
         #                       dec_inputs只是提供expand的size的
-        dec_enc_attn_mask = get_attn_pad_mask(
-            dec_inputs, enc_inputs)  # [batc_size, tgt_len, src_len]
+        dec_enc_attn_mask = get_attn_pad_mask(dec_inputs, enc_inputs,self.src_pad_idx)  # [batc_size, target_len, src_len]
 
         dec_self_attns, dec_enc_attns = [], []
         for layer in self.layers:
-            # dec_outputs: [batch_size, tgt_len, d_model], dec_self_attn: [batch_size, n_heads, tgt_len, tgt_len], dec_enc_attn: [batch_size, h_heads, tgt_len, src_len]
+            # dec_outputs: [batch_size, target_len, d_model], dec_self_attn: [batch_size, n_heads, target_len, target_len], dec_enc_attn: [batch_size, h_heads, target_len, src_len]
             # Decoder的Block是上一个Block的输出dec_outputs（变化）和Encoder网络的输出enc_outputs（固定）
-            dec_outputs, dec_self_attn, dec_enc_attn = layer(dec_outputs, enc_outputs, dec_self_attn_mask,
-                                                             dec_enc_attn_mask)
+            dec_outputs, dec_self_attn, dec_enc_attn = layer(dec_outputs, enc_outputs, dec_self_attn_mask, dec_enc_attn_mask)
             dec_self_attns.append(dec_self_attn)
             dec_enc_attns.append(dec_enc_attn)
-        # dec_outputs: [batch_size, tgt_len, d_model]
+        # dec_outputs: [batch_size, target_len, d_model]
         return dec_outputs, dec_self_attns, dec_enc_attns
 
 
 class Transformer(nn.Module):
-    def __init__(self):
+    def __init__(self,n_srcvoc,n_targetvoc,d_model,d_hidden,n_heads,n_layers,dropout=0.1 ,max_len = 50,src_pad_idx=0,target_pad_idx=0):
         super(Transformer, self).__init__()
-        self.encoder = Encoder()
-        self.decoder = Decoder()
-        self.projection = nn.Linear(
-            d_model, tgt_vocab_size, bias=False).to(device)
+        if src_pad_idx is None:
+            src_pad_idx = -1
+        if target_pad_idx is None:
+            target_pad_idx = -1
+        self.encoder = Encoder(n_srcvoc,max_len,d_model,d_hidden,n_heads,n_layers,dropout,src_pad_idx)
+        self.decoder = Decoder(n_targetvoc,max_len,d_model,d_hidden,n_heads,n_layers,dropout,src_pad_idx,target_pad_idx)
+        self.projection = nn.Linear(d_model, n_targetvoc)
 
     def forward(self, enc_inputs, dec_inputs):
         """Transformers的输入:两个序列
@@ -552,15 +502,69 @@ class Transformer(nn.Module):
         # 经过Encoder网络后，得到的输出还是[batch_size, src_len, d_model]
         enc_outputs, enc_self_attns = self.encoder(enc_inputs)
         # dec_outputs: [batch_size, tgt_len, d_model], dec_self_attns: [n_layers, batch_size, n_heads, tgt_len, tgt_len], dec_enc_attn: [n_layers, batch_size, tgt_len, src_len]
-        dec_outputs, dec_self_attns, dec_enc_attns = self.decoder(
-            dec_inputs, enc_inputs, enc_outputs)
+        dec_outputs, dec_self_attns, dec_enc_attns = self.decoder(dec_inputs, enc_inputs, enc_outputs)
         # dec_outputs: [batch_size, tgt_len, d_model] -> dec_logits: [batch_size, tgt_len, tgt_vocab_size]
         dec_logits = self.projection(dec_outputs)
         return dec_logits.view(-1, dec_logits.size(-1)), enc_self_attns, dec_self_attns, dec_enc_attns
 
 if __name__ == '__main__':
-    criterion = nn.CrossEntropyLoss()
-    model = Transformer()
+    parser = argparse.ArgumentParser(description='PyTorch ptb Language Model with Transformer')
+    parser.add_argument('--epochs', type=int, default=128,
+                        help='upper epoch limit')
+    parser.add_argument('--train_batch_size', type=int, default=20, metavar='N',
+                        help='train batch size')
+    parser.add_argument('--eval_batch_size', type=int, default=10, metavar='N',
+                        help='evaluate batch size')
+    parser.add_argument('--max_sql', type=int, default=35,
+                        help='sequence length')
+    parser.add_argument('--seed', type=int, default=1234,
+                        help='set random seed')
+    parser.add_argument('--cuda', action='store_true', help='use CUDA device')
+    parser.add_argument('--gpu_id', default=0, type=int, help='GPU device id used')
+    parser.add_argument('--learning_rate', default=1e-2,
+                        type=float, help='learning rate')
+    parser.add_argument('--d_model', default=512, type=int,
+                        help='the dimension of the word embeddings')
+    parser.add_argument('--n_heads', default=8, type=int,
+                        help='the number of heads')
+    parser.add_argument('--n_layers', default=6, type=int,
+                        help='the number of the encoder & decoder layers')
+    parser.add_argument('--dropout', default=0.1, type=float,
+                        help='dropout probability')
+    parser.add_argument('--d_hidden', default=2048, type=int,
+                        help='FeedForward Dimension')
+    args = parser.parse_args()
+
+    # Set the random seed manually for reproducibility.
+    torch.manual_seed(args.seed)
+    # Use gpu or cpu to train
+    use_gpu = args.cuda
+    global device
+    if use_gpu:
+        torch.cuda.set_device(args.gpu_id)
+        device = torch.device(args.gpu_id)
+    else:
+        device = torch.device("cpu")
+
+    # load data
+    train_batch_size = args.train_batch_size
+    eval_batch_size = args.eval_batch_size
+    batch_size = {'train': train_batch_size, 'valid': eval_batch_size}
+    # data_loader = Corpus("../data/ptb", batch_size, args.max_sql)
+    data_loader=Corpus('../data/ptb',batch_size,args.max_sql)
+    n_heads = args.n_heads
+    src_vocab_size = data_loader.vocab_size
+    target_vocab_size = src_vocab_size
+    d_model = args.d_model
+    n_layers = args.n_layers
+    d_hidden = args.d_hidden
+    dropout = args.dropout
+    if data_loader.pad_idx is not None:
+        criterion = nn.CrossEntropyLoss(ignore_index=data_loader.pad_idx)
+    else:
+        criterion = nn.CrossEntropyLoss()
+    
+    model = Transformer(src_vocab_size, target_vocab_size,d_model,d_hidden,n_heads,n_layers,dropout,args.max_sql+10,data_loader.pad_idx,data_loader.pad_idx)
     model = model.to(device)
     logger,writer=setup_default_logging(args,'TransformerLM')
     optimizer = torch.optim.Adam(model.parameters(),lr=args.learning_rate)
@@ -568,7 +572,7 @@ if __name__ == '__main__':
     # Loop over epochs.
     for epoch in range(1, args.epochs+1):
         # train()
-        train(epoch,model,data_loader,criterion,optimizer,scheduler,logger,writer)
-        evaluate(epoch,model,data_loader,criterion,logger,writer)
+        train(epoch,model,data_loader,criterion,optimizer,scheduler,logger,writer,device)
+        evaluate(epoch,model,data_loader,criterion,logger,writer,device)
         # evaluate()
     writer.close()
