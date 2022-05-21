@@ -1,10 +1,56 @@
 # Deep Learning HomeWork 3
+> RNN&transformer implementation is in model.py
+> RNN: python main.py 
+> Transformer: python transformer.py
+> DeepGCN: python DeepGCN.py
+
 
 ## RNN & Transformer
 ### Task A
+use GRU with 2 1500D hidden layers.
+#### training
 
+loss:
+
+![](RNN_and_Transformer/src/figures/RNN/train_1.loss.svg)
+
+perplexity:
+
+![](RNN_and_Transformer/src/figures/RNN/train_2.perplexity.svg)
+
+#### validation
+
+loss:
+
+![](RNN_and_Transformer/src/figures/RNN/valid_1.loss.svg)
+
+perplexity:
+
+![](RNN_and_Transformer/src/figures/RNN/valid_2.perplexity.svg)
 
 ### Task B
+
+use decoder-only structure like GPT. The decoder is composed with 6 decoder layer. the number of head is 8. the hidden dimension of the feedforward layer is 2048. the dimension of word embeddings is 512. 
+
+#### training
+
+loss:
+
+![](RNN_and_Transformer/src/figures/GPT/train_1.loss.svg)
+
+perplexity:
+
+![](RNN_and_Transformer/src/figures/GPT/train_2.perplexity.svg)
+
+#### validation
+
+loss:
+
+![](RNN_and_Transformer/src/figures/GPT/valid_1.loss.svg)
+
+perplexity:
+
+![](RNN_and_Transformer/src/figures/GPT/valid_2.perplexity.svg)
 
 ### Difference between preprocessing text and image 
 
